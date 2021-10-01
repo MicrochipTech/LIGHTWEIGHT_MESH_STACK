@@ -1,0 +1,13 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam0.drivers.gpio.quick_start_callback" caption="Quick Start for the SAM GPIO Driver (Callback)">
+		<info type="description" value="summary">
+		Quick start guide for the GPIO interface module in callback mode demonstrating module configuration.
+		</info>
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="c-source" value="qs_gpio_callback.c"/>
+		<build type="include-path" value="."/>
+		<require idref="sam0.drivers.gpio"/>
+		<require idref="sam0.utils.stdio.stdio_serial"/>
+		<device-support value="samb11"/>
+	</module>
+</asf>

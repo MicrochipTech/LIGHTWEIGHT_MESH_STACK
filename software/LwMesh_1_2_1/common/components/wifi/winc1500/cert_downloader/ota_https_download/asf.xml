@@ -1,0 +1,73 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc1500.cert_downloader.ota_https_download_example">
+		<module type="application" id="common.components.wifi.winc1500.cert_downloader.ota_https_download_example#1" caption="WINC1500 Certificate Downloader via OTA (HTTPS) from Host Example">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This example demonstrates how to get root/tls certificates from HTTPS server and upload in WINC1500 SPI Flash from host
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main21.c"/>
+			<build type="header-file" value="main.h"/>
+			<build type="include-path" value="iot"/>
+			<build type="include-path" value="iot/http"/>
+			<build type="c-source" value="iot/stream_writer.c"/>
+			<build type="header-file" value="iot/stream_writer.h"/>
+			<build type="c-source" value="iot/sw_timer.c"/>
+			<build type="header-file" value="iot/sw_timer.h"/>
+			<build type="c-source" value="iot/http/http_client.c"/>
+			<build type="header-file" value="iot/http/http_client.h"/>
+			<build type="header-file" value="iot/http/http_entity.h"/>
+			<build type="header-file" value="iot/http/http_header.h"/>
+
+			<!-- Device support -->
+			<device-support value="saml21"/>
+			<device-support value="samd21"/>
+			<device-support value="saml22"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500.cert_downloader"/>			
+			<require idref="sam0.drivers.tcc"/>
+			<require idref="sam0.utils"/>
+			<require idref="sam0.utils.stdio"/>
+			<require idref="sam0.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+			
+		</module>
+		<module type="application" id="common.components.wifi.winc1500.cert_downloader.ota_https_download_example#2" caption="WINC1500 Certificate Downloader via OTA (HTTPS) from Host Example">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This example demonstrates how to get root/tls certificates from HTTPS server and upload in WINC1500 SPI Flash from host
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main.c"/>
+			<build type="header-file" value="main.h"/>
+			<build type="include-path" value="iot"/>
+			<build type="include-path" value="iot/http"/>
+			<build type="c-source" value="iot/stream_writer.c"/>
+			<build type="header-file" value="iot/stream_writer.h"/>
+			<build type="c-source" value="iot/sw_timer.c"/>
+			<build type="header-file" value="iot/sw_timer.h"/>
+			<build type="c-source" value="iot/http/http_client.c"/>
+			<build type="header-file" value="iot/http/http_client.h"/>
+			<build type="header-file" value="iot/http/http_entity.h"/>
+			<build type="header-file" value="iot/http/http_header.h"/>
+
+			<!-- Device support -->
+			<device-support value="sam4s"/>
+			<device-support value="samg53"/>
+			<device-support value="samg55"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500.cert_downloader"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<require idref="sam.drivers.rtt"/>			
+			<info type="gui-flag" value="move-to-root"/>
+			
+		</module>		
+	</select-by-device>
+</asf>

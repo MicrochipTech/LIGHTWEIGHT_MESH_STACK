@@ -1,0 +1,63 @@
+<asf xmlversion="1.0">
+	<module type="meta" id="common.services.adp.common" caption="ADP - Atmel Data Protocol">
+		<build type="c-source" value="adp.c"/>
+		<build type="include-path" value="." />
+		<build type="header-file" subtype="api" value="adp.h"/>
+		<build type="header-file" value="adp_interface.h"/>
+	</module>
+
+	<module type="meta" id="common.services.adp.sam0" caption="ADP - Atmel Data Protocol">
+		<build type="include-path" value="sam0/" />
+		<require idref="common.services.adp.common"/>
+		<require idref="sam0.utils"/>
+		<require idref="sam0.drivers.system"/>
+	</module>
+
+	<module type="meta" id="common.services.adp.sam" caption="ADP - Atmel Data Protocol">
+		<build type="include-path" value="sam/" />
+		<require idref="common.services.adp.common"/>
+		<require idref="common.services.basic.clock"/>
+	</module>
+
+	<select-by-config id="common.services.adp" name="config.common.services.adp" default="spi">
+
+		<select-by-device id="common.services.adp#spi">
+			<module type="service" id="common.services.adp#spi#0" caption="ADP - Atmel Data Protocol - SAM0 SPI implementation">
+				<require idref="common.services.adp.sam0"/>
+				<require idref="sam0.drivers.sercom.spi"/>
+				<build type="c-source" value="sam0/adp_interface_spi.c"/>
+				<build type="define" name="ADP_MODE_SPI" value="" />
+				<device-support value="samd21"/>
+				<device-support value="saml21"/>
+			</module>
+			<module type="service" id="common.services.adp#spi#1" caption="ADP - Atmel Data Protocol - SAM SPI implementation">
+				<require idref="common.services.adp.sam"/>
+				<require idref="common.services.basic.spi_master"/>
+				<build type="c-source" value="sam/adp_interface_spi.c"/>
+				<build type="define" name="ADP_MODE_SPI" value=""/>
+				<device-support value="sam4s"/>
+			</module>
+		</select-by-device>
+
+		<select-by-device id="common.services.adp#twi">
+			<module type="service" id="common.services.adp#twi#0" caption="ADP - Atmel Data Protocol - SAM0 TWI implementation">
+				<require idref="common.services.adp.sam0"/>
+				<require idref="sam0.drivers.sercom.i2c.master"/>
+				<build type="c-source" value="sam0/adp_interface_twi.c"/>
+				<build type="define" name="ADC_CALLBACK_MODE" value="false"/>
+				<build type="define" name="ADP_MODE_TWI" value=""/>
+				<device-support value="samd21"/>
+				<device-support value="saml21"/>
+			</module>
+			<module type="service" id="common.services.adp#twi#1" caption="ADP - Atmel Data Protocol - SAM TWI implementation">
+				<require idref="common.services.adp.sam"/>
+				<require idref="common.services.basic.twi"/>
+				<build type="c-source" value="sam/adp_interface_twi.c"/>
+				<build type="define" name="ADP_MODE_TWI" value=""/>
+				<device-support value="sam4s"/>
+			</module>
+		</select-by-device>
+
+	</select-by-config>
+
+</asf>

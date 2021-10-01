@@ -1,0 +1,11 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.utils.cmsis.samd09.include.pio" caption="SAMD09 PIO definitions">
+		<info type="description" value="summary">
+		SAMD09 PIO component definitions.
+		</info>
+		<build type="header-file" value="samd09c13a.h"/>
+		<build type="header-file" value="samd09d14a.h"/>	
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="samd09"/>
+	</module>
+</asf>

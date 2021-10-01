@@ -1,0 +1,25 @@
+<asf xmlversion="1.0">
+	<module type="component" id="common.components.wifi.winc3400.ble.ble_profiles.wifi_provisioning" caption="WIFI-PROVISIONING Profile">
+		<info type="description" value="summary">
+			Wi-Fi provisioning profile for WINC3400.
+		</info>
+		<build type="include-path"  value="./"/>
+  		<build type="header-file"   value="wifi_provisioning.h"/>
+  		<build type="c-source"      value="wifi_provisioning.c"/>
+
+  		<build type="define" name="WIFI_PROVISIONING" value=""/>
+  		<build type="define" name="BLE_DEVICE_ROLE=BLE_PERIPHERAL" value=""/>
+
+
+		<require idref="common.components.wifi.winc3400.ble"/>
+		<require idref="common.components.wifi.winc3400.ble.ble_services.wifi_con"/>
+		<require idref="common.components.wifi.winc3400.ble.ble_services.wifi_scan"/>
+
+		<device-support value="samd21"/>
+		<device-support value="sam4s"/>
+		<device-support value="samg55"/>
+		<device-support value="same70"/>
+
+	</module>
+
+</asf>

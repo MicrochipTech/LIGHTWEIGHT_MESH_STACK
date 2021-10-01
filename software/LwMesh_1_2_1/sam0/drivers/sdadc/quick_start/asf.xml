@@ -1,0 +1,12 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam0.drivers.sdadc.quick_start" caption="Quick Start for the SAM SDADC Driver (Polled)">
+		<info type="description" value="summary">
+		Quick start guide for the Sigma-Delta Analog-to-Digital Converter module demonstrating module configuration.
+		</info>
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="c-source" value="qs_sdadc_basic.c"/>
+		<build type="include-path" value="."/>
+		<require idref="sam0.drivers.sdadc"/>
+		<device-support value="samc21"/>
+	</module>
+</asf>

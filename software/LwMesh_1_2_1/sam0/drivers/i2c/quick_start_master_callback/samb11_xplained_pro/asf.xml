@@ -1,0 +1,13 @@
+<asf xmlversion="1.0">
+	<project caption="Quick Start for the SAM B11 I2C Master Driver (Callback)" id="sam0.drivers.i2c.quick_start_master_interrupt.samb11_xplained_pro">
+		<info type="gui-flag" value="move-to-root"/>
+		<require idref="board.samb11_xplained_pro"/>
+		<require idref="sam0.drivers.i2c.quick_start_master_interrupt"/>
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<device-support value="atsamb11g18a"/>
+		<config name="config.sam0.drivers.i2c.master" value="callback"/>
+	</project>
+</asf>

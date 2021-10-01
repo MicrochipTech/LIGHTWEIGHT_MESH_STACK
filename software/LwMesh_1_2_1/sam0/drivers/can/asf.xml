@@ -1,0 +1,41 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.drivers.can" caption="CAN - Control Area Network Controller">
+		<info type="description" value="summary">
+			Driver for the SAM Control Area Network Controller. Provides a unified
+			interface for the configuration and management of the CAN module.
+		</info>
+		<info type="keyword" value="technology">
+			<keyword value="Communication" />
+		</info>
+		<info type="appnote" value="ATxxxxx"/>
+		<info type="keyword" value="pdf">
+			<keyword value="CAN"/>
+			<keyword value="Control Area Network"/>
+		</info>
+
+		<info type="description" value="pdf">
+			This application note describes how to use the ASF driver for interfacing the CAN on the SAM.
+		</info>
+
+		<build type="include-path" value="."/>
+		<build type="header-file" subtype="api" value="can.h"/>
+		<build type="c-source" value="can.c"/>
+
+		<build type="module-config" subtype="required-header-file" value="conf_can.h"/>
+		<build type="module-config" subtype="path" value="module_config"/>
+		<build type="header-file" value="quick_start/qs_can_basic.h"/>
+		<build type="header-file" value="quick_start_fd/qs_can_fd.h"/>
+
+		<build type="doxygen-example-path" value="quick_start"/>
+		<build type="doxygen-example-path" value="quick_start_fd"/>
+		<build type="doxygen-entry-point" value="asfdoc_sam0_can_group"/>
+		<build type="doxygen-quick-start" value="asfdoc_sam0_can_exqsg"/>
+
+		<device-support value="samc21"/>
+
+		<require idref="sam0.utils"/>
+		<require idref="sam0.drivers.system"/>
+
+		<generator value="doxygen-module-v2" default-mcu="unspecified-samc21"/>
+	</module>
+</asf>

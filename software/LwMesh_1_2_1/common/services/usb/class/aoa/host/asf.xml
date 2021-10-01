@@ -1,0 +1,35 @@
+<asf xmlversion="1.0">
+	<module type="service" id="common.services.usb.class.aoa.host" caption="USB Host Android Accessory Class">
+		<info type="description" value="summary">
+		USB Host Android Accessory Protocol. 
+		</info>
+		<info type="gui-flag" value="hidden"/>
+		<build type="header-file" subtype="api" value="uhi_aoa.h"/>
+		<build type="module-config" subtype="required-header-file" value="conf_aoa.h"/>
+		<build type="module-config" subtype="path" value="module_config"/>
+		<build type="c-source" value="uhi_aoa.c"/>
+		<build type="include-path" value="."/>
+		<build type="module-config" subtype="required-header-file" value="conf_usb_host.h"/>
+		<build type="module-config" subtype="path" value="module_config"/>
+		<build type="doxygen-entry-point" value="uhi_aoa_group"/>
+		<require idref="common.services.usb.class.aoa.protocol"/>
+		<require idref="common.services.usb.host"/>
+		<device-support value="uc3a"/>
+		<device-support value="uc3a3_a4"/>
+		<device-support value="sam3x"/>
+		<device-support value="sam3a"/>
+		<device-support value="sam4l"/>
+		<device-support value="samd21"/>
+		<device-support value="samr21"/>
+		<device-support value="sam4c32e"/>
+		<device-support value="saml21"/>
+		<device-support value="samg55"/>
+		<device-support value="samda1"/>
+		<device-support value="samv71"/>
+		<device-support value="samv70"/>
+		<device-support value="sams70"/>
+		<device-support value="same70"/>
+		<device-support value="samr30"/>
+		<generator value="doxygen-module" default-mcu="unspecified-uc3a"/>
+	</module>
+</asf>

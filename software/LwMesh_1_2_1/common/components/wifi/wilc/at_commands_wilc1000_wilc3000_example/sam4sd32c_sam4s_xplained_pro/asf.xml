@@ -1,0 +1,36 @@
+<asf xmlversion="1.0">
+	<project caption="WILC1000/WILC3000 AT Command example for SAM4S XPlained Pro" id="common.components.wifi.wilc3000.at_commands_wilc1000_wilc3000_example.sam4s_xplained_pro">
+		<!-- Summary Description -->
+		<info type="description" value="summary">
+			This example demonstrates AT commands over UART using sam4s xplained pro and WILC1000/WILC3000 Wi-Fi module.
+		</info>
+
+		<!-- Source -->
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_sd_mmc.h"/>        
+		<build type="header-file" value="conf_tinyservices.h"/>
+		<build type="header-file" value="conf_uart_serial.h"/>
+		<build type="header-file" value="conf_wilc.h"/>
+		<build type="header-file" value="FreeRTOSConfig.h"/>
+		<build type="header-file" value="lwipopts.h"/>
+		<build type="header-file" value="conf_sw_timer.h"/>
+		
+		<!-- Device support -->
+		<device-support value="atsam4sd32c"/>
+
+		<!-- Required modules -->
+		<require idref="common.components.wifi.wilc3000.at_commands_wilc1000_wilc3000_example"/>
+		<require idref="board.sam4s_xplained_pro"/>
+		<require idref="common.components.memory.sd_mmc"/>
+
+		<!-- Generators -->
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen"/>
+		<config name="config.compiler.armgcc.create_aux" value="no"/>
+		<config name="config.compiler.as5_arm.create_aux" value="no"/>
+		<config name="config.common.components.memory.sd_mmc" value="mci"/>
+	</project>
+</asf>

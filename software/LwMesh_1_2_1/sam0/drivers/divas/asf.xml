@@ -1,0 +1,69 @@
+<asf xmlversion="1.0">
+	<select-by-config id="sam0.drivers.divas" name="config.sam0.drivers.divas" caption="DIVAS - Divide and Square Root Accelerator" default="overload">
+		<info type="description" value="summary">
+			Driver for the DIVAS module. Provides a unified interface for
+			the configuration and management of the physical device DIVAS.
+		</info>
+
+		<module type="driver" id="sam0.drivers.divas#no_overload" caption="DIVAS - Divide and Square Root Accelerator (No Overload APIs)">
+
+			<build type="include-path" value="."/>
+
+			<build type="header-file" subtype="api" value="divas.h"/>
+			<build type="c-source" value="divas.c"/>
+
+			<build type="define" name="DIVAS_OVERLOAD_MODE" value="false"/>
+			<build type="header-file" value="quick_start/qs_divas_basic.h"/>
+
+			<build type="doxygen-entry-point" value="asfdoc_sam0_divas_group"/>
+			<build type="doxygen-example-path" value="quick_start"/>
+			<build type="doxygen-quick-start" value="asfdoc_sam0_divas_exqsg"/>
+
+			<device-support value="samc20"/>
+			<device-support value="samc21"/>
+
+			<require idref="sam0.utils"/>
+			<require idref="sam0.drivers.system"/>
+		</module>
+
+		<module type="driver" id="sam0.drivers.divas#overload" caption="DIVAS - Divide and Square Root Accelerator (Overload APIs)">
+
+			<info type="appnote" value="AT12200"/>
+			
+			<info type="keyword" value="pdf">
+				<keyword value="DIVAS"/>
+				<keyword value="Divide"/>
+				<keyword value="Square Root"/>
+				<keyword value="Accelerator"/>
+			</info>
+
+			<info type="description" value="pdf">
+				This document describes how to use the Divide and Square Root Accelerator on the
+				SAM, both the ASF driver and the peripheral itself.
+			</info>
+
+			<build type="include-path" value="."/>
+			<build type="c-source" value="divas.c"/>
+			<build type="header-file" subtype="api" value="divas.h"/>
+
+			<build type="define" name="DIVAS_OVERLOAD_MODE" value="true"/>
+			<build type="doxygen-enable-section" value="DIVAS_OVERLOAD_MODE"/>
+			
+			<build type="header-file" value="quick_start/qs_divas_basic.h"/>
+			<build type="header-file" value="quick_start_overload/qs_divas_overload.h"/>
+
+			<build type="doxygen-entry-point" value="asfdoc_sam0_divas_group"/>
+			<build type="doxygen-example-path" value="quick_start"/>
+			<build type="doxygen-example-path" value="quick_start_overload"/>
+			<build type="doxygen-quick-start" value="asfdoc_sam0_divas_exqsg"/>
+
+			<device-support value="samc20"/>
+			<device-support value="samc21"/>
+
+			<require idref="sam0.utils"/>
+			<require idref="sam0.drivers.system"/>
+
+			<generator value="doxygen-module-v2" default-mcu="unspecified-samc21"/>
+		</module>
+	</select-by-config>
+</asf>

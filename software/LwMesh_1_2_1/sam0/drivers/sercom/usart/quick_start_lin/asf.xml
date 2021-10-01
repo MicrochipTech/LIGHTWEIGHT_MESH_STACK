@@ -1,0 +1,17 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam0.drivers.sercom.usart.quick_start_lin" caption="Quick Start for the SAM SERCOM USART LIN Driver">
+		<info type="description" value="summary">
+			Quick start guide for SERCOM USART LIN driver.
+		</info>
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="c-source" value="qs_lin.c"/>
+		<build type="header-file" value="qs_lin.h"/>
+		<build type="include-path" value="."/>
+		<require idref="sam0.drivers.sercom.usart"/>
+		<require idref="sam0.drivers.port"/>
+		<require idref="sam0.utils"/>
+		<require idref="sam0.utils.stdio"/>
+		<require idref="sam0.utils.stdio.stdio_serial"/>
+		<device-support value="samc21"/>
+	</module>
+</asf>

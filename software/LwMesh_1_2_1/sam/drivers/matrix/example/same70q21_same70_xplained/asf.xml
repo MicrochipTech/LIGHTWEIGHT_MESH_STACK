@@ -1,0 +1,19 @@
+<asf xmlversion="1.0">
+	<project caption="MATRIX example for SAME70" id="sam.drivers.matrix.example.same70_xplained">
+		<info type="description" value="summary">
+		Basic example of MATRIX on SAME70 Xplained Ultra.
+		</info>
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_uart_serial.h"/>
+		<build type="include-path" value="."/>
+		<require idref="sam.drivers.matrix.example"/>
+		<require idref="board.same70_xplained"/>
+		<generator value="iarewarm"/>
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen"/>
+		<device-support value="atsame70q21b"/>
+	</project>
+</asf>

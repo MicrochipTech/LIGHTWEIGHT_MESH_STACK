@@ -1,0 +1,13 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam0.drivers.i2c.quick_start_master_interrupt" caption="Quick Start for the SAM I2C Master Driver (Callback)">
+		<info type="description" value="summary">
+		Quick start guide for the I2C interface module in master mode demonstrating module configuration.
+		</info>
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="c-source" value="qs_i2c_master_callback.c"/>
+		<build type="include-path" value="."/>
+		<require idref="sam0.drivers.gpio"/>
+		<require idref="sam0.drivers.i2c.master"/>
+		<device-support value="samb11"/>
+	</module>
+</asf>

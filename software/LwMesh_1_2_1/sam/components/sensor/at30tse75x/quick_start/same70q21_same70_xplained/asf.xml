@@ -1,0 +1,15 @@
+<asf xmlversion="1.0">
+	<project caption="Quick Start for the AT30TSE75X Temperature Sensor Component" id="sam.components.sensor.at30tse75x.quick_start.same70_xplained">
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_at30tse75x.h"/>
+		<require idref="board.same70_xplained"/>
+		<require idref="sam.components.sensor.at30tse75x.quick_start"/>
+		<generator value="iarewarm"/>
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<device-support value="atsame70q21b"/>
+	</project>
+</asf>

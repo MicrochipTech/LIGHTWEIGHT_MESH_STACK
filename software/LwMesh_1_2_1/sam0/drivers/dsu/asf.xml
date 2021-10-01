@@ -1,0 +1,31 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.drivers.dsu_crc32" caption="CRC32 - 32-bit cyclic redundancy check">
+		<info type="description" value="summary">
+			Driver for DSU CRC32.
+		</info>
+
+		<info type="keyword" value="technology">
+			<keyword value="I/O" />
+		</info>
+
+		<build type="include-path" value="."/>
+		<build type="include-path" value="crc32"/>
+		<build type="header-file" subtype="api" value="crc32/crc32.h"/>
+		<build type="c-source" value="crc32/crc32.c"/>
+
+		<device-support value="sam0"/>
+
+		<require idref="sam0.utils"/>
+		<require idref="sam0.drivers.pac"/>
+		<require idref="sam0.drivers.system"/>
+
+		<info type="description" value="pdf">
+			This application note describes how to use the ASF driver for interfacing CRC32.
+		</info>
+		<build type="doxygen-entry-point" value="asfdoc_sam0_drivers_crc32_group "/>
+		<build type="doxygen-example-path" value="quick_start_crc32"/>
+		<build type="doxygen-quick-start" value="asfdoc_sam0_drivers_crc32_exqsg"/>
+		<generator value="doxygen-module-v2" default-mcu="unspecified-samd21"/>
+
+	</module>
+</asf>

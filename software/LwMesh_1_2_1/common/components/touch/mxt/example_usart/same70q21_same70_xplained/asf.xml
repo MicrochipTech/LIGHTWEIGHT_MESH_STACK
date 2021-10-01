@@ -1,0 +1,20 @@
+<asf xmlversion="1.0">
+	<project caption="maXTouch component USART event example - SAME70 XPlained" id="common.components.touch.mxt.example_usart.same70_xplained">
+		<info type="description" value="summary">
+			This example demonstrates the maXTouch Xplained Pro top module on an SAME70 XPlained kit
+		</info>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_example.h"/>
+		<build type="header-file" value="conf_uart_serial.h"/>
+		<build type="header-file" value="conf_mxt.h"/>
+		<build type="include-path" value="."/>
+		<require idref="common.components.touch.mxt.example_usart"/>
+		<require idref="board.same70_xplained"/>
+		<generator value="iarewarm"/>
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen"/>
+		<device-support value="atsame70q21b"/>
+	</project>
+</asf>

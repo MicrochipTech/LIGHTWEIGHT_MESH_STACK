@@ -1,0 +1,11 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.utils.cmsis.samr30.include.pio" caption="SAMR30 PIO definitions">
+		<info type="description" value="summary">
+		SAMR30 PIO component definitions.
+		</info>
+		<build type="header-file" value="samr30e18a.h"/>
+		<build type="header-file" value="samr30g18a.h"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="samr30"/>
+	</module>
+</asf>

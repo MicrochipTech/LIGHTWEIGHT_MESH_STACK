@@ -1,0 +1,14 @@
+<asf xmlversion="1.0">
+	<module type="application" id="common2.components.memory.eeprom.at30tse75x.example" caption="I/O1 EEPROM and Temperature Sensor Example">
+		<info type="keyword" value="technology">
+			<keyword value="Memory"/>
+		</info>
+		<info type="description" value="summary">
+		Provide an application example using the Atmel AT30TSE75x temperature sensor. The sensor requires an I2C bus as a low level communication interface. This interface can be implemented using TWI controller for SAM devices.
+		</info>
+		<build type="c-source" value="at30tes_example.c"/>
+		<device-support value="samb11"/>
+		<require idref="common2.components.memory.eeprom.at30tse75x"/>
+		<info type="gui-flag" value="move-to-root"/>
+	</module>
+</asf>

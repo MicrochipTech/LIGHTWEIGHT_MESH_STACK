@@ -1,0 +1,39 @@
+<asf xmlversion="1.0">
+	<select-by-config id="config.thirdparty.wireless.addons.ota" name="config.thirdparty.wireless.addons.ota" caption="OTA Upgrade" default="client">
+		<module type="meta" id="config.thirdparty.wireless.addons.ota#client"   caption="OTA Module">
+			<info type="description" value="summary">
+			This OTA Client module provides API's for receiving data frames over-the-air and also handles writing/reading from flash.
+			</info>
+			<info type="gui-flag" value="hidden"/>
+			<build type="header-file"   value="ota.h"/>
+			<build type="include-path" value="."/>
+			<build type="header-file"   value="common/client_common.h"/>
+			<build type="header-file"   value="common/ota_common.h"/>
+			<build type="include-path" value="common/"/>
+			<build type="library" subtype="user" value="lib/libOTA_Client.a" toolchain="armgcc"/>
+			<build type="header-file"   value="upgrade/client_upgrade.h"/>
+			<build type="header-file"   value="upgrade/ota_upgrade.h"/>
+			<build type="include-path" value="upgrade/"/>
+			<device-support value="sam0"/>
+		</module>
+		<module type="meta" id="config.thirdparty.wireless.addons.ota#server"   caption="OTA Module">
+			<info type="description" value="summary">
+			This OTA Client module provides API's for receiving data frames over-the-air and also handles writing/reading from flash.
+			</info>
+			<info type="gui-flag" value="hidden"/>
+			<build type="header-file"   value="ota.h"/>
+			<build type="include-path" value="."/>
+			<build type="header-file"   value="common/ota_common.h"/>
+			<build type="header-file"   value="common/server_common.h"/>
+			<build type="include-path" value="common/"/>
+			<build type="library" subtype="user" value="lib/libOTA_Server.a" toolchain="armgcc"/>
+			<build type="distribute" subtype="user-file" value="tools/Atmel_Smart_Upgrade_Tool.msi"/>	
+			<build type="distribute" subtype="user-file" value="tools/Atmel_Smart_Upgrade_Tool.pdf"/>	
+			<build type="header-file"   value="upgrade/ota_upgrade.h"/>
+			<build type="header-file"   value="upgrade/server_upgrade.h"/>
+			<build type="include-path" value="upgrade/"/>
+			<build type="define" name="OTA_SERVER" value =""/>
+			<device-support value="sam0"/>
+		</module>
+	</select-by-config>
+</asf>

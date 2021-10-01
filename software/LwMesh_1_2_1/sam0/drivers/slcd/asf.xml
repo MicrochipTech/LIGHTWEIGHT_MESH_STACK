@@ -1,0 +1,68 @@
+<asf xmlversion="1.0">
+	<select-by-config id="sam0.drivers.slcd" name="config.sam0.drivers.slcd" caption="SLCD - Segment Liquid Crystal Display Controller" default="polling">
+		<info type="description" value="summary">
+			Driver for the SLCD (Segment Liquid Crystal Display Controller) module.
+		</info>
+		<module type="driver" id="sam0.drivers.slcd#polling" caption="SLCD - Segment Liquid Crystal Display Controller">
+			<info type="keyword" value="technology">
+				<keyword value="Graphics" />
+			</info>
+			<build type="include-path" value="."/>
+			<build type="c-source" value="slcd.c"/>
+			<build type="header-file" subtype="api" value="slcd.h"/>
+			<build type="module-config" subtype="path" value="module_config"/>
+			<build type="module-config" subtype="required-header-file" value="conf_slcd.h"/>
+			<build type="doxygen-entry-point" value="asfdoc_sam0_drivers_slcd_group"/>
+			<require idref="sam0.utils" />
+			<require idref="sam0.drivers.system" />
+			<device-support value="saml22"/>
+		</module>
+		<module type="driver" id="sam0.drivers.slcd#callback" caption="SLCD - Segment Liquid Crystal Display Controller">
+			<info type="keyword" value="technology">
+				<keyword value="Graphics" />
+			</info>
+			<build type="include-path" value="."/>
+			<build type="c-source" value="slcd.c"/>
+			<build type="c-source" value="slcd_callback.c"/>
+			<build type="header-file" subtype="api" value="slcd.h"/>
+			<build type="header-file" subtype="api" value="slcd_callback.h"/>
+			<build type="module-config" subtype="path" value="module_config"/>
+			<build type="module-config" subtype="required-header-file" value="conf_slcd.h"/>
+			<build type="doxygen-entry-point" value="asfdoc_sam0_drivers_slcd_group"/>
+			<require idref="sam0.utils" />
+			<require idref="sam0.drivers.system" />
+			<device-support value="saml22"/>
+		</module>
+	</select-by-config>
+	<module type="meta" id="sam0.drivers.slcd.appnote" caption="SLCD - Segment Liquid Crystal Display Controller">
+			<info type="keyword" value="technology">
+				<keyword value="Graphics" />
+			</info>
+
+			<info type="appnote" value="AT13155"/>
+			<info type="keyword" value="pdf">
+				<keyword value="Graphics" />
+			</info>
+			<info type="description" value="pdf">
+				This application note describes how to use the ASF driver for
+				interfacing to the SLCD module on SAM L22.
+			</info>
+
+			<build type="c-source" value="slcd.c"/>
+			<build type="c-source" value="slcd_callback.c"/>
+			<build type="header-file" subtype="api" value="slcd.h"/>
+			<build type="header-file" subtype="api" value="slcd_callback.h"/>
+			<build type="include-path" value="."/>
+			<build type="module-config" subtype="path" value="module_config"/>
+			<build type="module-config" subtype="required-header-file" value="conf_slcd.h"/>
+			<build type="doxygen-entry-point" value="asfdoc_sam0_drivers_slcd_group"/>
+			<build type="doxygen-quick-start" value="asfdoc_sam0_drivers_slcd_exqsg"/>
+			<build type="doxygen-example-path" value="quick_start"/>
+			<build type="header-file" value="quick_start/quick_start.h" />
+
+			<device-support value="saml22"/>
+			<require idref="sam0.utils" />
+			<require idref="sam0.drivers.system" />
+			<generator value="doxygen-module-v2" default-mcu="unspecified-saml22"/>
+		</module>
+</asf>

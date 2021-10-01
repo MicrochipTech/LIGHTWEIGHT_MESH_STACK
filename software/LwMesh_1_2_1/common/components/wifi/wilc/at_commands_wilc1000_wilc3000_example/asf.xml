@@ -1,0 +1,52 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.wilc3000.at_commands_wilc1000_wilc3000_example">
+		<module type="application" id="common.components.wifi.wilc3000.at_commands_wilc1000_wilc3000_example#1" caption="WILC1000/WILC3000 AT Commands Example">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This example demonstrates AT commands input over UART.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main.c"/>
+			<build type="c-source" value="application.c"/>
+			<build type="header-file" value="application.h"/>
+			<build type="c-source" value="at_cmd_handler/at_cmd_Handler.c"/>
+			<build type="header-file" value="at_cmd_handler/at_cmd_Handler.h"/>
+			<build type="c-source" value="iperf/iperf.c"/>
+			<build type="header-file" value="iperf/iperf.h"/>
+			<build type="c-source" value="http_downloader/httpdownloader.c"/>
+			<build type="header-file" value="http_downloader/httpdownloader.h"/>
+			<build type="c-source" value="ota_fw_update/ota_fw_update.c"/>
+			<build type="header-file" value="ota_fw_update/ota_fw_update.h"/>
+			<build type="include-path" value="iot"/>
+			<build type="include-path" value="iot/http"/>
+			<build type="c-source" value="iot/stream_writer.c"/>
+			<build type="header-file" value="iot/stream_writer.h"/>
+			<build type="c-source" value="iot/sw_timer.c"/>
+			<build type="header-file" value="iot/sw_timer.h"/>
+			<build type="c-source" value="iot/http/http_client.c"/>
+			<build type="header-file" value="iot/http/http_client.h"/>
+			<build type="header-file" value="iot/http/http_entity.h"/>
+			<build type="header-file" value="iot/http/http_header.h"/>
+			<build type="include-path" value="scripts"/>
+			<build type="distribute" subtype="file" value="scripts/udp_server.py"/>
+			<build type="distribute" subtype="file" value="scripts/udp_client.py"/>
+			<build type="distribute" subtype="file" value="scripts/tcp_server.py"/>
+			<build type="distribute" subtype="file" value="scripts/tcp_client.py"/>
+			
+			<!-- Device support -->
+			<device-support value="sam4s"/>
+			<device-support value="samv71"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.wilc3000"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.utils.osprintf"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<require idref="sam.drivers.rtt"/>  <!-- If not using RTT, plz remove -->
+			<require idref="sam.services.flash"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

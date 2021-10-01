@@ -1,0 +1,149 @@
+<asf xmlversion="1.0">
+	<select-by-config id="common.services.usb.class.hid.device.mouse.composite" name="config.common.services.usb.class.hid.device.mouse.composite" caption="USB Device HID Mouse (Composite Device)" default="disable">
+		<module type="service" id="common.services.usb.class.hid.device.mouse.composite#enable" caption="USB Device HID Mouse (Composite Device)">
+			<info type="description" value="summary">
+			USB Human Interface Device (HID) mouse for composite device.
+			</info>
+			<info type="keyword" value="technology">
+				<keyword value="USB"/>
+				<keyword value="Communication" />
+			</info>
+			<info type="gui-flag" value="hidden"/>
+			<build type="header-file" subtype="api" value="udi_hid_mouse.h"/>
+			<build type="c-source" value="udi_hid_mouse.c"/>
+			<build type="include-path" value="."/>
+			<build type="doxygen-entry-point" value="udi_hid_mouse_group"/>
+			<build type="doxygen-quick-start" value="udi_hid_mouse_use_case_composite"/>
+			<require idref="common.services.usb.class.hid.device"/>
+			<require idref="common.services.usb.class.composite.device"/>
+			<device-support value="uc3a"/>
+			<device-support value="uc3a3_a4"/>
+			<device-support value="uc3b"/>
+			<device-support value="uc3c"/>
+			<device-support value="uc3d"/>
+			<device-support value="uc3l3"/>
+			<device-support value="uc3l4"/>
+			<device-support value="xmegaa1u"/>
+			<device-support value="xmegaa3u"/>
+			<device-support value="xmegaa3bu"/>
+			<device-support value="xmegaa4u"/>
+			<device-support value="xmegab"/>
+			<device-support value="xmegac"/>
+			<device-support value="sam3s"/>
+			<device-support value="sam3sd"/>
+			<device-support value="sam3u"/>
+			<device-support value="sam3x"/>
+			<device-support value="sam3a"/>
+			<device-support value="sam4s"/>
+			<device-support value="sam4l"/>
+			<device-support value="sam4e"/>
+			<device-support value="samd21"/>
+			<device-support value="samr21"/>
+			<device-support value="sam4c32e"/>
+			<device-support value="saml21"/>
+			<device-support value="samg55"/>
+			<device-support value="samda1"/>
+			<device-support value="saml22"/>
+			<device-support value="samv71"/>
+			<device-support value="samv70"/>
+			<device-support value="sams70"/>
+			<device-support value="same70"/>
+			<device-support value="samr30" />
+			<generator value="doxygen-module" default-mcu="unspecified-uc3a"/>
+		</module>
+		<module type="service" id="common.services.usb.class.hid.device.mouse.composite#disable" caption="USB Device HID Mouse disabled">
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="avr"/>
+			<device-support value="sam"/>
+			<device-support value="sam0"/>
+			<generator value="doxygen-module" default-mcu="unspecified-uc3a"/>
+		</module>
+	</select-by-config>
+	<module type="service" id="common.services.usb.class.hid.device.mouse.single" caption="USB Device HID Mouse (Single Interface Device)">
+		<info type="description" value="summary">
+		USB Human Interface Device (HID) mouse is configurated to run on USB device with a single interface.
+		</info>
+		<info type="keyword" value="technology">
+			<keyword value="USB"/>
+			<keyword value="Communication" />
+		</info>
+		<info type="gui-flag" value="hidden"/>
+		<build type="header-file" subtype="api" value="udi_hid_mouse.h"/>
+		<build type="c-source" value="udi_hid_mouse.c"/>
+		<build type="header-file" value="udi_hid_mouse_conf.h"/>
+		<build type="c-source" value="udi_hid_mouse_desc.c"/>
+		<build type="include-path" value="."/>
+		<build type="module-config" subtype="required-header-file" value="conf_usb.h"/>
+		<build type="module-config" subtype="path" value="module_config"/>
+		<build type="doxygen-entry-point" value="udi_hid_mouse_group"/>
+		<require idref="common.services.usb.class.hid.device"/>
+		<device-support value="uc3a"/>
+		<device-support value="uc3a3_a4"/>
+		<device-support value="uc3b"/>
+		<device-support value="uc3c"/>
+		<device-support value="uc3d"/>
+		<device-support value="uc3l3"/>
+		<device-support value="uc3l4"/>
+		<device-support value="xmegaa1u"/>
+		<device-support value="xmegaa3u"/>
+		<device-support value="xmegaa3bu"/>
+		<device-support value="xmegaa4u"/>
+		<device-support value="xmegab"/>
+		<device-support value="xmegac"/>
+		<device-support value="sam3s"/>
+		<device-support value="sam3sd"/>
+		<device-support value="sam3u"/>
+		<device-support value="sam3x"/>
+		<device-support value="sam3a"/>
+		<device-support value="sam4s"/>
+		<device-support value="sam4l"/>
+		<device-support value="sam4e"/>
+		<device-support value="samd21"/>
+		<device-support value="samr21"/>
+		<device-support value="sam4c32e"/>
+		<device-support value="samd11"/>
+		<device-support value="saml21"/>
+		<device-support value="samg55"/>
+		<device-support value="samda1"/>
+		<device-support value="saml22"/>
+		<device-support value="samv71"/>
+		<device-support value="samv70"/>
+		<device-support value="sams70"/>
+		<device-support value="same70"/>
+		<device-support value="samr30" />
+		<generator value="doxygen-module" default-mcu="unspecified-uc3a"/>
+	</module>
+	<module type="meta" id="common.services.usb.class.hid.device.mouse.appnote" caption="USB Device HID Mouse (Application Note)">
+		<info type="keyword" value="technology">
+			<keyword value="USB"/>
+			<keyword value="Communication" />
+		</info>
+		<info type="gui-flag" value="hidden"/>
+
+		<info type="appnote" value="AT09336"/>
+		<info type="keyword" value="pdf">
+			<keyword value="USB"/>
+			<keyword value="Universal Serial Bus"/>
+		</info>
+
+		<info type="description" value="pdf">
+			This document describes use cases for USB Device Stack HID Mouse driver - UDI HID Mouse.
+		</info>
+
+		<build type="include-path" value="."/>
+
+		<build type="header-file" value="udi_hid_mouse_doc.h"/>
+
+		<build type="doxygen-example-path" value="."/>
+		<build type="doxygen-example-path" value="../../"/>
+		<build type="doxygen-example-path" value="../../../"/>
+		<build type="doxygen-entry-point" value="asfdoc_udi_hid_mouse_group"/>
+
+		<require idref="common.services.usb.udc.appnote"/>
+
+		<device-support value="sam"/>
+		<device-support value="sam0"/>
+		<device-support value="avr"/>
+		<generator default-mcu="unspecified-samd21" value="doxygen-module-v2"/>
+	</module>
+</asf>

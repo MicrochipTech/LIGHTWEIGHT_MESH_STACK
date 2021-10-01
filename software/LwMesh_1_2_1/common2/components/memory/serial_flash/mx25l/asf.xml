@@ -1,0 +1,20 @@
+<asf xmlversion="1.0">
+	<module type="component" id="common2.components.memory.serial_flash.mx25l" caption="MX25L Serial Flash">
+		<info type="description" value="summary">
+			MX25L Serial Flash driver, supplying basic functions for initilization,
+			data read/write, block protection, device ID read etc. SPI polling
+			mode is used in this driver.
+		</info>
+		<info type="keyword" value="technology">
+			<keyword value="Memory" />
+		</info>
+		<build type="c-source" value="mx25l.c"/>
+		<build type="header-file" value="mx25l.h"/>
+		<build type="include-path" value="."/>
+		<build type="doxygen-entry-point" value="asfdoc_common2_mx25l_group"/>
+		<require idref="sam0.drivers.sercom.spi"/>
+		<require idref="sam0.drivers.port"/>
+		<device-support value="atsamr21e18a"/>
+		<generator value="doxygen-module" default-mcu="atsamr21e18a"/>
+	</module>
+</asf>

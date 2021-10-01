@@ -1,0 +1,14 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam0.drivers.freqm.quick_start_callback" caption="Quick Start for the SAM FREQM Driver (Callback)">
+		<info type="description" value="summary">
+		Quick start guide for the Frequency Meter module demonstrating module configuration and basic use.
+		</info>
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="c-source" value="qs_freqm_callback.c"/>
+		<build type="include-path" value="."/>
+		<require idref="sam0.drivers.freqm"/>
+		<require idref="sam0.drivers.system"/>
+		<device-support value="saml22"/>
+		<device-support value="samc21"/>
+	</module>
+</asf>

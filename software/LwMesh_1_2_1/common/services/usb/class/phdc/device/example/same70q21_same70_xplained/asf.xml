@@ -1,0 +1,18 @@
+<asf xmlversion="1.0">
+	<project caption="USB Device PHDC for SAME70-Xplained" id="common.services.usb.class.phdc.device.example.same70_xplained">
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_sleepmgr.h"/>
+		<build type="c-source" value="ui.c"/>
+		<build type="include-path" value="."/>
+		<config name="config.common.services.usb.class.device" value="phdc"/>
+		<require idref="common.services.usb.class.phdc.device.example"/>
+		<require idref="board.same70_xplained"/>
+		<config name="config.board.same70_xplained.led" value="yes"/>
+		<generator value="iarewarm"/>
+		<generator value="armgcc"/>
+		<generator value="doxygen"/>
+		<generator value="as5_arm"/>
+		<device-support value="atsame70q21b"/>
+	</project>
+</asf>

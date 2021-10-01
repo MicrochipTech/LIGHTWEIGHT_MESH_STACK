@@ -1,0 +1,14 @@
+<asf xmlversion="1.0">
+	<project caption="SAMV71 Xplained Ultra Common Delay Service Example" id="common.services.delay.example.samv71_xplained_ultra">
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<require idref="common.services.delay.example"/>
+		<require idref="common.services.basic.gpio"/>
+		<require idref="board.samv71_xplained_ultra"/>
+		<generator value="iarewarm"/>
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<device-support value="atsamv71q21b"/>
+	</project>
+</asf>

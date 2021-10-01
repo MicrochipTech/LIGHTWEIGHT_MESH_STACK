@@ -1,0 +1,21 @@
+<asf xmlversion="1.0">
+	<module type="component" id="common.components.sensor.at30ts" caption="AT30TS Temperature Sensor series">
+		<info type="description" value="summary">
+			Low-level driver for the AT30TS family of Temperature Sensors. Can be used with any MCU that has TWI drivers in ASF.
+		</info>
+		<info type="keyword" value="technology">
+				<keyword value="Sensors" />
+		</info>
+		<build type="c-source" value="at30ts.c"/>
+		<build type="header-file" subtype="api" value="at30ts.h"/>
+		<build type="include-path" value="."/>
+		<build type="module-config" subtype="path" value="module_config"/>
+		<build type="module-config" subtype="required-header-file" value="conf_at30ts.h"/>
+		<build type="doxygen-entry-point" value="sensor_at30ts_group"/>
+		<build type="doxygen-quick-start" value="sensor_at30ts_quickstart"/>
+		<build type="define" name="_AT30TSE758_" value=""/>
+		<require idref="common.services.basic.twi"/>
+		<device-support value="xmega"/>
+		<generator value="doxygen-module" default-mcu="unspecified-xmegaa3u"/>
+	</module>
+</asf>

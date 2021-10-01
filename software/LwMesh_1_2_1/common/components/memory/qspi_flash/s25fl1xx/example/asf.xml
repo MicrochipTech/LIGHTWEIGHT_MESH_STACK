@@ -1,0 +1,23 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.memory.qspi_flash.s25fl1xx.example" caption="QSPI Example Memory mode for S25FL1XX">
+		<module type="application" id="common.components.memory.qspi_flash.s25fl1xx.example#0" caption="QSPI Example Memory mode for S25FL1XX">
+			<info type="description" value="summary">
+			This example demonstrates how to configure and use the S25FL1XX FLASH.
+			</info>
+			<build type="c-source" value="s25fl1xx_example.c"/>
+			<build type="header-file" value="getting_started_hex.h"/>
+			<build type="include-path" value="."/>
+			<device-support value="samv70"/>
+			<device-support value="samv71"/>
+			<device-support value="same70"/>
+			<device-support value="sams70"/>
+			<require idref="sam.drivers.qspi"/>
+			<require idref="common.components.memory.qspi_flash.s25fl1xx"/>
+			<require idref="sam.drivers.uart"/>
+			<require idref="sam.utils.syscalls"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

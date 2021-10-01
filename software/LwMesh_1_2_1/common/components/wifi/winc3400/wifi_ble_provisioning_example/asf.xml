@@ -1,0 +1,61 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc3400.wifi_ble_provisioning_example">
+		<module type="application" id="common.components.wifi.winc3400.wifi_ble_provisioning_example#0" caption="WINC3400 Wi-Fi Ble Provisioning Example">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+			This example demonstrates provisioning the WINC3400 to a OPEN / WPA2 / WEP / 802.1x network using Microchip Bluetooth Data BLE Application.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main21.c"/>
+			<build type="header-file" value="main.h"/>
+			<build type="c-source" value="m2m_ble.c"/>
+			<build type="header-file" value="m2m_ble.h"/>
+			<build type="c-source" value="provisioning_app.c"/>
+			<build type="header-file" value="provisioning_app.h"/>
+			<build type="header-file" value="m2m_test_config.h"/>
+
+			<!-- Device support -->
+			<device-support value="samd21"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc3400"/>
+			<require idref="common.components.wifi.winc3400.ble"/>
+			<require idref="common.components.wifi.winc3400.ble.ble_profiles.wifi_provisioning"/>
+			<require idref="sam0.utils"/>
+			<require idref="sam0.utils.stdio"/>
+			<require idref="sam0.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+		<module type="application" id="common.components.wifi.winc3400.wifi_ble_provisioning_example#1" caption="WINC3400 Wi-Fi Ble Provisioning Example">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+			This example demonstrates provisioning the WINC3400 to a OPEN / WPA2 / WEP / 802.1x network using Microchip Bluetooth Data BLE Application.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main.c"/>
+			<build type="header-file" value="main.h"/>
+			<build type="c-source" value="m2m_ble.c"/>
+			<build type="header-file" value="m2m_ble.h"/>
+			<build type="c-source" value="provisioning_app.c"/>
+			<build type="header-file" value="provisioning_app.h"/>
+			<build type="header-file" value="m2m_test_config.h"/>
+
+			<!-- Device support -->
+			<device-support value="sam4s"/>
+			<device-support value="samg55"/>
+			<device-support value="same70"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc3400"/>
+			<require idref="common.components.wifi.winc3400.ble"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<require idref="common.components.wifi.winc3400.ble.ble_profiles.wifi_provisioning"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

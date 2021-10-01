@@ -1,0 +1,18 @@
+<asf xmlversion="1.0">
+	<module type="application" id="xmega.drivers.adc.example9" caption="AVR XMEGA E Internal Temperature Sensor Two Point Calibration">
+		<info type="description" value="summary">
+		This example shows the usage of two calibration points available for the internal temperature sensor in AVR XMEGA E devices. 
+		Two-point calibration of the AVR XMEGA E internal temperature sensor helps to improve the accuracy of temperature readings.
+		</info>
+		<info type="keyword" value="technology">
+			<keyword value="Sensors"/>
+			<keyword value="Analog Conversion"/>
+		</info>
+		<build type="c-source" value="temp_sensor_calib.c"/>
+		<build type="library" subtype="compiler" value="libm"/>
+		<require idref="xmega.drivers.adc"/>
+		<require idref="common.utils.stdio.stdio_serial"/>
+		<device-support value="xmegae"/>
+		<info type="gui-flag" value="move-to-root"/>
+	</module>
+</asf>

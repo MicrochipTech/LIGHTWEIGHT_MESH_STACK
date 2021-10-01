@@ -1,0 +1,20 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam0.drivers.slcd.quick_start" caption="Quick Start for the SAM SLCD Driver">
+		<info type="description" value="summary">
+			SLCD quick example to use SLCD driver API.
+		</info>
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="include-path" value="."/>
+		<build type="c-source" value="quick_start.c"/>
+		<device-support value="saml22"/>
+		<require idref="sam0.drivers.slcd"/>
+		<require idref="sam0.drivers.system"/>
+		<require idref="sam0.drivers.dma"/>
+		<require idref="sam0.drivers.port"/>
+		<require idref="sam0.drivers.sercom.usart"/>
+		<require idref="sam0.utils"/>
+		<require idref="sam0.utils.stdio"/>
+		<require idref="sam0.utils.stdio.stdio_serial"/>
+		<require idref="common2.services.delay"/>
+	</module>
+</asf>

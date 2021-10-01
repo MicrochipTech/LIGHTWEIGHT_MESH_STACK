@@ -1,0 +1,79 @@
+<asf xmlversion="1.0">
+	<select-by-config id="sam0.drivers.freqm" name="config.sam0.drivers.freqm" caption="FREQM - Frequency Meter" default="callback">
+		<info type="description" value="summary">
+			Driver for the SAM Frequency Meter module. Provides a
+			unified interface for the configuration and management of the
+			device's hardware frequency meter.
+		</info>
+
+		<module caption="FREQM - Frequency Meter (Polled APIs)" id="sam0.drivers.freqm#polled" type="driver">
+			<build type="include-path" value="." />
+
+			<build name="FREQM_CALLBACK_MODE" type="define" value="false" />
+
+			<build subtype="api" type="header-file" value="freqm.h" />
+			<build type="c-source" value="freqm.c" />
+
+			<build type="doxygen-entry-point" value="asfdoc_sam0_freqm_group" />
+
+			<require idref="sam0.utils" />
+			<require idref="sam0.drivers.system" />
+
+			<device-support value="saml22" />
+			<device-support value="samc20" />
+			<device-support value="samc21" />
+		</module>
+
+		<module caption="FREQM - Frequency Meter (Callback APIs)" id="sam0.drivers.freqm#callback" type="driver">
+			<build type="include-path" value="." />
+
+			<build name="FREQM_CALLBACK_MODE" type="define" value="true" />
+			<build type="doxygen-enable-section" value="FREQM_CALLBACK_MODE"/>
+
+			<build subtype="api" type="header-file" value="freqm.h" />
+			<build subtype="api" type="header-file" value="freqm_callback.h" />
+			<build type="c-source" value="freqm.c" />
+			<build type="c-source" value="freqm_callback.c" />
+
+			<build type="doxygen-entry-point" value="asfdoc_sam0_freqm_group" />
+
+			<require idref="sam0.utils" />
+			<require idref="sam0.drivers.system" />
+
+			<device-support value="saml22" />
+			<device-support value="samc20" />
+			<device-support value="samc21" />
+		</module>
+	</select-by-config>
+
+	<module type="meta" id="sam0.drivers.freqm.appnote" caption="FREQM - Frequency Meter">
+		<info type="appnote" value="AT13481"/>
+
+		<info type="description" value="pdf">
+			This document describes how to use the Frequency Meter
+			on the SAM, both the ASF driver and the peripheral itself.
+		</info>
+
+		<build type="include-path" value="."/>
+		<build type="header-file" subtype="api" value="freqm.h"/>
+		<build type="header-file" subtype="api" value="freqm_callback.h"/>
+		<build type="c-source" value="freqm.c"/>
+		<build type="c-source" value="freqm_callback.c"/>
+
+		<build type="define" name="FREQM_CALLBACK_MODE" value="true"/>
+		<build type="doxygen-enable-section" value="FREQM_CALLBACK_MODE"/>
+
+		<build type="header-file" value="quick_start/qs_freqm_basic.h"/>
+		<build type="header-file" value="quick_start_callback/qs_freqm_callback.h"/>
+
+		<build type="doxygen-example-path" value="quick_start"/>
+		<build type="doxygen-example-path" value="quick_start_callback"/>
+		<build type="doxygen-entry-point" value="asfdoc_sam0_freqm_group"/>
+		<build type="doxygen-quick-start" value="asfdoc_sam0_freqm_exqsg"/>
+
+		<device-support value="saml22"/>
+		<device-support value="samc20" />
+		<device-support value="samc21"/>
+		<generator value="doxygen-module-v2" default-mcu="unspecified-samc21"/>
+	</module>
+</asf>

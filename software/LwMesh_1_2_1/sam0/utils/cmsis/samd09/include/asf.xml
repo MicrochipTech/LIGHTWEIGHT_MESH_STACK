@@ -1,0 +1,13 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.utils.cmsis.samd09.include" caption="SAMD09 part definitions">
+		<info type="description" value="summary">
+		SAMD09 device definitions.
+		</info>
+		<build type="include-path" value="."/>
+		<build type="header-file" value="samd09.h"/>
+		<build type="header-file" value="samd09c13a.h"/>
+		<build type="header-file" value="samd09d14a.h"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="samd09"/>
+	</module>
+</asf>

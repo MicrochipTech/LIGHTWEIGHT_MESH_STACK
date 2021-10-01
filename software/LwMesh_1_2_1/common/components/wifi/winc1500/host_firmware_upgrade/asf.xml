@@ -1,0 +1,26 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc1500.host_firmware_upgrade">
+		<module type="component" id="common.components.wifi.winc1500.host_firmware_upgrade#1" caption="HOST OTA Firmware Upgrade-Flash Driver">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				Driver to write into Host MCU Flash for the Host Firmware Upgrade through WINC Wi-Fi module.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="include-path" value="memory_flash/"/>
+			<build type="c-source" value="memory_flash/memory_flash.c"/>
+			<build type="header-file" value="memory_flash/memory_flash.h"/>
+
+			<!-- Device support -->
+			<device-support value="samg55"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500"/>
+			<require idref="sam.services.flash"/>			
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

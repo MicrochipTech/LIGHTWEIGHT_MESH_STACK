@@ -1,0 +1,27 @@
+<asf xmlversion="1.0">
+	<module type="component" id="sam0.components.smart_card" caption="Smart Card">
+		<info type="description" value="summary">
+		Driver for smart card via ISO7816.
+		</info>
+		<info type="keyword" value="technology">
+			<keyword value="Communication" />
+		</info>
+
+		<build type="include-path" value="."/>
+		<build type="header-file" subtype="api" value="iso7816.h"/>
+		<build type="c-source" value="iso7816.c"/>
+
+		<build type="doxygen-entry-point" value="asfdoc_sam0_iso7816_group"/>
+		<build type="doxygen-quick-start" value="asfdoc_sam0_iso7816_qs"/>
+		<build type="doxygen-example-path" value="quick_start/"/>
+
+		<device-support value="sam0"/>
+
+		<require idref="sam0.drivers.port"/>
+		<require idref="sam0.drivers.system"/>
+		<require idref="sam0.drivers.sercom.usart"/>
+		<require idref="sam0.utils.stdio.stdio_serial"/>
+
+		<generator value="doxygen-module-v2" default-mcu="unspecified-saml22"/>
+	</module>
+</asf>

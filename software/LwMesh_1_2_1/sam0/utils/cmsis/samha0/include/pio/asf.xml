@@ -1,0 +1,15 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.utils.cmsis.samha0.include.pio" caption="SAMHA0 PIO definitions">
+		<info type="description" value="summary">
+		SAMHA0 PIO component definitions.
+		</info>
+		<build type="header-file" value="samha0g14ab.h"/>
+		<build type="header-file" value="samha0g15ab.h"/>
+		<build type="header-file" value="samha0g16ab.h"/>
+		<build type="header-file" value="samha0e14ab.h"/>
+		<build type="header-file" value="samha0e15ab.h"/>
+		<build type="header-file" value="samha0e16ab.h"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="samha0"/>
+	</module>
+</asf>

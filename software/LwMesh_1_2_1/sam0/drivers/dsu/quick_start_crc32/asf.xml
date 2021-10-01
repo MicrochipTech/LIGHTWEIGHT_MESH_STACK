@@ -1,0 +1,13 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam0.drivers.dsu_crc32.quick_start" caption="Quick Start for the SAM CRC32 Driver">
+		<info type="description" value="summary">
+		Quick start guide for CRC32.
+		</info>
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="c-source" value="qs_crc32.c"/>
+		<build type="include-path" value="."/>
+		<device-support value="sam0"/>
+		<require idref="sam0.drivers.dsu_crc32"/>
+		<require idref="sam0.utils"/>
+	</module>
+</asf>

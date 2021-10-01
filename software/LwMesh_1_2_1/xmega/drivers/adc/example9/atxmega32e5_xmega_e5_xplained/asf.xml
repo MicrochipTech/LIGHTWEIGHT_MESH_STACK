@@ -1,0 +1,20 @@
+<asf xmlversion="1.0">
+	<project caption="AVR XMEGA E Internal Temperature Sensor Two Point Calibration on XMEGA-E5 Xplained" id="xmega.drivers.adc.example9.xmega_e5_xplained">
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="include-path" value="./config"/>
+		<build type="header-file" value="config/conf_adc.h"/>
+		<build type="header-file" value="config/conf_sleepmgr.h"/>
+		<build type="header-file" value="config/conf_board.h"/>
+		<build type="header-file" value="config/conf_clock.h"/>
+		<build type="header-file" value="config/conf_example.h"/>
+		<build type="header-file" value="config/conf_usart_serial.h"/>
+		<build type="include-path" value="."/>
+		<require idref="xmega.drivers.adc.example9"/>
+		<require idref="board.xmega_e5_xplained"/>
+		<generator value="iarew"/>
+		<generator value="avrgcc"/>
+		<generator value="as5_8"/>
+		<generator value="doxygen-v2"/>
+		<device-support value="atxmega32e5"/>
+	</project>
+</asf>

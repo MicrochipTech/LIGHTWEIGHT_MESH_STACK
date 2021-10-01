@@ -1,0 +1,26 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam.drivers.mcan" caption="CAN - Control Area Network Controller">
+		<info type="description" value="summary">
+			Driver for the SAM Control Area Network Controller. Provides a unified
+			interface for the configuration and management of the CAN module.
+		</info>
+		<info type="keyword" value="technology">
+			<keyword value="Communication" />
+		</info>
+		<build type="include-path" value="."/>
+		<build type="header-file" subtype="api" value="mcan.h"/>
+		<build type="c-source" value="mcan.c"/>
+		<build type="module-config" subtype="required-header-file" value="conf_mcan.h"/>
+		<build type="module-config" subtype="path" value="module_config"/>
+		<build type="doxygen-entry-point" value="asfdoc_sam_mcan_group"/>
+		<build type="doxygen-quick-start" value="asfdoc_sam_mcan_exqsg"/>
+		
+		<device-support value="same70"/>	
+		<device-support value="samv70"/>
+		<device-support value="samv71"/>
+		<device-support value="sams70"/>
+
+		<require idref="sam.utils"/>
+		<generator value="doxygen-module" default-mcu="unspecified-samv71"/>
+	</module>
+</asf>

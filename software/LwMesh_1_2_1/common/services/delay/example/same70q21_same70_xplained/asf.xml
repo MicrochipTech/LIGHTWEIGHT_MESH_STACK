@@ -1,0 +1,14 @@
+<asf xmlversion="1.0">
+	<project caption="SAME70 Xplained Common Delay Service Example" id="common.services.delay.example.same70_xplained">
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<require idref="common.services.delay.example"/>
+		<require idref="common.services.basic.gpio"/>
+		<require idref="board.same70_xplained"/>
+		<generator value="iarewarm"/>
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<device-support value="atsame70q21b"/>
+	</project>
+</asf>

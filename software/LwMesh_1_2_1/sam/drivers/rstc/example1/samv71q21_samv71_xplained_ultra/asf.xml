@@ -1,0 +1,18 @@
+<asf xmlversion="1.0">
+	<project caption="RSTC example on SAMV71-Xplained-Ultra" id="sam.drivers.rstc.example1.samv71_xplained_ultra">
+		<info type="description" value="summary">
+		This example demonstrates how to manage the RSTC inside the microcontroller.
+		</info>
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_uart_serial.h"/>
+		<build type="include-path" value="."/>
+		<require idref="sam.drivers.rstc.example1"/>
+		<require idref="board.samv71_xplained_ultra"/>
+		<generator value="iarewarm"/>
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<device-support value="atsamv71q21b"/>
+	</project>
+</asf>

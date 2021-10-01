@@ -1,0 +1,23 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam0.drivers.port.quick_start" caption="Quick Start for the SAM PORT Driver (Polled)">
+		<info type="description" value="summary">
+		Quick start guide for the PORT driver demonstrating configuration and initialization.
+		</info>
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="c-source" value="qs_port_basic.c"/>
+		<build type="include-path" value="."/>
+		<require idref="sam0.drivers.port"/>
+		<require idref="sam0.drivers.system"/>
+		<device-support value="samd20"/>
+		<device-support value="samd21"/>
+		<device-support value="samr21"/>
+		<device-support value="samd10"/>
+		<device-support value="samd11"/>
+		<device-support value="saml21"/>
+		<device-support value="saml22"/>
+		<device-support value="samda1"/>
+		<device-support value="samha1"/>
+		<device-support value="samc21"/>
+		<device-support value="samr30"/>
+	</module>
+</asf>

@@ -1,0 +1,19 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam.drivers.mcan.quick_start_fd" caption="FD Mode Quick Start for the SAM CAN Driver">
+		<info type="description" value="summary">
+		FD mode quick start guide for the CAN module demonstrating module configuration.
+		</info>
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="c-source" value="qs_mcan_fd.c"/>
+		<build type="include-path" value="."/>
+		<require idref="sam.drivers.mcan"/>
+		<require idref="sam.drivers.pmc"/>
+		<require idref="sam.drivers.mcan"/>
+		<require idref="common.services.basic.clock"/>
+		<require idref="common.utils.stdio.stdio_serial"/>
+		<device-support value="same70"/>	
+		<device-support value="samv70"/>
+		<device-support value="samv71"/>
+		<device-support value="sams70"/>
+	</module>
+</asf>

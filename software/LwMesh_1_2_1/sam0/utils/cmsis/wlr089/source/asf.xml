@@ -1,0 +1,11 @@
+<asf xmlversion="1.0">
+	<module type="driver" caption="WLR089 startup code" id="sam0.utils.cmsis.wlr089.source.template">
+		<build type="c-source" value="system_wlr089.c"/>
+		<build type="header-file" value="system_wlr089.h"/>
+		<build type="c-source" value="gcc/startup_wlr089.c" toolchain="armgcc"/>
+		<build type="c-source" value="iar/startup_wlr089.c" toolchain="iarewarm"/>
+		<build type="include-path" value="."/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="wlr089"/>
+	</module>
+</asf>

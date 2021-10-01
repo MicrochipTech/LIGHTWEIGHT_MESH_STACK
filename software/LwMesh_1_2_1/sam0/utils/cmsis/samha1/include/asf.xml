@@ -1,0 +1,23 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.utils.cmsis.samha1.include" caption="SAMHA1 part definitions">
+		<info type="description" value="summary">
+		SAMHA1 device definitions.
+		</info>
+		<build type="include-path" value="."/>
+		<build type="header-file" value="samha1.h"/>
+		<build type="header-file" value="samha1g14a.h"/>
+		<build type="header-file" value="samha1g15a.h"/>
+		<build type="header-file" value="samha1g16a.h"/>
+		<build type="header-file" value="samha1g14ab.h"/>
+		<build type="header-file" value="samha1g15ab.h"/>
+		<build type="header-file" value="samha1g16ab.h"/>
+		<build type="header-file" value="samha1e14a.h"/>
+		<build type="header-file" value="samha1e15a.h"/>
+		<build type="header-file" value="samha1e16a.h"/>
+		<build type="header-file" value="samha1e14ab.h"/>
+		<build type="header-file" value="samha1e15ab.h"/>
+		<build type="header-file" value="samha1e16ab.h"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="samha1"/>
+	</module>
+</asf>

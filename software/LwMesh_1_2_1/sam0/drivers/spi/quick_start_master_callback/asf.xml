@@ -1,0 +1,12 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam0.drivers.spi.quick_start_master_callback" caption="Quick Start for the SAM SPI Driver for SAMB11 (Master Callback)">
+		<info type="description" value="summary">
+		Quick start guide for the SPI interface module demonstrating module configuration for master in callback mode.
+		</info>
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="c-source" value="qs_spi_master_callback.c"/>
+		<build type="include-path" value="."/>
+		<require idref="sam0.drivers.spi"/>
+		<device-support value="samb11"/>
+	</module>
+</asf>

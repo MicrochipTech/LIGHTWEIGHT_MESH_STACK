@@ -1,0 +1,34 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc3400.provision_and_proximity_monitor_example">
+		<module type="meta" caption="WINC3400 Provision and Proximity Monitor Application" id="common.components.wifi.winc3400.provision_and_proximity_monitor_example#0">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				Provision and Proximity Monitor application for BLE stack
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="header-file" value="pxp_monitor_app.h"/>
+			<build type="c-source" value="pxp_monitor_app.c"/>
+			<build type="c-source" value="m2m_ble.c"/>
+			<build type="header-file" value="m2m_ble.h"/>
+			<build type="header-file" value="console.h"/>
+			<build type="define" name="BLE_DEVICE_ROLE" value="BLE_CENTRAL_AND_PERIPHERAL"/>
+			<build type="define" name="LINK_LOSS_SERVICE" value=""/>
+			<build type="define" name="IMMEDIATE_ALERT_SERVICE" value=""/>
+			<build type="define" name="TX_POWER_SERVICE" value=""/>
+
+			<!-- Device support -->
+			<device-support value="samd21"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc3400.ble.ble_profiles.pxp_monitor"/>
+			<require idref="common.components.wifi.winc3400.ble.onchip_profiles.wifi_prov"/>
+			<require idref="sam0.utils"/>
+			<require idref="sam0.utils.stdio"/>
+			<require idref="sam0.utils.stdio.stdio_serial"/>
+
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

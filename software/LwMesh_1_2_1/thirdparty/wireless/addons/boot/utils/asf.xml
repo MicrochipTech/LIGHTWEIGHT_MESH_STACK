@@ -1,0 +1,19 @@
+<asf xmlversion="1.0">
+	<module type="meta" id="thirdparty.wireless.addons.bootloader.utils"   caption="Bootloader Tools">
+		<info type="description" value="summary">
+		</info>
+		<info type="gui-flag" value="move-to-root"/>
+		<require idref="thirdparty.wireless.addons.bootloader.utils.linkerscript"/>
+		<device-support value="atsamr34j18b"/>
+	</module>
+	
+	<module type="meta" id="thirdparty.wireless.addons.bootloader.utils.linkerscript"   caption="Bootloader Tools">
+		<info type="description" value="summary">
+		</info>
+		<build type="include-path" value="."/>
+		<build type="linker-config" subtype="script" value="samr34j18b_flash.ld" toolchain="armgcc"/>
+		<device-support value="atsamr34j18b"/>
+	</module>
+	
+</asf>
+

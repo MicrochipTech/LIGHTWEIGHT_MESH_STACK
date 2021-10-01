@@ -1,0 +1,48 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam.utils.cmsis.samv70.include.component" caption="SAMV70 component definitions">
+		<info type="description" value="summary">
+		This file defines all structures and symbols for SAMV70 peripherals
+		</info>
+		<!--
+		<build type="include-path" value="."/>
+		-->
+		<build type="header-file" value="acc.h"/>
+		<build type="header-file" value="aes.h"/>
+		<build type="header-file" value="afec.h"/>
+		<build type="header-file" value="chipid.h"/>
+		<build type="header-file" value="dacc.h"/>
+		<build type="header-file" value="efc.h"/>
+		<build type="header-file" value="gpbr.h"/>
+		<build type="header-file" value="hsmci.h"/>
+		<build type="header-file" value="i2sc.h"/>
+		<build type="header-file" value="icm.h"/>
+		<build type="header-file" value="isi.h"/>
+		<build type="header-file" value="matrix.h"/>
+		<build type="header-file" value="mcan.h"/>
+		<build type="header-file" value="mlb.h"/>
+		<build type="header-file" value="pio.h"/>
+		<build type="header-file" value="pmc.h"/>
+		<build type="header-file" value="pwm.h"/>
+		<build type="header-file" value="qspi.h"/>
+		<build type="header-file" value="rstc.h"/>
+		<build type="header-file" value="rswdt.h"/>
+		<build type="header-file" value="rtc.h"/>
+		<build type="header-file" value="rtt.h"/>
+		<build type="header-file" value="sdramc.h"/>
+		<build type="header-file" value="smc.h"/>
+		<build type="header-file" value="spi.h"/>
+		<build type="header-file" value="ssc.h"/>
+		<build type="header-file" value="supc.h"/>
+		<build type="header-file" value="tc.h"/>
+		<build type="header-file" value="trng.h"/>
+		<build type="header-file" value="twihs.h"/>
+		<build type="header-file" value="uart.h"/>
+		<build type="header-file" value="usart.h"/>
+		<build type="header-file" value="usbhs.h"/>
+		<build type="header-file" value="utmi.h"/>
+		<build type="header-file" value="wdt.h"/>
+		<build type="header-file" value="xdmac.h"/>
+		<device-support value="samv70"/>
+		<info type="gui-flag" value="hidden"/>
+	</module>
+</asf>

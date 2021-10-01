@@ -1,0 +1,27 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam.utils.cmsis.samv71.include.pio" caption="SAMV71 PIO definitions">
+		<info type="description" value="summary">
+		This file defines all structures and symbols for SAMV71 PIO
+		</info>
+		<build type="header-file" value="samv71j19.h"/>
+		<build type="header-file" value="samv71j20.h"/>
+		<build type="header-file" value="samv71j21.h"/>
+		<build type="header-file" value="samv71n19.h"/>
+		<build type="header-file" value="samv71n20.h"/>
+		<build type="header-file" value="samv71n21.h"/>
+		<build type="header-file" value="samv71q19.h"/>
+		<build type="header-file" value="samv71q20.h"/>
+		<build type="header-file" value="samv71q21.h"/>
+		<build type="header-file" value="samv71j19b.h"/>
+		<build type="header-file" value="samv71j20b.h"/>
+		<build type="header-file" value="samv71j21b.h"/>
+		<build type="header-file" value="samv71n19b.h"/>
+		<build type="header-file" value="samv71n20b.h"/>
+		<build type="header-file" value="samv71n21b.h"/>
+		<build type="header-file" value="samv71q19b.h"/>
+		<build type="header-file" value="samv71q20b.h"/>
+		<build type="header-file" value="samv71q21b.h"/>
+		<device-support value="samv71"/>
+		<info type="gui-flag" value="hidden"/>
+	</module>
+</asf>

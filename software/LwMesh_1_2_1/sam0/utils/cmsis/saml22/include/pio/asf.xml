@@ -1,0 +1,18 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.utils.cmsis.saml22.include.pio" caption="SAML22 PIO definitions">
+		<info type="description" value="summary">
+		SAML22 PIO component definitions.
+		</info>
+		<build type="header-file" value="saml22n16a.h"/>
+		<build type="header-file" value="saml22n17a.h"/>
+		<build type="header-file" value="saml22n18a.h"/>
+		<build type="header-file" value="saml22g16a.h"/>
+		<build type="header-file" value="saml22g17a.h"/>
+		<build type="header-file" value="saml22g18a.h"/>
+		<build type="header-file" value="saml22j16a.h"/>
+		<build type="header-file" value="saml22j17a.h"/>
+		<build type="header-file" value="saml22j18a.h"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="saml22"/>
+	</module>
+</asf>

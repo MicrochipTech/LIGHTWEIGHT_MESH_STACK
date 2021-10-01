@@ -1,0 +1,34 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc1500.iot_cloud_demo">
+		<module type="application" id="common.components.wifi.winc1500.iot_cloud_demo#1" caption="WINC1500 IoT Cloud Demo">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This demo features a smart provisioning logic and then reports temperature and light sensor information to PubNub cloud using the I/O1 Xplained Pro board.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="demo.c"/>
+			<build type="header-file" value="demo.h"/>
+			<build type="c-source" value="PubNub.c"/>
+			<build type="header-file" value="PubNub.h"/>
+
+			<build type="include-path" value="android_app"/>
+			<build type="distribute" subtype="file" value="android_app/Atmel_IOT_Sensor_2.0.21.apk"/>
+
+			<!-- Device support -->
+			<device-support value="samd21"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500"/>
+			<require idref="sam0.drivers.adc"/>
+			<require idref="sam0.drivers.tcc"/>
+			<require idref="sam0.drivers.rtc"/>
+			<require idref="sam0.components.sensor.at30tse75x"/>
+			<require idref="sam0.utils"/>
+			<require idref="sam0.utils.stdio"/>
+			<require idref="sam0.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

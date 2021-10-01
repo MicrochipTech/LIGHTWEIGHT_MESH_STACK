@@ -1,0 +1,18 @@
+<asf xmlversion="1.0">
+	<project caption="Unit Tests for the SAM C21 RTC Driver" id="sam0.drivers.rtc.unit_test_count.samc21_xplained_pro" type="unit-test">
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_clocks.h"/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_test.h"/>
+		<build type="header-file" value="conf_rtc.h"/>
+		<require idref="board.samc21_xplained_pro"/>
+		<require idref="sam0.drivers.rtc.unit_test_count"/>
+		<config name="config.sam0.drivers.rtc" value="count_callback"/>
+		<generator value="iarewarm"/>
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen-v2"/>
+		<device-support value="atsamc21j18a"/>
+		<config name="config.compiler.iarewarm.dlib" value="full"/>
+	</project>
+</asf>

@@ -1,0 +1,24 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam.drivers.xdmac" caption="XDMAC - XDMA Controller">
+		<info type="description" value="summary">
+		Driver for the XDMA Controller (XDMAC).
+		It provides functions for configuring and using the on-chip XDMAC.
+		</info>
+		<info type="keyword" value="technology">
+			<keyword value="DMA Controller"/>
+		</info>
+		
+		<build type="c-source" value="xdmac.c"/>
+		<build type="header-file" subtype="api" value="xdmac.h"/>
+		<build type="include-path" value="."/>
+
+		<build type="doxygen-entry-point" value="asfdoc_sam_drivers_xdmac_group"/>
+
+		<device-support value="samv71"/>
+		<device-support value="samv70"/>
+		<device-support value="same70"/>
+		<device-support value="sams70"/>
+		<require idref="sam.utils"/>
+		<generator value="doxygen-module" default-mcu="unspecified-samv71"/>
+	</module>
+</asf>

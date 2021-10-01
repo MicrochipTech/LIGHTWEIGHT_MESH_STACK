@@ -1,0 +1,80 @@
+<asf xmlversion="1.0">
+	<select-by-config id="sam0.drivers.sdadc" name="config.sam0.drivers.sdadc" caption="SDADC - Sigma-Delta Analog-to-Digital Converter" default="callback">
+		<info type="description" value="summary">
+			Driver for the SAM Sigma-Delta Analog to Digital Converter. Provides a unified
+			interface for the configuration and management of the SDADC module,
+			including the channel input selections, windowd detections, channel
+			conversions and event generation.
+		</info>
+
+		<module type="driver" id="sam0.drivers.sdadc#polled" caption="SDADC - Sigma-Delta Analog-to-Digital Converter (Polled APIs)">
+			<info type="keyword" value="technology">
+				<keyword value="Analog Conversion"/>
+			</info>
+
+			<build type="c-source" value="sdadc.c"/>
+			<build type="header-file" subtype="api" value="sdadc.h"/>
+			<build type="include-path" value="."/>
+
+			<build type="header-file" value="quick_start/qs_sdadc_basic.h"/>
+
+			<build type="doxygen-example-path" value ="quick_start"/>
+			<build type="doxygen-entry-point" value="asfdoc_sam0_sdadc_group"/>
+			<build type="doxygen-quick-start" value="asfdoc_sam0_sdadc_exqsg"/>
+
+			<build type="define" name="SDADC_CALLBACK_MODE" value="false"/>
+
+			<device-support value="samc21"/>
+
+			<require idref="sam0.utils"/>
+			<require idref="sam0.drivers.system"/>
+
+			<generator value="doxygen-module-v2" default-mcu="unspecified-samc21"/>
+		</module>
+
+		<module type="driver" id="sam0.drivers.sdadc#callback" caption="SDADC - Sigma-Delta Analog-to-Digital Converter (Callback APIs)">
+			<info type="keyword" value="technology">
+				<keyword value="Analog Conversion"/>
+			</info>
+
+			<info type="appnote" value="AT12199"/>
+			<info type="keyword" value="pdf">
+				<keyword value="SDADC"/>
+				<keyword value="I/O"/>
+				<keyword value="Sigma-Delta Analog to Digital Converter"/>
+				<keyword value="Analog Conversion"/>
+			</info>
+
+			<info type="description" value="pdf">
+				This document describes how to use the Sigma-Delta Analog-to-Digital
+				Converter on the SAM, both the ASF driver and the
+				peripheral itself.
+			</info>
+
+			<build type="c-source" value="sdadc_callback.c"/>
+			<build type="c-source" value="sdadc.c"/>
+			<build type="header-file" subtype="api" value="sdadc.h"/>
+			<build type="header-file" subtype="api" value="sdadc_callback.h"/>
+
+			<build type="include-path" value="."/>
+
+			<build type="header-file" value="quick_start/qs_sdadc_basic.h"/>
+			<build type="header-file" value="quick_start_callback/qs_sdadc_callback.h"/>
+
+			<build type="doxygen-example-path" value="quick_start_callback"/>
+			<build type="doxygen-example-path" value="quick_start"/>
+			<build type="doxygen-entry-point" value="asfdoc_sam0_sdadc_group"/>
+			<build type="doxygen-quick-start" value="asfdoc_sam0_sdadc_exqsg"/>
+
+			<build type="define" name="SDADC_CALLBACK_MODE" value="true"/>
+			<build type="doxygen-enable-section" value="SDADC_CALLBACK_MODE"/>
+
+			<device-support value="samc21"/>
+
+			<require idref="sam0.utils"/>
+			<require idref="sam0.drivers.system"/>
+
+			<generator value="doxygen-module-v2" default-mcu="unspecified-samc21"/>
+		</module>
+	</select-by-config>
+</asf>

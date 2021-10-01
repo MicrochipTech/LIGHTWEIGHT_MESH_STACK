@@ -1,0 +1,31 @@
+<asf xmlversion="1.0">
+	<project caption="WINC3400 Provision AP with BLE Example - SAME70 XPlained Pro" id="common.components.wifi.winc3400.provision_ap_with_ble_on_chip_profile.same70_xplained_pro" force-caption="true" force-description="true">
+		<!-- Summary Description -->
+		<info type="description" value="summary">
+		This example demonstrates how to provision Wi-Fi via BLE using the WINC3400 Wi-Fi/BLE module.
+		</info>
+
+		<!-- Source -->
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_winc.h"/>
+		<build type="header-file" value="conf_uart_serial.h"/>
+		<build type="header-file" value="conf_sleepmgr.h"/>
+		<build type="header-file" value="conf_spi_master.h"/>
+
+		<!-- Device support -->
+		<device-support value="atsame70q21b"/>
+
+		<!-- Required modules -->
+		<require idref="common.components.wifi.winc3400.provision_ap_with_ble_on_chip_profile"/>
+		<require idref="board.same70_xplained"/>
+
+		<!-- Generators -->
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen"/>
+		<config name="config.compiler.armgcc.create_aux" value="no"/>
+		<config name="config.compiler.as5_arm.create_aux" value="no"/>
+	</project>
+</asf>

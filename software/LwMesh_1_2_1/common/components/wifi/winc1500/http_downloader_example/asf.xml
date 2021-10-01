@@ -1,0 +1,39 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc1500.http_downloader_example">
+		<module type="application" id="common.components.wifi.winc1500.http_downloader_example#1" caption="WINC1500 HTTP Downloader Example">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This example demonstrates how to retrieve a file from an HTTP web server using the WINC1500 Wi-Fi module.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main21.c"/>
+			<build type="header-file" value="main.h"/>
+			<build type="include-path" value="iot"/>
+			<build type="include-path" value="iot/http"/>
+			<build type="c-source" value="iot/stream_writer.c"/>
+			<build type="header-file" value="iot/stream_writer.h"/>
+			<build type="c-source" value="iot/sw_timer.c"/>
+			<build type="header-file" value="iot/sw_timer.h"/>
+			<build type="c-source" value="iot/http/http_client.c"/>
+			<build type="header-file" value="iot/http/http_client.h"/>
+			<build type="header-file" value="iot/http/http_entity.h"/>
+			<build type="header-file" value="iot/http/http_header.h"/>
+
+			<!-- Device support -->
+			<device-support value="samd21"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500"/>
+			<require idref="sam0.drivers.tcc"/>
+			<require idref="sam0.drivers.rtc"/>
+			<require idref="sam0.utils"/>
+			<require idref="sam0.utils.stdio"/>
+			<require idref="sam0.utils.stdio.stdio_serial"/>
+			<require idref="common2.components.memory.sd_mmc"/>
+			<require idref="common.services.fs.fatfs"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

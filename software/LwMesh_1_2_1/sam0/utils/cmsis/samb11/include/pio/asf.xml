@@ -1,0 +1,11 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.utils.cmsis.samb11.include.pio" caption="SAMB11 PIO definitions">
+		<info type="description" value="summary">
+		SAMB11 PIO component definitions.
+		</info>
+		<build type="header-file" value="samb11g18a.h"/>
+		<build type="header-file" value="samb11zr.h"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="samb11"/>
+	</module>
+</asf>

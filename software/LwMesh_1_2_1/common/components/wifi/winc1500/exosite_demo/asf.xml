@@ -1,0 +1,53 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc1500.exosite_demo">
+		<module type="application" id="common.components.wifi.winc1500.exosite_demo#1" caption="WINC1500 Exosite Cloud Demo">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This sample application demonstrates connectivity to the Exosite cloud using Atmel WINC1500 Wi-Fi module.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="exosite_example.c"/>
+			<build type="header-file" value="exosite_example.h"/>
+			<build type="header-file" value="debug_conf.h"/>
+			<build type="c-source" value="io1_board.c"/>
+			<build type="header-file" value="io1_board.h"/>
+			<build type="c-source" value="main.c"/>
+			<build type="header-file" value="main.h"/>
+			<build type="c-source" value="tick_counter.c"/>
+			<build type="header-file" value="tick_counter.h"/>
+			<build type="include-path" value="iot"/>
+			<build type="include-path" value="iot/http"/>
+			<build type="c-source" value="iot/json.c"/>
+			<build type="header-file" value="iot/json.h"/>
+			<build type="c-source" value="iot/stream_writer.c"/>
+			<build type="header-file" value="iot/stream_writer.h"/>
+			<build type="c-source" value="iot/sw_timer.c"/>
+			<build type="header-file" value="iot/sw_timer.h"/>
+			<build type="c-source" value="iot/http/http_client.c"/>
+			<build type="header-file" value="iot/http/http_client.h"/>
+			<build type="header-file" value="iot/http/http_entity.h"/>
+			<build type="header-file" value="iot/http/http_header.h"/>
+
+			<build type="include-path" value="doc"/>
+			<build type="distribute" subtype="file" value="doc/Atmel-ANXXX-IOT_App-For-SAMW25-Exosite_20150513.pdf"/>
+
+			<!-- Device support -->
+			<device-support value="samd21"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500"/>
+			<require idref="sam0.drivers.tcc"/>
+			<require idref="sam0.drivers.adc"/>
+			<require idref="sam0.drivers.rtc"/>
+			<require idref="sam0.components.sensor.at30tse75x"/>
+			<require idref="sam0.utils"/>
+			<require idref="sam0.utils.stdio"/>
+			<require idref="sam0.utils.stdio.stdio_serial"/>
+			<require idref="common2.components.memory.sd_mmc"/>
+			<require idref="common.services.fs.fatfs"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

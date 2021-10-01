@@ -1,0 +1,70 @@
+<asf xmlversion="1.0">
+	<select-by-config id="sam0.drivers.gpio" name="config.sam0.drivers.gpio" caption="GPIO - GPIO Pin Control for SAMB" default="callback">
+		<module type="driver" id="sam0.drivers.gpio#polled" caption="GPIO - GPIO Pin Control for SAMB (Polled APIs)">
+			<info type="description" value="summary">
+				Driver for the SAM GPIO module. Provides a unified interface for
+				the configuration and management of the physical device GPIO pins,
+				including input/output state control.
+			</info>
+
+			<info type="keyword" value="technology">
+				<keyword value="I/O" />
+			</info>
+
+			<info type="description" value="pdf">
+				This document describes how to use the GPIO Controller on the
+				SAMB11, both the ASF driver and the peripheral itself.
+			</info>
+
+			<build type="include-path" value="."/>
+			<build type="header-file" subtype="api" value="gpio.h"/>
+			<build type="c-source" value="gpio.c"/>
+
+			<build type="header-file" value="quick_start/qs_gpio_basic.h"/>
+
+			<build type="doxygen-entry-point" value="asfdoc_samb_gpio_group"/>
+			<build type="doxygen-example-path" value="quick_start"/>
+			<build type="doxygen-quick-start" value="asfdoc_samb_gpio_exqsg"/>
+
+			<device-support value="samb"/>
+
+			<require idref="sam0.utils"/>
+			<require idref="sam0.drivers.system"/>
+
+			<generator value="doxygen-module-v2" default-mcu="unspecified-samb11"/>
+		</module>
+		<module type="driver" id="sam0.drivers.gpio#callback" caption="GPIO - GPIO Pin Control for SAMB (Callback APIs)">
+			<info type="description" value="summary">
+				Driver for the SAM GPIO module. Provides a unified interface for
+				the configuration and management of the physical device GPIO pins,
+				including input/output state control.
+			</info>
+
+			<info type="keyword" value="technology">
+				<keyword value="I/O" />
+			</info>
+
+			<info type="description" value="pdf">
+				This document describes how to use the GPIO Controller on the
+				SAMB11, both the ASF driver and the peripheral itself.
+			</info>
+
+			<build type="include-path" value="."/>
+			<build type="header-file" subtype="api" value="gpio.h"/>
+			<build type="c-source" value="gpio.c"/>
+
+			<build type="header-file" value="quick_start_callback/qs_gpio_callback.h"/>
+
+			<build type="doxygen-entry-point" value="asfdoc_samb_gpio_group"/>
+			<build type="doxygen-example-path" value="quick_start_callback"/>
+			<build type="doxygen-quick-start" value="asfdoc_samb_gpio_exqsg"/>
+
+			<device-support value="samb"/>
+
+			<require idref="sam0.utils"/>
+			<require idref="sam0.drivers.system"/>
+
+			<generator value="doxygen-module-v2" default-mcu="unspecified-samb11"/>
+		</module>
+	</select-by-config>
+</asf>

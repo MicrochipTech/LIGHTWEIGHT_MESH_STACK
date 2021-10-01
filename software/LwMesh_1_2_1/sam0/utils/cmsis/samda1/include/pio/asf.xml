@@ -1,0 +1,27 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.utils.cmsis.samda1.include.pio" caption="SAMDA1 PIO definitions">
+		<info type="description" value="summary">
+		SAMDA1 PIO component definitions.
+		</info>
+		<build type="header-file" value="samda1e14a.h"/>
+		<build type="header-file" value="samda1e15a.h"/>
+		<build type="header-file" value="samda1e16a.h"/>
+		<build type="header-file" value="samda1j14a.h"/>
+		<build type="header-file" value="samda1j15a.h"/>
+		<build type="header-file" value="samda1j16a.h"/>
+		<build type="header-file" value="samda1g14a.h"/>
+		<build type="header-file" value="samda1g15a.h"/>
+		<build type="header-file" value="samda1g16a.h"/>
+		<build type="header-file" value="samda1e14b.h"/>
+		<build type="header-file" value="samda1e15b.h"/>
+		<build type="header-file" value="samda1e16b.h"/>
+		<build type="header-file" value="samda1j14b.h"/>
+		<build type="header-file" value="samda1j15b.h"/>
+		<build type="header-file" value="samda1j16b.h"/>
+		<build type="header-file" value="samda1g14b.h"/>
+		<build type="header-file" value="samda1g15b.h"/>
+		<build type="header-file" value="samda1g16b.h"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="samda1"/>
+	</module>
+</asf>

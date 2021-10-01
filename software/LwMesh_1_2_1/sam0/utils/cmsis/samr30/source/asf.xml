@@ -1,0 +1,12 @@
+<asf xmlversion="1.0">
+	<module type="driver" caption="SAMR30 startup code" id="sam0.utils.cmsis.samr30.source.template">
+		<build type="c-source" value="system_samr30.c"/>
+		<build type="header-file" value="system_samr30.h"/>
+		<build type="c-source" value="gcc/startup_samr30.c" toolchain="armgcc"/>
+		<build type="c-source" value="iar/startup_samr30.c" toolchain="iarewarm"/>
+		<build type="include-path" value="."/>
+		<build type="include-path" value="../include"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="samr30"/>
+	</module>
+</asf>

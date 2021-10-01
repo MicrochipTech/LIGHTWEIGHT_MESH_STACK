@@ -1,0 +1,22 @@
+<asf xmlversion="1.0">
+	<module type="component" id="common.components.memory.eeprom.at24macxx" caption="EEPROM AT24MACXX">
+		<info type="keyword" value="technology">
+			<keyword value="Memory" />
+		</info>
+		<info type="description" value="summary">
+		Driver for the AT24MAC series EEPROM memories. It provides functions for initialization and read/write operations. Common implementation for UC3, XMEGA and SAM.
+		</info>
+		<build type="c-source" value="at24macxx.c"/>
+		<build type="header-file" subtype="api" value="at24macxx.h"/>
+		<build type="include-path" value="."/>
+		<build type="doxygen-entry-point" value="common_components_memory_eeprom_at24macxx_group"/>
+		<require idref="common.services.ioport"/>
+		<require idref="common.services.delay"/>
+		<require idref="common.services.basic.twihs"/>
+		<device-support value="samv70"/>
+		<device-support value="samv71"/>
+		<device-support value="same70"/>
+		<device-support value="sams70"/>
+		<generator value="doxygen-module" default-mcu="unspecified-samv71"/>
+	</module>
+</asf>

@@ -1,0 +1,19 @@
+<asf xmlversion="1.0">
+	<project caption="SDRAMC example for SAME70 Xplained" id="sam.components.memory.sdram.is42s16100e.example.same70_xplained">
+		<info type="description" value="summary">
+		SDRAM example for IS42S16100E.
+		</info>
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_uart_serial.h"/>
+		<build type="header-file" value="conf_sleepmgr.h"/>
+		<build type="include-path" value="."/>
+		<require idref="sam.components.memory.sdram.is42s16100e.example"/>
+		<require idref="board.same70_xplained"/>
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen"/>
+		<device-support value="atsame70q21b"/>
+	</project>
+</asf>

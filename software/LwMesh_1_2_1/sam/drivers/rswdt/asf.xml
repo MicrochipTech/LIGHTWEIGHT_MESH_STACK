@@ -1,0 +1,23 @@
+<asf xmlversion="1.0">
+	<select-by-device id="sam.drivers.rswdt" caption="RSWDT - Reinforced Safety Watchdog Timer">
+		<module type="driver" id="sam.drivers.rswdt#sam4" caption="RSWDT - Reinforced Safety Watchdog Timer">
+			<info type="description" value="summary">
+				The Reinforced Safety Watchdog Timer can be used to prevent system lock-up if the software becomes trapped in a deadlock. It features a 12-bit down counter that allows a watchdog period of up to 16 seconds (slow clock at 32.768 kHz).
+			</info>
+			<info type="keyword" value="technology">
+				<keyword value="Timers" />
+			</info>
+			<build type="c-source" value="rswdt.c"/>
+			<build type="header-file" subtype="api" value="rswdt.h"/>
+			<build type="include-path" value="."/>
+			<build type="doxygen-entry-point" value="sam_drivers_rswdt_group"/>
+			<device-support value="sam4e"/>
+			<device-support value="samv70"/>
+			<device-support value="samv71"/>
+			<device-support value="same70"/>
+			<device-support value="sams70"/>
+			<require idref="sam.utils"/>
+			<generator value="doxygen-module" default-mcu="unspecified-sam4e"/>
+		</module>
+	</select-by-device>
+</asf>

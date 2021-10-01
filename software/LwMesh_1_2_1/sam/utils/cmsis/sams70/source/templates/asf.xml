@@ -1,0 +1,12 @@
+<asf xmlversion="1.0">
+	<module type="driver" caption="SAMS70 startup code" id="sam.utils.cmsis.sams70.source.template">
+		<build type="c-source" value="system_sams70.c"/>
+		<build type="header-file" value="system_sams70.h"/>
+		<build type="c-source" value="gcc/startup_sams70.c" toolchain="armgcc"/>
+		<build type="c-source" value="iar/startup_sams70.c" toolchain="iarewarm"/>
+		<build type="include-path" value="."/>
+		<build type="include-path" value="../../include"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="sams70"/>
+	</module>
+</asf>

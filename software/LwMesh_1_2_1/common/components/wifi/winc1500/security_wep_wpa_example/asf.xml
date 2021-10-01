@@ -1,0 +1,48 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc1500.security_wep_network_example">
+		<module type="application" id="common.components.wifi.winc1500.security_wep_network_example#0" caption="WINC1500 Connecting a WEP/WPA Secured AP Example">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This example demonstrates how to connect to a secured WEP or WPA network using the WINC1500 Wi-Fi module.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main21.c"/>
+			<build type="header-file" value="main.h"/>
+
+			<!-- Device support -->
+			<device-support value="samd21"/>
+			<device-support value="saml21"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500"/>
+			<require idref="sam0.utils"/>
+			<require idref="sam0.utils.stdio"/>
+			<require idref="sam0.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+		<module type="application" id="common.components.wifi.winc1500.security_wep_network_example#1" caption="WINC1500 Connecting a WEP/WPA Secured AP Example">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This example demonstrates how to connect to a secured WEP or WPA network using the WINC1500 Wi-Fi module.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main.c"/>
+			<build type="header-file" value="main.h"/>
+
+			<!-- Device support -->
+			<device-support value="sam4s"/>
+			<device-support value="samg53"/>
+			<device-support value="samg55"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

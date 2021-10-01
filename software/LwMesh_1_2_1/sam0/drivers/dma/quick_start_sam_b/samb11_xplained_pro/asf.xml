@@ -1,0 +1,13 @@
+<asf xmlversion="1.0">
+	<project caption="Quick Start for the SAM B11 DMA Driver" id="sam0.drivers.dma.quick_start_sam_b.samb11_xplained_pro">
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_dma.h"/>
+		<require idref="board.samb11_xplained_pro"/>
+		<require idref="sam0.drivers.dma.quick_start_sam_b"/>
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<device-support value="atsamb11g18a"/>
+	</project>
+</asf>

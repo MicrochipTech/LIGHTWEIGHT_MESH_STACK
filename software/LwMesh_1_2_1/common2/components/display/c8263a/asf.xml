@@ -1,0 +1,19 @@
+<asf xmlversion="1.0">
+	<module type="component" id="common2.components.display.c8263a" caption="Segment LCD">
+		<info type="description" value="summary">
+			Low-level driver for the C8263A LCD Glass.
+		</info>
+		<info type="keyword" value="technology">
+			<keyword value="Graphics" />
+		</info>
+		<build type="c-source" value="c8263a.c"/>
+		<build type="header-file" subtype="api" value="c8263a.h"/>
+		<build type="module-config" subtype="path" value="module_config"/>
+		<build type="module-config" subtype="required-header-file" value="config_c8263a.h"/>
+		<build type="include-path" value="."/>
+		<build type="doxygen-entry-point" value="c8263a_display_group"/>
+		<require idref="sam0.drivers.slcd"/>
+		<device-support value="saml22"/>
+		<generator value="doxygen-module" default-mcu="unspecified-saml22"/>
+	</module>
+</asf>

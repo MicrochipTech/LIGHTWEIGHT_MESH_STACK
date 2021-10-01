@@ -1,0 +1,44 @@
+<asf xmlversion="1.0">
+	<select-by-device id="sam.drivers.adc" caption="ADC - Analog-to-digital Converter">
+		<module type="driver" id="sam.drivers.adc#1" caption="ADC - Analog-to-digital Converter">
+			<info type="description" value="summary">
+				The Analog to Digital Converter is able to capture analog signals and transform them into digital format with 10-bit or 12-bit resolution.
+			</info>
+			<info type="keyword" value="technology">
+				<keyword value="Analog Conversion"/>
+			</info>
+			<build type="c-source" value="adc.c"/>
+			<build type="c-source" value="adc_sam3u.c"/>
+			<build type="header-file" subtype="api" value="adc.h"/>
+			<build type="include-path" value="."/>
+			<build type="doxygen-entry-point" value="sam_drivers_adc_group"/>
+			<build type="doxygen-quick-start" value="sam_adc_quickstart"/>
+			<device-support value="sam3"/>
+			<device-support value="sam4s"/>
+			<device-support value="sam4c"/>
+			<device-support value="sam4cm"/>
+			<device-support value="sam4cp"/>
+			<require idref="sam.utils"/>
+			<generator value="doxygen-module" default-mcu="unspecified-sam3s"/>
+		</module>
+		<module type="driver" id="sam.drivers.adc#2" caption="ADC - Analog-to-digital Converter">
+			<info type="description" value="summary">
+				The Analog to Digital Converter is able to capture analog signals and transform them into digital format.
+			</info>
+			<info type="keyword" value="technology">
+				<keyword value="Analog Conversion"/>
+			</info>
+			<build type="c-source" value="adc2.c"/>
+			<build type="header-file" subtype="api" value="adc2.h"/>
+			<build type="include-path" value="."/>
+			<build type="doxygen-entry-point" value="sam_drivers_adc2_group"/>
+			<build type="doxygen-quick-start" value="sam_adc2_quickstart"/>
+			<device-support value="sam4n"/>
+			<device-support value="samg"/>
+			<require idref="sam.utils"/>
+			<require idref="common.services.basic.sleepmgr"/>
+			<require idref="common.services.basic.clock"/>
+			<generator value="doxygen-module" default-mcu="unspecified-sam4n"/>
+		</module>
+	</select-by-device>
+</asf>

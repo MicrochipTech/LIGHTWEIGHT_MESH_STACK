@@ -1,0 +1,18 @@
+<asf xmlversion="1.0">
+  
+        <module type="meta" id="thirdparty.wireless.services.edbg_eui" caption="TBA">
+			<info type="description" value="summary">
+			
+			</info>
+			
+			<build type="c-source"      value="edbg-eui.c"/>
+			<build type="header-file"	value="edbg-eui.h"/>
+			<build type="include-path" value="."/>		
+			<build type="doxygen-entry-point" value="group_contiki"/>	
+			<info type="keyword" value="technology">
+                <keyword value="Wireless"/>
+                <keyword value="Communication"/>
+            </info>
+        </module>
+        
+</asf>

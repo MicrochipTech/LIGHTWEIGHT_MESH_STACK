@@ -1,0 +1,21 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.memory.eeprom.at24macxx.example">
+		<module type="application" id="common.components.memory.eeprom.at24macxx.example#sam" caption="AT24MACXX EEPROM Example">
+			<info type="keyword" value="technology">
+				<keyword value="Memory"/>
+			</info>
+			<info type="description" value="summary">
+			Provide an application example using the Atmel EEPROM AT24MAC component. The EEPROM requires an I2C bus as a low level communication interface. This interface can be implemented using TWIHS controller for SAM devices.
+			</info>
+			<build type="c-source" value="at24macxx_example.c"/>
+			<device-support value="samv71"/>
+			<device-support value="samv70"/>
+			<device-support value="sams70"/>
+			<device-support value="same70"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.components.memory.eeprom.at24macxx"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

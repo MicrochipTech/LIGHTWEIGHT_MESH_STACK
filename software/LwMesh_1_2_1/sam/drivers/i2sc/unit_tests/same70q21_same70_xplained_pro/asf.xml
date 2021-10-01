@@ -1,0 +1,21 @@
+<asf xmlversion="1.0">
+	<project caption="I2SC unit Test for SAME70-Xplained-Pro" id="sam.drivers.i2sc.unit_tests.same70_xplained_pro" type="unit-test">
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_sleepmgr.h"/>
+		<build type="header-file" value="conf_test.h"/>
+		<build type="header-file" value="conf_uart_serial.h"/>
+		<require idref="sam.drivers.i2sc.unit_tests"/>
+		<require idref="board.same70_xplained"/>
+		<!--generator value="iarewarm"/-->
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen"/>
+		<!--config name="config.compiler.iarewarm.dlib" value="full"/-->
+		<!--config name="config.compiler.iarewarm.create_aux" value="no"/-->
+		<config name="config.compiler.armgcc.create_aux" value="no"/>
+		<config name="config.compiler.as5_arm.create_aux" value="no"/>
+		<device-support value="atsame70q21b"/>
+	</project>
+</asf>

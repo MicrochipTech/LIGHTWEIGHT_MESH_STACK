@@ -1,0 +1,23 @@
+<asf xmlversion="1.0">
+		<module type="application" id="common.components.sensor.at30ts.example1" caption="AT30TS Temperature Sensor Example1">
+			<info type="keyword" value="technology">
+				<keyword value="Sensors" />
+			</info>
+			<info type="description" value="summary">
+			Provides an application example for AT30TS Temperature Sensor. Uses XmegaA3BU Xplained and ATAVRTEMPSENSORX
+			</info>
+			<build type="c-source" value="at30ts_example1.c"/>
+			<build type="include-path" value="."/>
+			<device-support value="xmega"/>
+			<require idref="common.services.basic.gpio"/>
+			<require idref="common.services.gfx_mono.font"/>
+			<require idref="common.components.sensor.at30ts"/>
+			<require idref="common.services.basic.twi"/>
+			<require idref="xmega.drivers.ioport"/>
+			<require idref="xmega.drivers.twi"/>
+			<require idref="common.services.delay"/>
+			<require idref="common.boards"/>
+			<require idref="xmega.utils"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+</asf>

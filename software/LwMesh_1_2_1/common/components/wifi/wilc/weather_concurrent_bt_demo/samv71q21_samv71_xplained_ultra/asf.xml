@@ -1,0 +1,32 @@
+<asf xmlversion="1.0">
+	<project caption="WILC3000 Weather WiFi Concurrent Mode and Bluetooth Demo for SAMV71 XPlained Ultra" id="common.components.wifi.wilc3000.weather_concurrent_bt_demo.samv71_xplained_ultra">
+		<!-- Source -->
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_sd_mmc.h"/>        
+		<build type="header-file" value="conf_tinyservices.h"/>
+		<build type="header-file" value="conf_uart_serial.h"/>
+		<build type="header-file" value="conf_wilc.h"/>
+		<build type="header-file" value="FreeRTOSConfig.h"/>
+		<build type="header-file" value="lwipopts.h"/>
+
+		<!-- Device support -->
+		<device-support value="atsamv71q21b"/>
+
+		<!-- Required modules -->
+		<require idref="common.components.wifi.wilc3000.weather_concurrent_bt_demo"/>
+		<require idref="board.samv71_xplained_ultra"/>
+		<require idref="common.components.memory.sd_mmc"/>
+		<config name="config.thirdparty.os.freertos.version" value="8.2.3"/>
+		<config name="config.thirdparty.os.freertos-8_2_3.memory_manager" value="4_first_fit_coallesce" />
+
+		<!-- Generators -->
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen"/>
+		<config name="config.compiler.armgcc.create_aux" value="no"/>
+		<config name="config.compiler.as5_arm.create_aux" value="no"/>
+		<config name="config.common.components.memory.sd_mmc" value="mci"/>
+	</project>
+</asf>

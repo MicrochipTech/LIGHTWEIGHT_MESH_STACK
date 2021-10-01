@@ -1,0 +1,56 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc3400.security_enterprise_network_mschapv2_example">
+		<module type="application" id="common.components.wifi.winc3400.security_enterprise_network_mschapv2_example#0" caption="WINC3400 enterprise security network mschapv2 example">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This example demonstrates how to connect WINC3400 Wi-Fi module to a 802.1x enterprise secured network which uses MSCHAPV2 as phase2 authentication.
+				The supported enterprise methods by this example are
+					EAP-TTLSv0 with MSCHAPv2 ( Extensible Authentication Protocol Tunneled Transport Layer Security Authenticated Protocol Version 0)
+					EAP-PEAPv0 with MSCHAPv2 (Protected Extensible Authentication Protocol v0 - Microsoft Challenge Handshake Authentication Protocol version 2)
+					EAP-PEAPv1 with MSCHAPv2 (Protected Extensible Authentication Protocol v1 - Microsoft Challenge Handshake Authentication Protocol version 2)
+
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main21.c"/>
+			<build type="header-file" value="main.h"/>
+
+			<!-- Device support -->
+			<device-support value="samd21"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc3400"/>
+			<require idref="sam0.utils"/>
+			<require idref="sam0.utils.stdio"/>
+			<require idref="sam0.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+		<module type="application" id="common.components.wifi.winc3400.security_enterprise_network_mschapv2_example#1" caption="WINC3400 enterprise security mschapv2">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This example demonstrates how to connect WINC3400 Wi-Fi module to a 802.1x enterprise secured network which uses MSCHAPV2 as phase2 authentication.
+				The supported enterprise methods by this example are
+					EAP-TTLSv0 with MSCHAPv2 ( Extensible Authentication Protocol Tunneled Transport Layer Security Authenticated Protocol Version 0)
+					EAP-PEAPv0 with MSCHAPv2 (Protected Extensible Authentication Protocol v0 - Microsoft Challenge Handshake Authentication Protocol version 2)
+					EAP-PEAPv1 with MSCHAPv2 (Protected Extensible Authentication Protocol v1 - Microsoft Challenge Handshake Authentication Protocol version 2)
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main.c"/>
+			<build type="header-file" value="main.h"/>
+
+			<!-- Device support -->
+			<device-support value="sam4s"/>
+			<device-support value="samg55"/>
+			<device-support value="same70"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc3400"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

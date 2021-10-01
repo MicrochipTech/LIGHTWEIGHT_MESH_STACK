@@ -1,0 +1,21 @@
+<asf xmlversion="1.0">
+	<project caption="GMAC example on SAMV71-Xplained-Ultra" id="sam.drivers.gmac.gmac_example.samv71_xplained_ultra">
+		<info type="description" value="summary">
+		Ethernet example with ethernet GMAC, process simple ethernet packets.
+		</info>
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_eth.h"/>
+		<build type="header-file" value="conf_uart_serial.h"/>
+		<build type="include-path" value="."/>
+		<require idref="sam.drivers.gmac.gmac_example"/>
+		<require idref="board.samv71_xplained_ultra"/>
+		<generator value="iarewarm"/>
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen"/>
+		<device-support value="atsamv71q21b"/>
+		<config name="config.sam.drivers.gmac.gmac_example" value="ksz8061rnb"/>
+	</project>
+</asf>

@@ -1,0 +1,14 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.utils.cmsis.samr34.include" caption="SAMR34 part definitions">
+		<info type="description" value="summary">
+		SAMR34 device definitions.
+		</info>
+		<build type="include-path" value="."/>
+		<build type="header-file" value="samr34.h"/>
+		<build type="header-file" value="samr34j18b.h"/>
+		<build type="header-file" value="samr34j17b.h"/>
+		<build type="header-file" value="samr34j16b.h"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="samr34"/>
+	</module>
+</asf>

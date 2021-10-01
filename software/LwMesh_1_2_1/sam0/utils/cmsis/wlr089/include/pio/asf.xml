@@ -1,0 +1,10 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.utils.cmsis.wlr089.include.pio" caption="WLR089 PIO definitions">
+		<info type="description" value="summary">
+		WLR089 PIO component definitions.
+		</info>
+		<build type="header-file" value="wlr089u0.h"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="wlr089u0"/>
+	</module>
+</asf>

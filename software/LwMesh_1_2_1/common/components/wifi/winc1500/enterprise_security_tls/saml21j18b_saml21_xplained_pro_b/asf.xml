@@ -1,0 +1,34 @@
+<asf xmlversion="1.0">
+	<project caption="WINC1500 Connecting a TLS Enterprise Secured AP Example for SAML21 XPlained Pro B" id="common.components.wifi.winc1500.security_enterprise_network_tls_example.saml21_xplained_pro_b">
+		<!-- Summary Description -->
+		<info type="description" value="summary">
+			This example demonstrates how to connect WINC1500 Wi-Fi module to a 802.1x enterprise secured network which uses TLS as phase2 authentication.
+			The supported enterprise methods by this example are
+				EAP with TLS (Extensible Authentication Protocol - Transport Layer Security)
+				PEAPv0 with TLS (Protected Extensible Authentication Protocol v0 - Transport Layer Security)
+				PEAPv1 with TLS (Protected Extensible Authentication Protocol v1 - Transport Layer Security)
+		</info>
+
+		<!-- Source -->
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clocks.h"/>
+		<build type="header-file" value="conf_extint.h"/>
+		<build type="header-file" value="conf_spi.h"/>
+		<build type="header-file" value="conf_winc.h"/>
+
+		<!-- Device support -->
+		<device-support value="atsaml21j18b"/>
+
+		<!-- Required modules -->
+		<require idref="common.components.wifi.winc1500.security_enterprise_network_tls_example"/>
+		<require idref="board.saml21_xplained_pro_b"/>
+
+		<!-- Generators -->
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen"/>
+		<config name="config.compiler.armgcc.create_aux" value="no"/>
+		<config name="config.compiler.as5_arm.create_aux" value="no"/>
+	</project>
+</asf>

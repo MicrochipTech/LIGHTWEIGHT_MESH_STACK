@@ -1,0 +1,64 @@
+<asf xmlversion="1.0">
+	<select-by-device id="sam.drivers.spi.xdmac_example" caption="SPI Example">
+		<module type="application" id="sam.drivers.spi.xdmac_example#0" caption="SPI Example">
+			<info type="description" value="summary">
+		This example is aimed to demonstrate the usage of SPI peripheral.
+		</info>
+			<info type="keyword" value="technology">
+				<keyword value="Communication"/>
+			</info>
+			<build type="c-source" value="spi_xdmac_example.c"/>
+			<device-support value="sam3"/>
+			<device-support value="sam4s"/>
+			<device-support value="sam4e"/>
+			<device-support value="sam4n"/>
+			<device-support value="sam4c"/>
+			<device-support value="sam4cp"/>
+			<device-support value="samg51"/>
+			<device-support value="samg53"/>
+			<device-support value="samg54"/>
+			<device-support value="samv71n"/>
+			<device-support value="samv71q"/>
+			<device-support value="samv70n"/>
+			<device-support value="samv70q"/>
+			<device-support value="same70n"/>
+			<device-support value="same70q"/>
+			<device-support value="sams70n"/>
+			<device-support value="sams70q"/>
+			<require idref="sam.drivers.spi"/>
+			<require idref="sam.drivers.pmc"/>
+			<require idref="sam.drivers.xdmac"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+		<module type="application" id="sam.drivers.spi.xdmac_example#1" caption="SPI Example">
+			<info type="description" value="summary">
+		This example is aimed to demonstrate the usage of SPI peripheral.
+		</info>
+			<info type="keyword" value="technology">
+				<keyword value="Communication"/>
+			</info>
+			<build type="c-source" value="spi_example.c"/>
+			<device-support value="samg55"/>
+			<require idref="sam.drivers.flexcom"/>
+			<require idref="sam.drivers.spi"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+		<module type="application" id="sam.drivers.spi.xdmac_example#2" caption="SPI Example">
+			<info type="description" value="summary">
+			This example is aimed to demonstrate the usage of SPI peripheral.
+			</info>
+			<info type="keyword" value="technology">
+				<keyword value="Communication"/>
+			</info>
+			<build type="c-source" value="spi_example.c"/>
+			<device-support value="sam4l"/>
+			<require idref="sam.drivers.spi"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

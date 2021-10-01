@@ -1,0 +1,27 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.drivers.timer" caption="TIMER - Timer for SAMB">
+		<info type="keyword" value="technology">
+			<keyword value="Timers"/>
+		</info>
+
+		<info type="description" value="pdf">
+			This document describes how to use the Timer on the
+			SAMB11, both the ASF driver and the peripheral itself.
+		</info>
+
+		<build type="include-path" value="."/>
+		<build type="header-file" subtype="api" value="timer.h"/>
+		<build type="c-source" value="timer.c"/>
+
+		<build type="header-file" value="quick_start/qs_timer_basic.h"/>
+
+		<build type="doxygen-entry-point" value="asfdoc_samb_timer_group"/>
+		<build type="doxygen-example-path" value="quick_start"/>
+		<build type="doxygen-quick-start" value="asfdoc_samb_timer_exqsg"/>
+
+		<device-support value="samb"/>
+		<require idref="sam0.utils"/>
+		<require idref="sam0.drivers.system"/>
+		<generator value="doxygen-module-v2" default-mcu="unspecified-samb11"/>
+	</module>
+</asf>

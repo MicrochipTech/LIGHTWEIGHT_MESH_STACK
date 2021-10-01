@@ -1,0 +1,41 @@
+<asf xmlversion="1.0">
+
+	<module type="meta" id="common.services.adp.example.common" caption="ADP example application">
+		<build type="c-source" value="adp_example.c"/>
+		<build type="c-source" value="adp_window.c"/>
+		<build type="include-path" value="."/>
+		<build type="header-file" value="adp_example_adc.h"/>
+		<build type="header-file" value="adp_example_tc.h"/>
+		<build type="header-file" value="adp_window.h"/>
+		<require idref="common.services.adp"/>
+		<require idref="common.services.ioport"/>
+		<info type="gui-flag" value="move-to-root"/>
+	</module>
+
+	<select-by-device id="common.services.adp.example">
+
+		<module type="application" id="common.services.adp.example#sam0" caption="ADP example application">
+			<info type="description" value="summary">
+				ADP example application
+			</info>
+			<build type="c-source" value="sam0/adp_example_adc.c"/>
+			<build type="c-source" value="sam0/adp_example_tc.c"/>
+			<require idref="common.services.adp.example.common"/>
+			<device-support value="samd21"/>
+			<device-support value="saml21"/>
+		</module>
+
+		<module type="application" id="common.services.adp.example#sam" caption="ADP example application">
+			<info type="description" value="summary">
+				ADP example application
+			</info>
+			<build type="c-source" value="sam/adp_example_adc.c"/>
+			<build type="c-source" value="sam/adp_example_tc.c"/>
+			<require idref="sam.drivers.adc"/>
+			<require idref="sam.drivers.tc"/>
+			<require idref="common.services.adp.example.common"/>
+			<device-support value="sam4s"/>
+		</module>
+
+	</select-by-device>
+</asf>

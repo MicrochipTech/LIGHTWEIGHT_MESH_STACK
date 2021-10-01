@@ -1,0 +1,13 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam0.drivers.adc.quick_start_sam_b" caption="Quick Start for the SAM ADC Driver for SAMB (Polled)">
+		<info type="description" value="summary">
+		Quick start guide for the Analog-to-Digital Converter module demonstrating module configuration.
+		</info>
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="c-source" value="qs_adc_basic.c"/>
+		<build type="include-path" value="."/>
+		<require idref="samb.drivers.adc"/>
+		<require idref="sam0.drivers.gpio"/>
+		<device-support value="samb"/>
+	</module>
+</asf>

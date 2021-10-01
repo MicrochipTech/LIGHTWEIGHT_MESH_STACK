@@ -1,0 +1,44 @@
+<asf xmlversion="1.0">
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++++MODULE+++++++++++++++++++++++++++++++++++++++++++++++. -->
+	<module type="meta" id="thirdparty.wireless.addons.boot"     caption="Boot Loader">
+		<info type="description" value="summary">
+		</info>
+	<!-- +++++++++++++++++++++++++++++++++++++++++++++++BUILD+++++++++++++++++++++++++++++++++++++++++++++++. -->
+
+		<require idref="sam0.drivers.port"/>
+		<require idref="sam0.utils"/>
+		<require idref="sam0.drivers.sercom.usart"/>
+		<require idref="sam0.drivers.nvm"/>		
+		<build type="c-source"      value="bootloader/src/abstractSerializer.c"/>
+		<build type="c-source"      value="bootloader/src/bootloader.c"/>
+		<build type="c-source"      value="bootloader/src/eepromLoader.c"/>
+		<build type="c-source"      value="bootloader/src/flashLoader.c"/>
+		<build type="c-source"      value="bootloader/src/hardwareInit.c"/>
+		<build type="c-source"      value="bootloader/src/preparser.c"/>
+		<build type="c-source"      value="bootloader/src/srecParser.c"/>
+		<build type="c-source"      value="bootloader/src/uartSerializer.c"/>
+		<build type="c-source"      value="bootloader/src/app_info.c"/>
+		<build type="header-file"   value="bootloader/inc/abstractSerializer.h"/>
+		<build type="header-file"   value="bootloader/inc/appEntry.h"/>
+		<build type="header-file"   value="bootloader/inc/bootStructure.h"/>
+		<build type="header-file"   value="bootloader/inc/eepromLoader.h"/>
+		<build type="header-file"   value="bootloader/inc/fcpu.h"/>
+		<build type="header-file"   value="bootloader/inc/flashLoader.h"/>
+		<build type="header-file"   value="bootloader/inc/hardwareInit.h"/>
+		<build type="header-file"   value="bootloader/inc/moveIntVector.h"/>
+		<build type="header-file"   value="bootloader/inc/preparser.h"/>
+		<build type="header-file"   value="bootloader/inc/srecParser.h"/>
+		<build type="header-file"   value="bootloader/inc/types.h"/>
+		<build type="header-file"   value="bootloader/inc/app_info.h"/>
+		<build type="header-file"   value="bootloader/inc/uartSerializer.h"/>
+		<build type="header-file"   value="bootloader/inc/boot_version.h"/>
+		<build type="include-path" value="."/>
+		<build type="include-path" value="bootloader/inc/."/>
+		<build type="include-path" value="bootloader/inc"/>
+		<device-support value="sam0"/>
+		<info type="keyword" value="technology">
+			<keyword value="Wireless"/>
+			<keyword value="Communication"/>
+		</info>
+	</module>
+</asf>

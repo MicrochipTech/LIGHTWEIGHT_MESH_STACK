@@ -1,0 +1,52 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc1500.security_enterprise_provisioning_example">
+		<module type="application" id="common.components.wifi.winc1500.security_enterprise_provisioning_example#0" caption="WINC1500 Connecting a Enterprise Secured Network">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This example demonstrates application level provisioning in WINC1500. It starts in Access Point (AP) mode with OPEN security and host a webserver. An Android smart phone or laptop can send provisioning information to the AP via HTTPS connection.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main21.c"/>
+			<build type="header-file" value="main.h"/>
+
+			<!-- Device support -->
+			<device-support value="samd21"/>
+			<device-support value="saml21"/>
+			<device-support value="saml22"/>
+			<device-support value="samr21"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500.wifi_provisioning"/>
+			<require idref="sam0.utils"/>
+			<require idref="sam0.utils.stdio"/>
+			<require idref="sam0.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+		<module type="application" id="common.components.wifi.winc1500.security_enterprise_provisioning_example#1" caption="WINC1500 Connecting a Enterprise Secured Network">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This example demonstrates application level provisioning in WINC1500. It starts in Access Point (AP) mode with OPEN security and host a webserver. An Android smart phone or laptop can send provisioning information to the AP via HTTPS connection.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main.c"/>
+			<build type="header-file" value="main.h"/>
+
+			<!-- Device support -->
+			<device-support value="sam4s"/>
+			<device-support value="samg53"/>
+			<device-support value="samg55"/>
+			<device-support value="same70"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500.wifi_provisioning"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+
+		</module>
+	</select-by-device>
+</asf>

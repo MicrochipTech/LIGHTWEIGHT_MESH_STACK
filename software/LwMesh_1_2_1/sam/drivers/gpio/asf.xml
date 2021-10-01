@@ -1,0 +1,34 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam.drivers.gpio" caption="GPIO - General-Purpose Input/Output">
+		<info type="description" value="summary">
+		Advanced functions for GPIO module: interrupt and event support. Please refer IOPORT module for basic GPIO function.
+		</info>
+		<info type="keyword" value="technology">
+			<keyword value="I/O" />
+		</info>
+		<build type="c-source" value="gpio.c"/>
+		<build type="header-file" subtype="api" value="gpio.h"/>
+		<build type="include-path" value="."/>
+		<build type="doxygen-entry-point" value="asfdoc_sam_drivers_gpio_group"/>
+		<build type="doxygen-quick-start" value="sam_gpio_quick_start"/>
+		<build type="doxygen-example-path" value=" example"/>
+		<device-support value="sam4l"/>
+		<require idref="sam.utils"/>
+		<require idref="common.services.ioport"/>
+		<info type="appnote" value="AT07903"/>
+		<info type="keyword" value="pdf">
+			<keyword value="GPIO" />
+			<keyword value="IO"/>
+			<keyword value="I/O"/>
+			<keyword value="Input"/>
+			<keyword value="Output"/>
+		</info>
+		
+		<info type="description" value="pdf">
+			This application note describes how to use the ASF driver for
+			interfacing to the GPIO controller on SAM.
+		</info>	
+		<generator value="doxygen-module-v2" default-mcu="unspecified-sam4l"/>
+	</module>
+</asf>
+

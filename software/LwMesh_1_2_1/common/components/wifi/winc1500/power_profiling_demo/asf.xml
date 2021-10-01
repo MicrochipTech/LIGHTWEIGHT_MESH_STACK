@@ -1,0 +1,29 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc1500.power_profiling_demo">
+		<module type="application" id="common.components.wifi.winc1500.power_profiling_demo#0" caption="WINC 1500 Power Profiling Demo">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This example demonstrates power profiling for WINC1500 during various modes of operation.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main.c"/>
+			<build type="header-file" value="main.h"/>
+
+			<!-- Device support -->
+			<device-support value="samd21"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500"/>
+			<require idref="sam0.utils"/>
+			<require idref="sam0.utils.stdio"/>
+			<require idref="sam0.utils.stdio.stdio_serial"/>
+			<require idref="sam0.drivers.port"/>
+			<require idref="sam0.drivers.system"/>
+			<info type="gui-flag" value="move-to-root"/>
+			
+			<build type="define" name="CONF_PERIPH" value=""/>
+		</module>
+	</select-by-device>
+</asf>

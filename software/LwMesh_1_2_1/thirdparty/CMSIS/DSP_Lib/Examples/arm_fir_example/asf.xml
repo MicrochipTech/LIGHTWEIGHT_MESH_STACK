@@ -1,0 +1,19 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam.utils.cmsis.dsp_lib.examples.arm_fir_example" caption="CMSIS DSP FIR Example">
+		<info type="description" value="summary">
+			Example code demonstrating how an FIR filter can be used as a low pass filter.
+		</info>
+		<build type="c-source" value="arm_fir_example_f32.c"/>
+		<build type="c-source" value="arm_fir_data.c"/>
+		<build type="c-source" value="math_helper.c"/>
+		<build type="header-file" value="math_helper.h"/>
+		<build type="header-file" value="documentation.h"/>
+		<build type="include-path" value="."/>
+		<device-support value="sam4"/>
+		<device-support value="samg"/>
+		<device-support value="samv71"/>
+		<device-support value="same70"/>
+		<require idref="thirdparty.cmsis.license"/>
+		<info type="gui-flag" value="move-to-root"/>
+	</module>
+</asf>

@@ -1,0 +1,30 @@
+<asf xmlversion="1.0">
+	<project caption="WINC1500 Serial Bridge Example for SAML22 XPlained Pro B" id="common.components.wifi.winc1500.serial_bridge_example.saml22_xplained_pro_b">
+		<!-- Summary Description -->
+		<info type="description" value="summary">
+			This project enables the host MCU to act as a EBDG UART to WINC1500 SPI bridge.
+		</info>
+
+		<!-- Source -->
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clocks.h"/>
+		<build type="header-file" value="conf_extint.h"/>
+		<build type="header-file" value="conf_spi.h"/>
+		<build type="header-file" value="conf_winc.h"/>
+
+		<!-- Device support -->
+		<device-support value="atsaml22n18a"/>
+
+		<!-- Required modules -->
+		<require idref="common.components.wifi.winc1500.serial_bridge_example"/>
+		<require idref="board.saml22_xplained_pro_b"/>
+
+		<!-- Generators -->
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen"/>
+		<config name="config.compiler.armgcc.create_aux" value="no"/>
+		<config name="config.compiler.as5_arm.create_aux" value="no"/>
+	</project>
+</asf>

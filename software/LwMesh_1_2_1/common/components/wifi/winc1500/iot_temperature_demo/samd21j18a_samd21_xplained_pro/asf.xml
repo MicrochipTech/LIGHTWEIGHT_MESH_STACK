@@ -1,0 +1,32 @@
+<asf xmlversion="1.0">
+	<project caption="WINC1500 IoT Temperature Sensor Demo for SAMD21 XPlained Pro" id="common.components.wifi.winc1500.iot_temperature_demo.samd21_xplained_pro">
+		<!-- Summary Description -->
+		<info type="description" value="summary">
+			This IoT temperature sensor demo is configured to work with the SAM D21 Xplained Pro using the WINC1500 Wi-Fi module.
+		</info>
+
+		<!-- Source -->
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_at30tse75x.h"/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clocks.h"/>
+		<build type="header-file" value="conf_extint.h"/>
+		<build type="header-file" value="conf_spi.h"/>
+		<build type="header-file" value="conf_winc.h"/>
+		<build type="header-file" value="conf_uart_serial.h"/>
+
+		<!-- Device support -->
+		<device-support value="atsamd21j18a"/>
+
+		<!-- Required modules -->
+		<require idref="common.components.wifi.winc1500.iot_temperature_demo"/>
+		<require idref="board.samd21_xplained_pro"/>
+
+		<!-- Generators -->
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen"/>
+		<config name="config.compiler.armgcc.create_aux" value="no"/>
+		<config name="config.compiler.as5_arm.create_aux" value="no"/>
+	</project>
+</asf>

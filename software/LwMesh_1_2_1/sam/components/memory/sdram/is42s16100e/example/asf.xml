@@ -1,0 +1,38 @@
+<asf xmlversion="1.0">
+	<select-by-device id="sam.components.memory.sdram.is42s16100e.example" caption="SDRAM Example for Micron IS42S16100E">
+		<module type="application" id="sam.components.memory.sdram.is42s16100e.example#0" caption="SDRAM Example for Micron IS42S16100E">
+			<info type="description" value="summary">
+			This example demonstrates how to configure and use the IS42S16100E SDRAM.
+			</info>
+			<build type="c-source" value="is42s16100e_example.c"/>
+			<build type="include-path" value="."/>
+			<device-support value="samv71"/>
+			<require idref="sam.utils.cmsis.samv71.source.template"/>
+			<require idref="sam.drivers.sdramc"/>
+			<require idref="sam.components.memory.sdram.is42s16100e"/>
+			<require idref="sam.drivers.pmc"/>
+			<require idref="sam.drivers.uart"/>
+			<require idref="sam.utils.syscalls"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+		<module type="application" id="sam.components.memory.sdram.is42s16100e.example#1" caption="SDRAM Example for Micron IS42S16100E">
+			<info type="description" value="summary">
+			This example demonstrates how to configure and use the IS42S16100E SDRAM.
+			</info>
+			<build type="c-source" value="is42s16100e_example.c"/>
+			<build type="include-path" value="."/>
+			<device-support value="same70"/>
+			<require idref="sam.utils.cmsis.same70.source.template"/>
+			<require idref="sam.drivers.sdramc"/>
+			<require idref="sam.components.memory.sdram.is42s16100e"/>
+			<require idref="sam.drivers.pmc"/>
+			<require idref="sam.drivers.uart"/>
+			<require idref="sam.utils.syscalls"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

@@ -1,0 +1,28 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam.utils.cmsis.sams70.include" caption="SAMS70 part definitions">
+		<info type="description" value="summary">
+		This file defines all structures and symbols for SAMS70
+		</info>
+		<build type="header-file" value="sams70.h"/>
+		<build type="header-file" value="sams70j19.h"/>
+		<build type="header-file" value="sams70j20.h"/>
+		<build type="header-file" value="sams70j21.h"/>
+		<build type="header-file" value="sams70n19.h"/>
+		<build type="header-file" value="sams70n20.h"/>
+		<build type="header-file" value="sams70n21.h"/>
+		<build type="header-file" value="sams70q19.h"/>
+		<build type="header-file" value="sams70q20.h"/>
+		<build type="header-file" value="sams70q21.h"/>
+		<build type="header-file" value="sams70j19b.h"/>
+		<build type="header-file" value="sams70j20b.h"/>
+		<build type="header-file" value="sams70j21b.h"/>
+		<build type="header-file" value="sams70n19b.h"/>
+		<build type="header-file" value="sams70n20b.h"/>
+		<build type="header-file" value="sams70n21b.h"/>
+		<build type="header-file" value="sams70q19b.h"/>
+		<build type="header-file" value="sams70q20b.h"/>
+		<build type="header-file" value="sams70q21b.h"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="sams70"/>
+	</module>
+</asf>

@@ -1,0 +1,23 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam.drivers.twihs.twihs_master_example" caption="TWIHS MASTER example">
+		<info type="description" value="summary">
+		The application demonstrates how to use the SAM TWIHS peripheral in master mode.
+		</info>
+		<info type="keyword" value="technology">
+			<keyword value="Communication"/>
+		</info>
+		<build type="c-source" value="twihs_master_example.c"/>
+		<device-support value="samg51"/>
+		<device-support value="samg53"/>
+		<device-support value="samg54"/>
+		<device-support value="samv70"/>
+		<device-support value="samv71"/>
+		<device-support value="same70"/>
+		<device-support value="sams70"/>
+		<require idref="sam.drivers.pmc"/>
+		<require idref="sam.drivers.twihs"/>
+		<require idref="common.services.basic.clock"/>
+		<require idref="common.utils.stdio.stdio_serial"/>
+		<info type="gui-flag" value="move-to-root"/>
+	</module>
+</asf>

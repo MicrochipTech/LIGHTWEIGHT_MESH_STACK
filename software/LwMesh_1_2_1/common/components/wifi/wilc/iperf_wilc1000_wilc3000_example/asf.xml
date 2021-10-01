@@ -1,0 +1,28 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.wilc3000.iperf_wilc1000_wilc3000_example">
+		<module type="application" id="common.components.wifi.wilc3000.iperf_wilc1000_wilc3000_example#1" caption="WILC1000/WILC3000 iperf Server Example">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This example implements an iperf server for UDP/TCP bandwidth measurements.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="iperf.c"/>
+			<build type="header-file" value="iperf.h"/>
+			<build type="c-source" value="main.c"/>
+
+			<!-- Device support -->
+			<device-support value="sam4s"/>
+			<device-support value="samg53"/>
+			<device-support value="samg55"/>
+			<device-support value="samv71"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.wilc3000"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.utils.osprintf"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

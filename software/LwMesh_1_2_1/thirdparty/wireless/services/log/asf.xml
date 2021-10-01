@@ -1,0 +1,14 @@
+<asf xmlversion="1.0">
+	<module type="component" id="thirdparty.wireless.services.log" caption="Wireless services common UART logging module">
+		<info type="description" value="summary">
+		Wireless services common UART logging module
+		</info>
+        <require idref="thirdparty.wireless.services.log.src"/>
+        <device-support-alias value="log_device_support"/>
+	</module>
+    
+    <device-alias-map name="log_device_support">
+		<device-support value="atsaml21j18b"/>
+		<device-support value="atsamr34j18b"/>
+	</device-alias-map>
+</asf>

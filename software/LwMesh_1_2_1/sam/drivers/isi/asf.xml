@@ -1,0 +1,24 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam.drivers.isi" caption="ISI - Image Sensor Interface">
+		<info type="description" value="summary">
+		Driver for the Image Sensor Interface (ISI).
+		It provides functions for configuring and using the on-chip ISI.
+		</info>
+		<info type="keyword" value="technology">
+			<keyword value="Sensors"/>
+		</info>
+		
+		<build type="c-source" value="isi.c"/>
+		<build type="header-file" subtype="api" value="isi.h"/>
+		<build type="include-path" value="."/>
+
+		<build type="doxygen-entry-point" value="asfdoc_sam_drivers_isi_group"/>
+
+		<device-support value="samv71"/>
+		<device-support value="samv70"/>
+		<device-support value="same70"/>
+		<device-support value="sams70"/>
+		<require idref="sam.utils"/>
+		<generator value="doxygen-module" default-mcu="unspecified-samv71"/>
+	</module>
+</asf>

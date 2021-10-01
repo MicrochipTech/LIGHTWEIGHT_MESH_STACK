@@ -1,0 +1,42 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc1500.wifi_provisioning" caption="WINC1500 Host MCU HTTPs Provisioning">
+		<info type="description" value="summary">
+			Wi-Fi provisioning is implemented on the Host MCU, WINC1500 will be in AP mode and host a webserver which user can connect provide credentials.
+		</info>
+		<info type="keyword" value="technology">
+			<keyword value="Wireless"/>
+		</info>
+		<module type="service" id="common.components.wifi.winc1500.wifi_provisioning#0" caption="WINC1500 Host MCU HTTPs Provisioning">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				Wi-Fi provisioning is implemented on the Host MCU, WINC1500 will be in AP mode and host a webserver which user can connect provide credentials.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="wifi_prov.c"/>
+			<build type="header-file" value="wifi_prov.h"/>
+			<build type="c-source" value="http_content.c"/>
+			<build type="header-file" value="http_content.h"/>
+			<build type="c-source" value="base64decode.c"/>
+			<build type="header-file" value="html_page_buf.h"/>
+			<build type="include-path" value="script"/>
+			<build type="distribute" subtype="file" value="script/hexdump.py"/>
+			<build type="distribute" subtype="file" value="script/logo.png"/>
+			<build type="distribute" subtype="file" value="script/provisioning.html"/>
+
+			<!-- Device support -->
+			<device-support value="samd21"/>
+			<device-support value="saml21"/>
+			<device-support value="saml22"/>
+			<device-support value="samr21"/>
+			<device-support value="sam4s"/>
+			<device-support value="samg53"/>
+			<device-support value="samg55"/>
+			<device-support value="same70"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500"/>
+		</module>
+	</select-by-device>
+</asf>

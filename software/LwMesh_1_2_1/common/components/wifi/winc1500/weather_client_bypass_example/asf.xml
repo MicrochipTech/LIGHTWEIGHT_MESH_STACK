@@ -1,0 +1,42 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc1500.weather_client_bypass_example">
+		<module type="application" id="common.components.wifi.winc1500.weather_client_bypass_example#0" caption="WINC1500 Weather Client ByPass Example">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This example demonstrates how to retrieve weather information from openweathermap.org server using the WINC1500 Wi-Fi module in ByPass Mode.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main.c"/>
+			<build type="header-file" value="main.h"/>
+			<build type="header-file" value="sta.h"/>
+			<build type="c-source" value="sta.c"/>
+			<build type="header-file" value="m2m_wifi_ex.h"/>
+			<build type="header-file" value="net_init.h"/>
+			<build type="header-file" value="os_hook.h"/>
+			<build type="c-source" value="m2m_wifi_ex.c"/>
+			<build type="c-source" value="net_init.c"/>
+			<build type="c-source" value="os_hook.c"/>
+			<build type="header-file" value="winc_netif.h"/>
+			<build type="c-source" value="winc_netif.c"/>
+
+			<!-- Device support -->
+			<device-support value="samg55"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.utils.stdio.stdio_serial"/>
+			<require idref="common.utils.osprintf"/>
+			<require idref="common.services.ioport"/>
+			<require idref="common.services.delay"/>
+			<require idref="thirdparty.os.freertos.version"/>
+			<require idref="thirdparty.lwip.141-dev"/>
+			<require idref="thirdparty.lwip-port.141-dev"/>
+			<require idref="thirdparty.lwip.tinyservices"/>
+			<info type="gui-flag" value="move-to-root"/>
+			<build type="define" name="ETH_MODE" value=""/>
+		</module>
+	</select-by-device>
+</asf>

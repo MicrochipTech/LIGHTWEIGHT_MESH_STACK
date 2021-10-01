@@ -1,0 +1,32 @@
+<asf xmlversion="1.0">
+	<project caption="AT30TS Temperature Sensor Example" id="common.components.sensor.at30ts.example1.xmega_a3bu_xplained">
+		<info type="description" value="summary">
+		AT30TS family of Temperature Sensors have been developed to allow fast system prototyping with a wide range of AVR microcontrollers. The software drivers eliminate low-level development to ease and accelerate development. 
+		</info>
+
+		<!-- List header and source files in this folder -->
+		<build type="header-file" value="conf_example.h"/>
+		<build type="header-file" value="conf_at30ts.h"/>		
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_st7565r.h"/>
+		<build type="header-file" value="conf_sysfont.h"/>
+		<build type="header-file" value="conf_twim.h"/>	
+		<build type="header-file" value="conf_usart_spi.h"/>
+		<config name="config.spi_master_type" value="usart_spi"/>
+			
+		<!-- Include paths -  "." is the minimum required by the generator -->
+		<build type="include-path" value="."/>
+		<build type="include-path" value="../../"/>
+		<build type="define" name ="_ATAVRTEMPSENSORX_" value=""/>
+		
+		<require idref="common.components.sensor.at30ts.example1"/>
+		<require idref="board.xmega_a3bu_xplained"/>
+			<!-- Setup generators -->
+		<generator value="iarew"/>
+		<generator value="avrgcc"/>
+		<generator value="as5_8"/>
+		<generator value="doxygen"/>
+		<device-support value="atxmega256a3bu"/>
+	</project>
+</asf>

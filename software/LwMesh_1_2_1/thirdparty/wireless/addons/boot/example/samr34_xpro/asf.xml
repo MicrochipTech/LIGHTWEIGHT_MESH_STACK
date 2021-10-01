@@ -1,0 +1,27 @@
+<asf xmlversion="1.0">
+	<project caption="Serial Bootloader Application - SAM R34 Xplained Pro" id="thirdparty.wireless.addons.boot.samr34_xpro" force-caption ="true" force-description="true">
+		<info type="description" value="summary">
+			Serial bootloader for SAMR34 Xplained Pro
+		</info>	
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clocks.h"/>
+		<build type="header-file" value="conf_sio2host.h"/>
+		<build type="header-file" value="conf_sio2ncp.h"/>
+		<build type="header-file" value="conf_extint.h"/>
+
+		<require idref="thirdparty.wireless.addons.boot.example"/>
+		<require idref="board.samr34_xplained_pro"/>
+		<require idref="thirdparty.wireless.addons.bootloader.utils"/>
+		<config name="config.sam0.drivers.sercom.usart" value="callback"/>
+		<require idref="sam0.drivers.extint"/>
+		<config name="config.thirdparty.wireless.addons.sio2host" value="uart"/>
+		<config name="config.thirdparty.wireless.addons.sio2ncp" value="uart"/>
+
+		<generator value="iarewarm"/>
+		<generator value="armgcc" />
+		<generator value="as5_arm" />
+		<generator value="doxygen"/>
+		<device-support value="atsamr34j18b"/>
+	</project>
+</asf>

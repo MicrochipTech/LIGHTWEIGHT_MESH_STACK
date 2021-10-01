@@ -1,0 +1,12 @@
+<asf xmlversion="1.0">
+	<module type="driver" caption="SAMC20 startup code" id="sam0.utils.cmsis.samc20.source.template">
+		<build type="c-source" value="system_samc20.c"/>
+		<build type="header-file" value="system_samc20.h"/>
+		<build type="c-source" value="gcc/startup_samc20.c" toolchain="armgcc"/>
+		<build type="c-source" value="iar/startup_samc20.c" toolchain="iarewarm"/>
+		<build type="include-path" value="."/>
+		<build type="include-path" value="../include"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="samc20"/>
+	</module>
+</asf>

@@ -1,0 +1,12 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam0.components.smart_card.quick_start" caption="Quick Start for Smart Card">
+		<info type="description" value="summary">
+		Quick start guide for Smart Card.
+		</info>
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="c-source" value="qs_smart_card.c"/>
+		<build type="include-path" value="."/>
+		<require idref="sam0.components.smart_card"/>
+		<device-support value="saml22"/>
+	</module>
+</asf>

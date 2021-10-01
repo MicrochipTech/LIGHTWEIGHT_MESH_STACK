@@ -1,0 +1,48 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc1500.cert_downloader">
+		<module type="component" id="common.components.wifi.winc1500.cert_downloader#1" caption="WINC1500 Certificate Downloader Driver">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				Driver to upload root, tls certificate to WINC1500 SPI Flash from host
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="include-path" value="root_tls_cert"/>
+			<build type="include-path" value="root_tls_cert/x509"/>
+			<build type="include-path" value="root_tls_cert/crypto"/>
+			<build type="header-file" value="root_tls_cert/pem.h"/>
+			<build type="c-source" value="root_tls_cert/pem.c"/>
+			<build type="header-file" value="root_tls_cert/root_setup.h"/>
+			<build type="c-source" value="root_tls_cert/root_setup.c"/>
+			<build type="header-file" value="root_tls_cert/root_tls_cert.h"/>
+			<build type="c-source" value="root_tls_cert/tls_setup.c"/>
+			<build type="header-file" value="root_tls_cert/tls_setup.h"/>
+			<build type="c-source" value="root_tls_cert/tls_srv_sec.c"/>
+			<build type="header-file" value="root_tls_cert/tls_srv_sec.h"/>
+			<build type="header-file" value="root_tls_cert/x509/x509_cert.h"/>
+			<build type="header-file" value="root_tls_cert/x509/asn1.h"/>
+			<build type="c-source" value="root_tls_cert/x509/x509_cert.c"/>
+			<build type="c-source" value="root_tls_cert/x509/asn1.c"/>
+			<build type="header-file" value="root_tls_cert/crypto/crypto.h"/>
+			<build type="header-file" value="root_tls_cert/crypto/crypto_api.h"/>
+			<build type="c-source" value="root_tls_cert/crypto/crypto_api.c"/>
+			<build type="c-source" value="root_tls_cert/crypto/rsa_key.c"/>
+			<build type="c-source" value="root_tls_cert/crypto/hash.c"/>
+			<build type="c-source" value="root_tls_cert/crypto/tls_buffer_manager.c"/>
+			<build type="header-file" value="root_tls_cert/crypto/crypto_types.h"/>
+			<build type="header-file" value="root_tls_cert/crypto/tls_buffer_manager.h"/>
+			
+			<device-support value="samd21"/>
+			<device-support value="saml21"/>
+			<device-support value="saml22"/>
+			<device-support value="sam4s"/>
+			<device-support value="samg53"/>
+			<device-support value="samg55"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500"/>
+			<info type="gui-flag" value="move-to-root"/>
+	    </module>		
+	</select-by-device>
+</asf>

@@ -1,0 +1,21 @@
+<asf xmlversion="1.0">
+	<board id="board.samr21b18_module" vendor="Atmel" caption="SAMR21B18_MODULE">
+		<build type="define" name="BOARD" value="SAMR21B18_MODULE"/>
+		<build type="define" name="__SAMR21E18A__" value=""/>
+		<build type="include-path" value="."/>
+		<build type="include-path" value=".."/>
+		<require idref="sam0.utils.cmsis.samr21.source.template"/>
+		<require idref="common.utils"/>
+		<require idref="common.boards"/>
+		<require idref="sam0.drivers.port"/>
+		<device-support value="atsamr21e18a"/>
+		<build type="macro-config" subtype="script" value="debug_scripts/gcc/samr21b18_module_flash.gdb" toolchain="armgcc"/>
+		<build type="macro-config" subtype="aux-script" value="debug_scripts/gcc/samr21b18_module_sram.gdb" toolchain="armgcc"/>
+		<build type="macro-config" subtype="script" value="debug_scripts/iar/samr21b18_module_flash.mac" toolchain="iarewarm"/>
+		<build type="macro-config" subtype="aux-script" value="debug_scripts/iar/samr21b18_module_sram.mac" toolchain="iarewarm"/>
+		<build type="header-file" value="samr21b18_module.h"/>
+		<build type="c-source" value="board_init.c"/>
+		<build type="module-config" subtype="path" value="board_config"/>
+		<build type="module-config" subtype="required-header-file" value="conf_board.h"/>
+	</board>
+</asf>

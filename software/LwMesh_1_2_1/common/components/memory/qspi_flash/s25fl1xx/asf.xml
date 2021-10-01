@@ -1,0 +1,21 @@
+<asf xmlversion="1.0">
+	<module type="component" id="common.components.memory.qspi_flash.s25fl1xx" caption="QSPI Flash configuration for S25FL1XX">
+		<info type="keyword" value="technology">
+			<keyword value="Memory"/>
+		</info>
+		<info type="description" value="summary">
+		The QSPI configuration for the S25FL1XX FLASH from Mircon.
+		</info>			
+		<build type="header-file" value="s25fl1xx.h"/>
+		<build type="c-source" value="s25fl1xx.c"/>
+		<build type="include-path" value="."/>
+		<build type="doxygen-entry-point" value="group_common_components_memory_qspi_flash_s25fl1xx"/>
+		<device-support value="samv70"/>
+		<device-support value="samv71"/>
+		<device-support value="same70"/>
+		<device-support value="sams70"/>
+		<require idref="sam.drivers.qspi"/>
+		<require idref="common.services.delay"/>
+		<generator value="doxygen-module" default-mcu="unspecified-samv71"/>
+	</module>
+</asf>

@@ -1,0 +1,106 @@
+<asf xmlversion="1.0">
+	<select-by-config id="common.services.usb.class.hid.device.mtouch.composite" name="config.common.services.usb.class.hid.device.mtouch.composite" caption="USB Device HID Multi-touch (Composite Device)" default="disable">
+		<module type="service" id="common.services.usb.class.hid.device.mtouch.composite#enable" caption="USB Device HID Multi-touch (Composite Device)">
+			<info type="description" value="summary">
+			USB Human Interface Device (HID) Multi-touch for composite device.
+			</info>
+			<info type="keyword" value="technology">
+				<keyword value="USB"/>
+				<keyword value="Communication" />
+			</info>
+			<info type="gui-flag" value="hidden"/>
+			<build type="header-file" subtype="api" value="udi_hid_multitouch.h"/>
+			<build type="c-source" value="udi_hid_multitouch.c"/>
+			<build type="include-path" value="."/>
+			<build type="doxygen-entry-point" value="udi_hid_mtouch_group"/>
+			<build type="doxygen-quick-start" value="udi_hid_mtouch_use_case_composite"/>
+			<require idref="common.services.usb.class.hid.device"/>
+			<require idref="common.services.usb.class.composite.device"/>
+			<device-support value="uc3a"/>
+			<device-support value="uc3a3_a4"/>
+			<device-support value="uc3b"/>
+			<device-support value="uc3c"/>
+			<device-support value="uc3d"/>
+			<device-support value="uc3l3"/>
+			<device-support value="uc3l4"/>
+			<device-support value="xmegaa1u"/>
+			<device-support value="xmegaa3u"/>
+			<device-support value="xmegaa3bu"/>
+			<device-support value="xmegaa4u"/>
+			<device-support value="xmegab"/>
+			<device-support value="xmegac"/>
+			<device-support value="sam3s"/>
+			<device-support value="sam3sd"/>
+			<device-support value="sam3u"/>
+			<device-support value="sam3x"/>
+			<device-support value="sam3a"/>
+			<device-support value="sam4s"/>
+			<device-support value="sam4l"/>
+			<device-support value="sam4e"/>
+			<device-support value="samd21"/>
+			<device-support value="samr21"/>
+			<device-support value="sam4c32e"/>
+			<device-support value="saml21"/>
+			<device-support value="samg55"/>
+			<device-support value="saml22"/>
+			<device-support value="samr30"/>
+			<generator value="doxygen-module" default-mcu="unspecified-uc3a"/>
+		</module>
+		<module type="service" id="common.services.usb.class.hid.device.mtouch.composite#disable" caption="USB Device HID Multi-touch disabled">
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="avr"/>
+			<device-support value="sam"/>
+			<device-support value="sam0"/>
+			<generator value="doxygen-module" default-mcu="unspecified-uc3a"/>
+		</module>
+	</select-by-config>
+	<module type="service" id="common.services.usb.class.hid.device.mtouch.single" caption="USB Device HID Multi-touch (Single Interface Device)">
+		<info type="description" value="summary">
+		USB Human Interface Device (HID) Multi-touch is configurated to run on USB device with a single interface.
+		</info>
+		<info type="keyword" value="technology">
+			<keyword value="USB"/>
+			<keyword value="Communication" />
+		</info>
+		<info type="gui-flag" value="hidden"/>
+		<build type="header-file" subtype="api" value="udi_hid_multitouch.h"/>
+		<build type="c-source" value="udi_hid_multitouch.c"/>
+		<build type="header-file" value="udi_hid_multitouch_conf.h"/>
+		<build type="c-source" value="udi_hid_multitouch_desc.c"/>
+		<build type="include-path" value="."/>
+		<build type="module-config" subtype="required-header-file" value="conf_usb.h"/>
+		<build type="module-config" subtype="path" value="module_config"/>
+		<build type="doxygen-entry-point" value="udi_hid_mtouch_group"/>
+		<require idref="common.services.usb.class.hid.device"/>
+		<device-support value="uc3a"/>
+		<device-support value="uc3a3_a4"/>
+		<device-support value="uc3b"/>
+		<device-support value="uc3c"/>
+		<device-support value="uc3d"/>
+		<device-support value="uc3l3"/>
+		<device-support value="uc3l4"/>
+		<device-support value="xmegaa1u"/>
+		<device-support value="xmegaa3u"/>
+		<device-support value="xmegaa3bu"/>
+		<device-support value="xmegaa4u"/>
+		<device-support value="xmegab"/>
+		<device-support value="xmegac"/>
+		<device-support value="sam3s"/>
+		<device-support value="sam3sd"/>
+		<device-support value="sam3u"/>
+		<device-support value="sam3x"/>
+		<device-support value="sam3a"/>
+		<device-support value="sam4s"/>
+		<device-support value="sam4l"/>
+		<device-support value="sam4e"/>
+		<device-support value="samd21"/>
+		<device-support value="samr21"/>
+		<device-support value="sam4c32e"/>
+		<device-support value="samd11"/>
+		<device-support value="saml21"/>
+		<device-support value="samg55"/>
+		<device-support value="saml22"/>
+		<device-support value="samr30"/>
+		<generator value="doxygen-module" default-mcu="unspecified-uc3a"/>
+	</module>
+</asf>

@@ -1,0 +1,26 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.wilc.serial_bridge_wilc1000_example">
+		<module type="application" id="common.components.wifi.wilc.serial_bridge_wilc1000_example#1" caption="WILC1000 Serial Bridge Example">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This example demonstrates how to communicate with WILC firmware from PC GUI tool using SPI or SDIO serial brdige appplication using the WILC1000 Wi-Fi module.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="serial_bridge.c"/>
+			<build type="c-source" value="uart_stream.c"/>
+			<build type="header-file" value="uart_stream.h"/>	
+
+			<!-- Device support -->
+			<device-support value="sam4s"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.wilc1000"/>
+			<require idref="common.services.basic.clock"/>
+			<require idref="common.components.memory.sd_mmc"/>
+			<require idref="common.utils.osprintf"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

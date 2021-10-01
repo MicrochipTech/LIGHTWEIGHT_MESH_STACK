@@ -1,0 +1,312 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.utils.common" caption="Common SAM0 compiler driver">
+		<info type="description" value="summary">
+		Compiler abstraction layer and code utilities for SAM0 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+		</info>
+		<build type="include-path" value="."/>
+		<build type="header-file" subtype="api" value="compiler.h"/>
+		<build type="header-file" subtype="api" value="status_codes.h"/>
+		<build type="include-path" value="header_files/"/>
+		<build type="header-file" value="header_files/io.h"/>
+		<build type="doxygen-entry-point" value="group_sam0_utils" />
+		<require idref="sam0.utils.preprocessor"/>
+		<require idref="sam0.utils.makefile"/>
+		<require idref="sam0.utils.syscalls"/>
+		<require idref="common.utils.interrupt" />
+		<require idref="common.utils.part_macros" />
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="sam0"/>
+		<device-support value="samb"/>
+	</module>
+
+	<select-by-device id="sam0.utils" caption="SAM0 compiler driver">
+		<!-- SAMD20 //-->
+		<module type="driver" id="sam0.utils#0" caption="SAM D20 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMD20 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samd20.include"/>
+			<require idref="sam0.utils.cmsis.samd20.include.component"/>
+			<require idref="sam0.utils.cmsis.samd20.include.instance"/>
+			<require idref="sam0.utils.cmsis.samd20.include.pio"/>
+			<require idref="sam0.utils.cmsis.samd20.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samd20"/>
+		</module>
+
+		<!-- SAMD21 //-->
+		<module type="driver" id="sam0.utils#1" caption="SAM D21 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMD21 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samd21.include"/>
+			<require idref="sam0.utils.cmsis.samd21.include.component"/>
+			<require idref="sam0.utils.cmsis.samd21.include.instance"/>
+			<require idref="sam0.utils.cmsis.samd21.include.pio"/>
+			<require idref="sam0.utils.cmsis.samd21.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samd21"/>
+		</module>
+
+		<!-- SAMR21 //-->
+		<module type="driver" id="sam0.utils#2" caption="SAM R21 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMR21 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samr21.include"/>
+			<require idref="sam0.utils.cmsis.samr21.include.component"/>
+			<require idref="sam0.utils.cmsis.samr21.include.instance"/>
+			<require idref="sam0.utils.cmsis.samr21.include.pio"/>
+			<require idref="sam0.utils.cmsis.samr21.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samr21"/>
+		</module>
+
+		<!-- SAMD10 //-->
+		<module type="driver" id="sam0.utils#3" caption="SAM D10 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMD10 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samd10.include"/>
+			<require idref="sam0.utils.cmsis.samd10.include.component"/>
+			<require idref="sam0.utils.cmsis.samd10.include.instance"/>
+			<require idref="sam0.utils.cmsis.samd10.include.pio"/>
+			<require idref="sam0.utils.cmsis.samd10.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samd10"/>
+		</module>
+
+		<!-- SAMD11 //-->
+		<module type="driver" id="sam0.utils#4" caption="SAM D11 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMD11 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samd11.include"/>
+			<require idref="sam0.utils.cmsis.samd11.include.component"/>
+			<require idref="sam0.utils.cmsis.samd11.include.instance"/>
+			<require idref="sam0.utils.cmsis.samd11.include.pio"/>
+			<require idref="sam0.utils.cmsis.samd11.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samd11"/>
+		</module>
+
+		<!-- SAML21 A variant //-->
+		<module type="driver" id="sam0.utils#5" caption="SAM L21 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAML21 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.saml21.include"/>
+			<require idref="sam0.utils.cmsis.saml21.include.component"/>
+			<require idref="sam0.utils.cmsis.saml21.include.instance"/>
+			<require idref="sam0.utils.cmsis.saml21.include.pio"/>
+			<require idref="sam0.utils.cmsis.saml21.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="saml21xxxa"/>
+		</module>
+
+		<!-- SAML21 B variant //-->
+		<module type="driver" id="sam0.utils#6" caption="SAM L21 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAML21 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.saml21.include_b"/>
+			<require idref="sam0.utils.cmsis.saml21.include_b.component"/>
+			<require idref="sam0.utils.cmsis.saml21.include_b.instance"/>
+			<require idref="sam0.utils.cmsis.saml21.include_b.pio"/>
+			<require idref="sam0.utils.cmsis.saml21.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="saml21xxxb"/>
+			<device-support value="unspecified-saml21"/>
+		</module>
+
+		<!-- SAMDA1 //-->
+		<module type="driver" id="sam0.utils#7" caption="SAM DA1 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMDA1 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samda1.include"/>
+			<require idref="sam0.utils.cmsis.samda1.include.component"/>
+			<require idref="sam0.utils.cmsis.samda1.include.instance"/>
+			<require idref="sam0.utils.cmsis.samda1.include.pio"/>
+			<require idref="sam0.utils.cmsis.samda1.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samda1"/>
+		</module>
+
+		<!-- SAMC21 //-->
+		<module type="driver" id="sam0.utils#8" caption="SAM C21 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMC21 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samc21.include"/>
+			<require idref="sam0.utils.cmsis.samc21.include.component"/>
+			<require idref="sam0.utils.cmsis.samc21.include.instance"/>
+			<require idref="sam0.utils.cmsis.samc21.include.pio"/>
+			<require idref="sam0.utils.cmsis.samc21.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samc21"/>
+		</module>
+
+		<!-- SAMC20 //-->
+		<module type="driver" id="sam0.utils#9" caption="SAM C20 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMC20 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samc20.include"/>
+			<require idref="sam0.utils.cmsis.samc20.include.component"/>
+			<require idref="sam0.utils.cmsis.samc20.include.instance"/>
+			<require idref="sam0.utils.cmsis.samc20.include.pio"/>
+			<require idref="sam0.utils.cmsis.samc20.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samc20"/>
+		</module>
+
+		<!-- SAML22 //-->
+		<module type="driver" id="sam0.utils#10" caption="SAM L22 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAML22 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.saml22.include"/>
+			<require idref="sam0.utils.cmsis.saml22.include.component"/>
+			<require idref="sam0.utils.cmsis.saml22.include.instance"/>
+			<require idref="sam0.utils.cmsis.saml22.include.pio"/>
+			<require idref="sam0.utils.cmsis.saml22.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="saml22"/>
+		</module>
+
+		<!-- SAMD09 //-->
+		<module type="driver" id="sam0.utils#11" caption="SAM D09 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMD09 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samd09.include"/>
+			<require idref="sam0.utils.cmsis.samd09.include.component"/>
+			<require idref="sam0.utils.cmsis.samd09.include.instance"/>
+			<require idref="sam0.utils.cmsis.samd09.include.pio"/>
+			<require idref="sam0.utils.cmsis.samd09.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samd09"/>
+		</module>
+
+		<!-- SAMHA1 //-->
+		<module type="driver" id="sam0.utils#13" caption="SAM HA1 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMHA1 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samha1.include"/>
+			<require idref="sam0.utils.cmsis.samha1.include.component"/>
+			<require idref="sam0.utils.cmsis.samha1.include.instance"/>
+			<require idref="sam0.utils.cmsis.samha1.include.pio"/>
+			<require idref="sam0.utils.cmsis.samha1.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samha1"/>
+		</module>
+
+		<!-- SAMHA0 //-->
+		<module type="driver" id="sam0.utils#17" caption="SAM HA0 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMHA0 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samha0.include"/>
+			<require idref="sam0.utils.cmsis.samha0.include.component"/>
+			<require idref="sam0.utils.cmsis.samha0.include.instance"/>
+			<require idref="sam0.utils.cmsis.samha0.include.pio"/>
+			<require idref="sam0.utils.cmsis.samha0.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samha0"/>
+		</module>
+
+		<!-- SAMB11 //-->
+		<module type="driver" id="sam0.utils#15" caption="SAM B11 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMB11 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samb11.include"/>
+			<require idref="sam0.utils.cmsis.samb11.include.component"/>
+			<require idref="sam0.utils.cmsis.samb11.include.instance"/>
+			<require idref="sam0.utils.cmsis.samb11.include.pio"/>
+			<require idref="sam0.utils.cmsis.samb11.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samb11"/>
+		</module>
+
+		<!-- SAMR30 //-->
+		<module type="driver" id="sam0.utils#16" caption="SAM R30 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMR30 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samr30.include"/>
+			<require idref="sam0.utils.cmsis.samr30.include.component"/>
+			<require idref="sam0.utils.cmsis.samr30.include.instance"/>
+			<require idref="sam0.utils.cmsis.samr30.include.pio"/>
+			<require idref="sam0.utils.cmsis.samr30.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samr30"/>
+		</module>
+		
+		<!-- SAMR34 B variant //-->
+		<module type="driver" id="sam0.utils#18" caption="SAM R34 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMR34 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samr34.include"/>
+			<require idref="sam0.utils.cmsis.samr34.include.component"/>
+			<require idref="sam0.utils.cmsis.samr34.include.instance"/>
+			<require idref="sam0.utils.cmsis.samr34.include.pio"/>
+			<require idref="sam0.utils.cmsis.samr34.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samr34jxxb"/>
+			<device-support value="unspecified-samr34"/>
+		</module>
+		
+		<!-- SAMR35 B variant //-->
+		<module type="driver" id="sam0.utils#19" caption="SAM R35 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for SAMR35 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.samr35.include"/>
+			<require idref="sam0.utils.cmsis.samr35.include.component"/>
+			<require idref="sam0.utils.cmsis.samr35.include.instance"/>
+			<require idref="sam0.utils.cmsis.samr35.include.pio"/>
+			<require idref="sam0.utils.cmsis.samr35.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="samr35jxxb"/>
+			<device-support value="unspecified-samr35"/>
+		</module>
+		<!-- WLR089 variant //-->
+		<module type="driver" id="sam0.utils#20" caption="WLR089 compiler driver">
+			<info type="description" value="summary">
+			Compiler abstraction layer and code utilities for WLR089 devices. This module provides various abstraction layers and utilities to make code compatible between different compilers. It also contains utilities typically used while pre-processing code.
+			</info>
+			<require idref="sam0.utils.common"/>
+			<require idref="sam0.utils.cmsis.wlr089.include"/>
+			<require idref="sam0.utils.cmsis.wlr089.include.component"/>
+			<require idref="sam0.utils.cmsis.wlr089.include.instance"/>
+			<require idref="sam0.utils.cmsis.wlr089.include.pio"/>
+			<require idref="sam0.utils.cmsis.wlr089.source.template"/>
+			<info type="gui-flag" value="hidden"/>
+			<device-support value="wlr089u0"/>
+			<device-support value="unspecified-wlr089"/>
+		</module>
+		
+	</select-by-device>
+</asf>

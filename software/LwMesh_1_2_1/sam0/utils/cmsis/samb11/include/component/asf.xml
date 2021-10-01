@@ -1,0 +1,28 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.utils.cmsis.samb11.include.component" caption="SAMB11 component definitions">
+		<info type="description" value="summary">
+		SAMB11 component definitions.
+		</info>
+		<build type="header-file" value="aon_gp_regs.h"/>
+		<build type="header-file" value="aon_pwr_seq.h"/>
+		<build type="header-file" value="aon_sleep_timer.h"/>
+		<build type="header-file" value="arm_bpu.h"/>
+		<build type="header-file" value="arm_dwt.h"/>
+		<build type="header-file" value="arm_rom.h"/>
+		<build type="header-file" value="arm_sysctrl.h"/>
+		<build type="header-file" value="dualtimer.h"/>
+		<build type="header-file" value="efuse_misc_regs.h"/>
+		<build type="header-file" value="gpio.h"/>
+		<build type="header-file" value="i2c.h"/>
+		<build type="header-file" value="lp_clk_cal_regs.h"/>
+		<build type="header-file" value="lpmcu_misc_regs.h"/>
+		<build type="header-file" value="prov_dma_ctrl.h"/>
+		<build type="header-file" value="spi.h"/>
+		<build type="header-file" value="spi_flash.h"/>
+		<build type="header-file" value="timer.h"/>
+		<build type="header-file" value="uart.h"/>
+		<build type="header-file" value="wdt.h"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="samb11"/>
+	</module>
+</asf>

@@ -1,0 +1,12 @@
+<asf xmlversion="1.0">
+	<module type="component" id="thirdparty.wireless.services.log.src" caption="Wireless services common UART logging module">
+		<info type="description" value="summary">
+		Wireless services common UART logging module sources
+		</info>
+		<info type="gui-flag" value="hidden"/>
+		<build type="c-source" value="log.c"/>
+        <require idref="thirdparty.wireless.services.log.inc"/>
+        <require idref="thirdparty.wireless.addons.sio2host"/>
+        <device-support-alias value="log_device_support"/>
+	</module>
+</asf>

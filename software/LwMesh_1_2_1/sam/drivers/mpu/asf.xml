@@ -1,0 +1,17 @@
+<asf xmlversion="1.0">
+	<select-by-device id="sam.drivers.mpu" caption="MPU - Memory Protect Unit">
+		<module type="driver" id="sam.drivers.mpu#0" caption="MPU - Memory Protect Unit">
+			<build type="c-source" value="mpu.c"/>
+			<build type="header-file" subtype="api" value="mpu.h"/>
+			<build type="include-path" value="."/>
+			<require idref="sam.utils"/>
+			<require idref="common.services.basic.clock"/>
+			<device-support value="samv71"/>
+			<device-support value="samv70"/>
+			<device-support value="same70"/>
+			<device-support value="sams70"/>
+			<build type="doxygen-entry-point" value="sam_drivers_mpu_group"/>
+			<generator value="doxygen-module" default-mcu="unspecified-samv71"/>
+		</module>
+	</select-by-device>
+</asf>

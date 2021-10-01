@@ -1,0 +1,34 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam.drivers.eic" caption="EIC - External Interrupt Controller">
+		<info type="description" value="summary">
+		EIC allows pins to be configured as external interrupts.
+		</info>
+		<info type="keyword" value="technology">
+			<keyword value="I/O" />
+			<keyword value="Interrupt" />
+		</info>
+		<build type="c-source" value="eic.c"/>
+		<build type="header-file" subtype="api" value="eic.h"/>
+		<build type="include-path" value="."/>
+		<build type="doxygen-entry-point" value="asfdoc_sam_drivers_eic_group"/>
+		<build type="doxygen-quick-start" value="sam_eic_quickstart"/>
+		<build type="doxygen-example-path" value=" example"/>
+		<device-support value="sam4l"/>
+		<require idref="common.services.basic.clock"/>
+		<require idref="common.services.basic.sleepmgr"/>
+		<require idref="sam.utils"/>
+		<info type="appnote" value="AT07901"/>
+		<info type="keyword" value="pdf">
+			<keyword value="EIC" />
+			<keyword value="Interrupt"/>
+			<keyword value="Controller"/>
+			<keyword value="External"/>
+		</info>
+
+		<info type="description" value="pdf">
+			This application note describes how to use the ASF driver to
+			interface to the EIC on SAM.
+		</info>
+		<generator value="doxygen-module-v2" default-mcu="unspecified-sam4l"/>
+	</module>
+</asf>

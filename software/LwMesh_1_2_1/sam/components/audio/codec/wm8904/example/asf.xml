@@ -1,0 +1,19 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam.components.audio.codec.wm8904.example" caption="WM8904 Audio Codec Example">
+		<info type="description" value="summary">
+			A simple example for the WM8904 by playing back a WAV file.
+		</info>
+		<build type="c-source" value="wm8904_example.c"/>
+		<build type="include-path" value="."/>
+		<device-support value="samv71"/>
+		<require idref="sam.utils.cmsis.samv71.source.template"/>
+		<require idref="sam.components.audio.codec.wm8904"/>
+		<require idref="common.services.basic.clock"/>
+		<require idref="sam.drivers.pio"/>
+		<require idref="sam.drivers.ssc"/>
+		<require idref="sam.drivers.xdmac"/>
+		<require idref="common.utils.stdio.stdio_serial"/>
+		<require idref="common.services.delay"/>
+		<info type="gui-flag" value="move-to-root"/>
+	</module>
+</asf>

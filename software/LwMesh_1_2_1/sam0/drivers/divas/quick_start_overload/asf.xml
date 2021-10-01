@@ -1,0 +1,13 @@
+<asf xmlversion="1.0">
+	<module type="application" id="sam0.drivers.divas.quick_start_overload" caption="Quick Start for the SAM0 DIVAS Driver (Overload APIs)">
+		<info type="description" value="summary">
+		Quick start guide for the DIVAS driver demonstrating configuration and initialization using overload.
+		</info>
+		<info type="gui-flag" value="move-to-root"/>
+		<build type="c-source" value="qs_divas_overload.c"/>
+		<build type="include-path" value="."/>
+		<require idref="sam0.drivers.divas"/>
+		<require idref="sam0.drivers.system"/>
+		<device-support value="samc21"/>
+	</module>
+</asf>

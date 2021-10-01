@@ -1,0 +1,37 @@
+<asf xmlversion="1.0">
+	<select-by-device id="common.components.wifi.winc1500.iot_qtouch_demo">
+		<module type="application" id="common.components.wifi.winc1500.iot_qtouch_demo#0" caption="WINC1500 IoT Qtouch Sensor Demo">
+			<!-- Summary Description -->
+			<info type="description" value="summary">
+				This IoT Qtouch sensor demo is configured to work with the SAM D21 Xplained Pro using the WINC1500 Wi-Fi module.
+			</info>
+
+			<!-- Source -->
+			<build type="include-path" value="."/>
+			<build type="c-source" value="main.c"/>
+			<build type="c-source" value="demo.c"/>
+			<build type="header-file" value="demo.h"/>
+
+			<build type="include-path" value="qtouch"/>
+			<build type="c-source" value="qtouch/touch.c"/>
+			<build type="header-file" value="qtouch/QDebugSettings.h"/>
+
+			<build type="include-path" value="doc"/>
+			<build type="distribute" subtype="file" value="doc/Atmel-WINC1500-Internet-of-Things-Sensor-Demo-using-SAM-D21-Xplained-Pro.pdf"/>
+			<build type="include-path" value="android_app"/>
+			<build type="distribute" subtype="file" value="android_app/Atmel_IOT_Sensor_v2.0.18.apk"/>
+
+			<!-- Device support -->
+			<device-support value="samd21"/>
+
+			<!-- Required modules -->
+			<require idref="common.components.wifi.winc1500"/>
+			<require idref="sam0.drivers.rtc"/>
+			<require idref="sam0.utils"/>
+			<require idref="sam0.utils.stdio"/>
+			<require idref="sam0.utils.stdio.stdio_serial"/>
+			<require idref="sam.services.qtouch.devspecific.sam0.samd"/>
+			<info type="gui-flag" value="move-to-root"/>
+		</module>
+	</select-by-device>
+</asf>

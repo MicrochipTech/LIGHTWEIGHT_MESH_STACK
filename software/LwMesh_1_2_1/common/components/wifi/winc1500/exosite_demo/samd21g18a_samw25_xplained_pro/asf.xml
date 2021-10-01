@@ -1,0 +1,39 @@
+<asf xmlversion="1.0">
+	<project caption="WINC1500 Exosite Cloud Demo for SAMW25 XPlained Pro" id="common.components.wifi.winc1500.exosite_demo.samw25_xplained_pro">
+		<!-- Summary Description -->
+		<info type="description" value="summary">
+			This sample application demonstrates connectivity to the Exosite cloud using Atmel WINC1500 Wi-Fi module.
+		</info>
+
+		<!-- Source -->
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_access.h"/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clocks.h"/>
+		<build type="header-file" value="conf_extint.h"/>
+		<build type="header-file" value="conf_fatfs.h"/>
+		<build type="header-file" value="conf_sd_mmc.h"/>
+		<build type="header-file" value="conf_spi.h"/>
+		<build type="header-file" value="conf_sw_timer.h"/>
+		<build type="header-file" value="conf_winc.h"/>
+		<build type="header-file" value="conf_at30tse75x.h"/>
+		
+		<config name="config.common2.components.memory.sd_mmc" value="spi"/>
+		<config name="config.common2.components.memory.sd_mmc.ctrl_access" value="enable"/>
+		<config name="config.sam0.drivers.rtc" value="calendar_callback"/>
+
+		<!-- Device support -->
+		<device-support value="atsamd21g18a"/>
+
+		<!-- Required modules -->
+		<require idref="common.components.wifi.winc1500.exosite_demo"/>
+		<require idref="board.samw25_xplained_pro"/>
+
+		<!-- Generators -->
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen"/>
+		<config name="config.compiler.armgcc.create_aux" value="no"/>
+		<config name="config.compiler.as5_arm.create_aux" value="no"/>
+	</project>
+</asf>

@@ -1,0 +1,15 @@
+<asf xmlversion="1.0">
+	<project id="common.services.adp.example.sam4s_xplained_pro_twi" caption="ADP Example Application on SAM4S Xplained Pro(TWI interface)">
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_tc.h"/>
+		<require idref="common.services.adp.example"/>
+		<require idref="board.sam4s_xplained_pro"/>
+		<generator value="iarewarm"/>
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<config name="config.common.services.adp" value="twi"/>
+		<device-support value="atsam4sd32c"/>
+	</project>
+</asf>

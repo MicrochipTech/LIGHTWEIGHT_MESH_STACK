@@ -1,0 +1,11 @@
+<asf xmlversion="1.0">
+	<module type="component" id="thirdparty.wireless.services.log.inc" caption="Wireless services common UART logging module">
+		<info type="description" value="summary">
+		Wireless services common UART logging module headers
+		</info>
+		<info type="gui-flag" value="hidden"/>
+        <build type="include-path" value="."/>
+		<build type="header-file" value="log.h"/>
+        <device-support-alias value="log_device_support"/>
+	</module>
+</asf>

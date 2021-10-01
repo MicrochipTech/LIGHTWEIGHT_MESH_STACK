@@ -1,0 +1,19 @@
+<asf xmlversion="1.0">
+	<project caption="GMAC unit Test for SAME70" id="sam.drivers.gmac.unit_tests.same70_xplained">
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_test.h"/>
+		<build type="header-file" value="conf_eth.h"/>
+		<build type="header-file" value="conf_uart_serial.h"/>
+		<require idref="sam.drivers.gmac.unit_tests"/>
+		<require idref="board.same70_xplained"/>
+		<generator value="iarewarm"/>
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen"/>
+		<config name="config.compiler.iarewarm.dlib" value="full"/>
+		<device-support value="atsame70q21b"/>
+		<config name="config.sam.drivers.gmac.unit_tests" value="ksz8081rna"/>
+	</project>
+</asf>

@@ -1,0 +1,18 @@
+<asf xmlversion="1.0">
+	<project caption="Flash efc unit Test for SAME70" id="sam.services.flash.unit_tests.same70_xplained">
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_test.h"/>
+		<build type="header-file" value="conf_uart_serial.h"/>
+		<require idref="sam.services.flash.unit_tests"/>
+		<require idref="board.same70_xplained"/>
+		<generator value="iarewarm"/>
+		<generator value="armgcc"/>
+		<generator value="doxygen"/>
+		<generator value="as5_arm"/>
+		<config name="config.compiler.iarewarm.dlib" value="full"/>
+		<config name="config.compiler.armgcc.create_aux" value="no"/>
+		<device-support value="atsame70q21b"/>
+	</project>
+</asf>

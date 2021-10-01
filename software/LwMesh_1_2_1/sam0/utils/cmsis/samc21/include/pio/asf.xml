@@ -1,0 +1,21 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam0.utils.cmsis.samc21.include.pio" caption="SAMC21 PIO definitions">
+		<info type="description" value="summary">
+		SAMC21 PIO component definitions.
+		</info>
+		<build type="header-file" value="samc21e15a.h"/>
+		<build type="header-file" value="samc21e16a.h"/>
+		<build type="header-file" value="samc21e17a.h"/>
+		<build type="header-file" value="samc21e18a.h"/>
+		<build type="header-file" value="samc21g15a.h"/>
+		<build type="header-file" value="samc21g16a.h"/>
+		<build type="header-file" value="samc21g17a.h"/>
+		<build type="header-file" value="samc21g18a.h"/>
+		<build type="header-file" value="samc21j15a.h"/>
+		<build type="header-file" value="samc21j16a.h"/>
+		<build type="header-file" value="samc21j17a.h"/>
+		<build type="header-file" value="samc21j18a.h"/>
+		<info type="gui-flag" value="hidden"/>
+		<device-support value="samc21"/>
+	</module>
+</asf>

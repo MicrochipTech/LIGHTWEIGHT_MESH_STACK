@@ -1,0 +1,27 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam.utils.cmsis.same70.include.pio" caption="SAME70 PIO definitions">
+		<info type="description" value="summary">
+		This file defines all structures and symbols for SAME70 PIO
+		</info>
+		<build type="header-file" value="same70j19.h"/>
+		<build type="header-file" value="same70j20.h"/>
+		<build type="header-file" value="same70j21.h"/>
+		<build type="header-file" value="same70n19.h"/>
+		<build type="header-file" value="same70n20.h"/>
+		<build type="header-file" value="same70n21.h"/>
+		<build type="header-file" value="same70q19.h"/>
+		<build type="header-file" value="same70q20.h"/>
+		<build type="header-file" value="same70q21.h"/>
+		<build type="header-file" value="same70j19b.h"/>
+		<build type="header-file" value="same70j20b.h"/>
+		<build type="header-file" value="same70j21b.h"/>
+		<build type="header-file" value="same70n19b.h"/>
+		<build type="header-file" value="same70n20b.h"/>
+		<build type="header-file" value="same70n21b.h"/>
+		<build type="header-file" value="same70q19b.h"/>
+		<build type="header-file" value="same70q20b.h"/>
+		<build type="header-file" value="same70q21b.h"/>
+		<device-support value="same70"/>
+		<info type="gui-flag" value="hidden"/>
+	</module>
+</asf>

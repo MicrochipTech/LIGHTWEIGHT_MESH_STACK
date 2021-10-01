@@ -1,0 +1,21 @@
+<asf xmlversion="1.0">
+	<project caption="ILI9488 LCD Controller example for SAME70 Xplained" id="sam.components.display.ili9488.example.same70_xplained">
+		<info type="description" value="summary">
+		This example demonstrates how to configure the ILI9488 LCD controller to draw pictures and strings on the display.
+		</info>
+		<build type="include-path" value="."/>
+		<build type="header-file" value="conf_clock.h"/>
+		<build type="header-file" value="conf_board.h"/>
+		<build type="header-file" value="conf_ili9488.h"/>
+		<build type="header-file" value="conf_uart_serial.h"/>
+		<build type="header-file" value="conf_spi_master.h"/>
+		<require idref="sam.components.display.ili9488.example"/>
+		<require idref="board.same70_xplained"/>
+		<config name="config.sam.components.display.ili9488" value="spi"/>
+		<generator value="iarewarm"/>
+		<generator value="armgcc"/>
+		<generator value="as5_arm"/>
+		<generator value="doxygen"/>
+		<device-support value="atsame70q21b"/>
+	</project>
+</asf>

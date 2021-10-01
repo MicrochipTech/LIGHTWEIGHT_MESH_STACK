@@ -1,0 +1,68 @@
+<asf xmlversion="1.0">
+	<module type="driver" id="sam.utils.cmsis.samv70.include.instance" caption="SAMV70 instance definitions">
+		<info type="description" value="summary">
+		This file defines all structures and symbols for SAMV70 peripherals 
+		</info>
+		<!--
+		<build type="include-path" value="."/>
+		-->
+		<build type="header-file" value="acc.h"/>
+		<build type="header-file" value="aes.h"/>
+		<build type="header-file" value="afec0.h"/>
+		<build type="header-file" value="afec1.h"/>
+		<build type="header-file" value="chipid.h"/>
+		<build type="header-file" value="dacc.h"/>
+		<build type="header-file" value="efc.h"/>
+		<build type="header-file" value="gpbr.h"/>
+		<build type="header-file" value="hsmci.h"/>
+		<build type="header-file" value="i2sc0.h"/>
+		<build type="header-file" value="i2sc1.h"/>
+		<build type="header-file" value="icm.h"/>
+		<build type="header-file" value="isi.h"/>
+		<build type="header-file" value="matrix.h"/>
+		<build type="header-file" value="mcan0.h"/>
+		<build type="header-file" value="mcan1.h"/>
+		<build type="header-file" value="mlb.h"/>
+		<build type="header-file" value="pioa.h"/>
+		<build type="header-file" value="piob.h"/>
+		<build type="header-file" value="pioc.h"/>
+		<build type="header-file" value="piod.h"/>
+		<build type="header-file" value="pioe.h"/>
+		<build type="header-file" value="pmc.h"/>
+		<build type="header-file" value="pwm0.h"/>
+		<build type="header-file" value="pwm1.h"/>
+		<build type="header-file" value="qspi.h"/>
+		<build type="header-file" value="rstc.h"/>
+		<build type="header-file" value="rswdt.h"/>
+		<build type="header-file" value="rtc.h"/>
+		<build type="header-file" value="rtt.h"/>
+		<build type="header-file" value="sdramc.h"/>
+		<build type="header-file" value="smc.h"/>
+		<build type="header-file" value="spi0.h"/>
+		<build type="header-file" value="spi1.h"/>
+		<build type="header-file" value="ssc.h"/>
+		<build type="header-file" value="supc.h"/>
+		<build type="header-file" value="tc0.h"/>
+		<build type="header-file" value="tc1.h"/>
+		<build type="header-file" value="tc2.h"/>
+		<build type="header-file" value="tc3.h"/>
+		<build type="header-file" value="trng.h"/>
+		<build type="header-file" value="twihs0.h"/>
+		<build type="header-file" value="twihs1.h"/>
+		<build type="header-file" value="twihs2.h"/>
+		<build type="header-file" value="uart0.h"/>
+		<build type="header-file" value="uart1.h"/>
+		<build type="header-file" value="uart2.h"/>
+		<build type="header-file" value="uart3.h"/>
+		<build type="header-file" value="uart4.h"/>
+		<build type="header-file" value="usart0.h"/>
+		<build type="header-file" value="usart1.h"/>
+		<build type="header-file" value="usart2.h"/>
+		<build type="header-file" value="usbhs.h"/>
+		<build type="header-file" value="utmi.h"/>
+		<build type="header-file" value="wdt.h"/>
+		<build type="header-file" value="xdmac.h"/>
+		<device-support value="samv70"/>
+		<info type="gui-flag" value="hidden"/>
+	</module>
+</asf>
