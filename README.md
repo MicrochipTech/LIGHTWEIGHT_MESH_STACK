@@ -7,7 +7,7 @@ Devices: 802.15.4 TRx and SoCs
 
 <p align="left">
 <a href="https://www.microchip.com" target="_blank">
-<img src="resources/media/Microchip_logo.png" width=320></a>
+<img src="resources/media/mchp_logo.png" width=320></a>
 </p>
 
 ## ⚠ Disclaimer
@@ -248,8 +248,8 @@ End Device:
 Network topology in WSN Monitor for 3 devices configured with different device roles in application level.
 
 <p align="center">
-<img src="resources/media/wsndemo_output_01.png" width=480>
-<img src="resources/media/wsndemo_output_02.png" width=480>
+<img src="resources/media/wsndemo_out_01.png" width=480>
+<img src="resources/media/wsndemo_out_02.png" width=480>
 </p>
 
 > Note: For details on LwMesh Architecture & Network Layer specifications, please refer the document [AVR2130_LWMesh_Developer_Guide_v1.2.1](https://ww1.microchip.com/downloads/en/Appnotes/Atmel-42028-Lightweight-Mesh-Developer-Guide_Application-Note_AVR2130.pdf)
