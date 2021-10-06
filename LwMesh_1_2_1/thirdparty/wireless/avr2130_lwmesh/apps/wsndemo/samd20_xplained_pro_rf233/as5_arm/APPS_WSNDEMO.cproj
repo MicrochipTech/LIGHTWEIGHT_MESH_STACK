@@ -1,0 +1,1615 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+	<PropertyGroup>
+		<SchemaVersion>2.0</SchemaVersion>
+		<ProjectVersion>6.1</ProjectVersion>
+		<ProjectGuid>ff4944db-2661-3ced-840c-355b37d37a65</ProjectGuid>
+		<Name>$(MSBuildProjectName)</Name>
+		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
+		<RootNamespace>$(MSBuildProjectName)</RootNamespace>
+		<AsfFrameworkConfig>
+			<framework-data>
+				<options>
+					<option id="common.boards" value="Add" config="" content-id="Atmel.ASF"/>
+					<option id="common.utils" value="Add" config="" content-id="Atmel.ASF"/>
+					<option id="sam0.drivers.port" value="Add" config="" content-id="Atmel.ASF"/>
+					<option id="sam0.utils.cmsis.samd20.source.template" value="Add" config="" content-id="Atmel.ASF"/>
+					<option id="thirdparty.wireless.avr2130_lwmesh.apps.wsndemo" value="Add" config="" content-id="Atmel.ASF"/>
+					<option id="thirdparty.wireless.avr2130_lwmesh.apps.wsndemo_module" value="Add" config="" content-id="Atmel.ASF"/>
+				</options>
+				<configurations>
+					<configuration key="config.sam0.drivers.sercom.usart" value="callback" default="callback" content-id="Atmel.ASF"/>
+					<configuration key="config.thirdparty.wireless.avr2130_lwmesh.source.phy.ext" value="at86rf233" default="at86rf233" content-id="Atmel.ASF"/>
+					<configuration key="config.sam0.drivers.sercom.spi" value="polled" default="polled" content-id="Atmel.ASF"/>
+					<configuration key="config.compiler.armgcc.optimization" value="high" default="high" content-id="Atmel.ASF"/>
+				</configurations>
+				<files>
+					<file path="src/ASF/common2/services/delay/delay.h" source="common2/services/delay/delay.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common2/services/delay/sam0/systick_counter.c" source="common2/services/delay/sam0/systick_counter.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common2/services/delay/sam0/systick_counter.h" source="common2/services/delay/sam0/systick_counter.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/boards/board.h" source="common/boards/board.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/serial/sam0_usart/usart_serial.h" source="common/services/serial/sam0_usart/usart_serial.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/serial/serial.h" source="common/services/serial/serial.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/utils/interrupt.h" source="common/utils/interrupt.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/utils/interrupt/interrupt_sam_nvic.c" source="common/utils/interrupt/interrupt_sam_nvic.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/utils/interrupt/interrupt_sam_nvic.h" source="common/utils/interrupt/interrupt_sam_nvic.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/utils/parts.h" source="common/utils/parts.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/boards/samd20_xplained_pro/board_init.c" source="sam0/boards/samd20_xplained_pro/board_init.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/boards/samd20_xplained_pro/samd20_xplained_pro.h" source="sam0/boards/samd20_xplained_pro/samd20_xplained_pro.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/extint/extint.h" source="sam0/drivers/extint/extint.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/extint/extint_callback.c" source="sam0/drivers/extint/extint_callback.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/extint/extint_callback.h" source="sam0/drivers/extint/extint_callback.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/extint/extint_sam_d_r_h/extint.c" source="sam0/drivers/extint/extint_sam_d_r_h/extint.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/port/port.c" source="sam0/drivers/port/port.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/port/port.h" source="sam0/drivers/port/port.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/port/quick_start/qs_port_basic.h" source="sam0/drivers/port/quick_start/qs_port_basic.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/rtc/rtc_count.h" source="sam0/drivers/rtc/rtc_count.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/rtc/rtc_count_interrupt.h" source="sam0/drivers/rtc/rtc_count_interrupt.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h/rtc_count.c" source="sam0/drivers/rtc/rtc_sam_d_r_h/rtc_count.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/rtc/rtc_sam_d_r_h/rtc_count_interrupt.c" source="sam0/drivers/rtc/rtc_sam_d_r_h/rtc_count_interrupt.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/rtc/rtc_tamper.h" source="sam0/drivers/rtc/rtc_tamper.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/sercom.c" source="sam0/drivers/sercom/sercom.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/sercom.h" source="sam0/drivers/sercom/sercom.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/sercom_interrupt.c" source="sam0/drivers/sercom/sercom_interrupt.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/sercom_interrupt.h" source="sam0/drivers/sercom/sercom_interrupt.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/sercom_pinout.h" source="sam0/drivers/sercom/sercom_pinout.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/spi/quick_start_dma/qs_spi_dma_use.h" source="sam0/drivers/sercom/spi/quick_start_dma/qs_spi_dma_use.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/spi/quick_start_master/qs_spi_master_basic.h" source="sam0/drivers/sercom/spi/quick_start_master/qs_spi_master_basic.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/spi/quick_start_slave/qs_spi_slave_basic.h" source="sam0/drivers/sercom/spi/quick_start_slave/qs_spi_slave_basic.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/spi/spi.c" source="sam0/drivers/sercom/spi/spi.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/spi/spi.h" source="sam0/drivers/sercom/spi/spi.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/usart/quick_start/qs_usart_basic_use.h" source="sam0/drivers/sercom/usart/quick_start/qs_usart_basic_use.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/usart/quick_start_callback/qs_usart_callback.h" source="sam0/drivers/sercom/usart/quick_start_callback/qs_usart_callback.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/usart/quick_start_dma/qs_usart_dma_use.h" source="sam0/drivers/sercom/usart/quick_start_dma/qs_usart_dma_use.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/usart/quick_start_lin/qs_lin.h" source="sam0/drivers/sercom/usart/quick_start_lin/qs_lin.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/usart/usart.c" source="sam0/drivers/sercom/usart/usart.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/usart/usart.h" source="sam0/drivers/sercom/usart/usart.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/usart/usart_interrupt.c" source="sam0/drivers/sercom/usart/usart_interrupt.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/sercom/usart/usart_interrupt.h" source="sam0/drivers/sercom/usart/usart_interrupt.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/clock/clock.h" source="sam0/drivers/system/clock/clock.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/clock/clock_samd20/clock.c" source="sam0/drivers/system/clock/clock_samd20/clock.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/clock/clock_samd20/clock_config_check.h" source="sam0/drivers/system/clock/clock_samd20/clock_config_check.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/clock/clock_samd20/clock_feature.h" source="sam0/drivers/system/clock/clock_samd20/clock_feature.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/clock/clock_samd20/gclk.c" source="sam0/drivers/system/clock/clock_samd20/gclk.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/clock/gclk.h" source="sam0/drivers/system/clock/gclk.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/interrupt/system_interrupt.c" source="sam0/drivers/system/interrupt/system_interrupt.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/interrupt/system_interrupt.h" source="sam0/drivers/system/interrupt/system_interrupt.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/interrupt/system_interrupt_samd20/system_interrupt_features.h" source="sam0/drivers/system/interrupt/system_interrupt_samd20/system_interrupt_features.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/pinmux/pinmux.c" source="sam0/drivers/system/pinmux/pinmux.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/pinmux/pinmux.h" source="sam0/drivers/system/pinmux/pinmux.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/pinmux/quick_start/qs_pinmux_basic.h" source="sam0/drivers/system/pinmux/quick_start/qs_pinmux_basic.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/power/power_sam_d_r_h/power.h" source="sam0/drivers/system/power/power_sam_d_r_h/power.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/reset/reset_sam_d_r_h/reset.h" source="sam0/drivers/system/reset/reset_sam_d_r_h/reset.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/system.c" source="sam0/drivers/system/system.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/system/system.h" source="sam0/drivers/system/system.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/tc/tc.h" source="sam0/drivers/tc/tc.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/tc/tc_interrupt.c" source="sam0/drivers/tc/tc_interrupt.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/tc/tc_interrupt.h" source="sam0/drivers/tc/tc_interrupt.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/drivers/tc/tc_sam_d_r_h/tc.c" source="sam0/drivers/tc/tc_sam_d_r_h/tc.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/ac.h" source="sam0/utils/cmsis/samd20/include/component/ac.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/adc.h" source="sam0/utils/cmsis/samd20/include/component/adc.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/dac.h" source="sam0/utils/cmsis/samd20/include/component/dac.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/dsu.h" source="sam0/utils/cmsis/samd20/include/component/dsu.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/eic.h" source="sam0/utils/cmsis/samd20/include/component/eic.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/evsys.h" source="sam0/utils/cmsis/samd20/include/component/evsys.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/gclk.h" source="sam0/utils/cmsis/samd20/include/component/gclk.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/nvmctrl.h" source="sam0/utils/cmsis/samd20/include/component/nvmctrl.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/pac.h" source="sam0/utils/cmsis/samd20/include/component/pac.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/pm.h" source="sam0/utils/cmsis/samd20/include/component/pm.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/port.h" source="sam0/utils/cmsis/samd20/include/component/port.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/rtc.h" source="sam0/utils/cmsis/samd20/include/component/rtc.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/sercom.h" source="sam0/utils/cmsis/samd20/include/component/sercom.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/sysctrl.h" source="sam0/utils/cmsis/samd20/include/component/sysctrl.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/tc.h" source="sam0/utils/cmsis/samd20/include/component/tc.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/component/wdt.h" source="sam0/utils/cmsis/samd20/include/component/wdt.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/ac.h" source="sam0/utils/cmsis/samd20/include/instance/ac.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/adc.h" source="sam0/utils/cmsis/samd20/include/instance/adc.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/dac.h" source="sam0/utils/cmsis/samd20/include/instance/dac.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/dsu.h" source="sam0/utils/cmsis/samd20/include/instance/dsu.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/eic.h" source="sam0/utils/cmsis/samd20/include/instance/eic.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/evsys.h" source="sam0/utils/cmsis/samd20/include/instance/evsys.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/gclk.h" source="sam0/utils/cmsis/samd20/include/instance/gclk.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/nvmctrl.h" source="sam0/utils/cmsis/samd20/include/instance/nvmctrl.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/pac0.h" source="sam0/utils/cmsis/samd20/include/instance/pac0.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/pac1.h" source="sam0/utils/cmsis/samd20/include/instance/pac1.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/pac2.h" source="sam0/utils/cmsis/samd20/include/instance/pac2.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/pm.h" source="sam0/utils/cmsis/samd20/include/instance/pm.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/port.h" source="sam0/utils/cmsis/samd20/include/instance/port.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/rtc.h" source="sam0/utils/cmsis/samd20/include/instance/rtc.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/sercom0.h" source="sam0/utils/cmsis/samd20/include/instance/sercom0.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/sercom1.h" source="sam0/utils/cmsis/samd20/include/instance/sercom1.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/sercom2.h" source="sam0/utils/cmsis/samd20/include/instance/sercom2.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/sercom3.h" source="sam0/utils/cmsis/samd20/include/instance/sercom3.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/sercom4.h" source="sam0/utils/cmsis/samd20/include/instance/sercom4.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/sercom5.h" source="sam0/utils/cmsis/samd20/include/instance/sercom5.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/sysctrl.h" source="sam0/utils/cmsis/samd20/include/instance/sysctrl.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/tc0.h" source="sam0/utils/cmsis/samd20/include/instance/tc0.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/tc1.h" source="sam0/utils/cmsis/samd20/include/instance/tc1.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/tc2.h" source="sam0/utils/cmsis/samd20/include/instance/tc2.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/tc3.h" source="sam0/utils/cmsis/samd20/include/instance/tc3.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/tc4.h" source="sam0/utils/cmsis/samd20/include/instance/tc4.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/tc5.h" source="sam0/utils/cmsis/samd20/include/instance/tc5.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/tc6.h" source="sam0/utils/cmsis/samd20/include/instance/tc6.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/tc7.h" source="sam0/utils/cmsis/samd20/include/instance/tc7.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/instance/wdt.h" source="sam0/utils/cmsis/samd20/include/instance/wdt.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20e14.h" source="sam0/utils/cmsis/samd20/include/pio/samd20e14.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20e14b.h" source="sam0/utils/cmsis/samd20/include/pio/samd20e14b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20e15.h" source="sam0/utils/cmsis/samd20/include/pio/samd20e15.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20e15b.h" source="sam0/utils/cmsis/samd20/include/pio/samd20e15b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20e16.h" source="sam0/utils/cmsis/samd20/include/pio/samd20e16.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20e16b.h" source="sam0/utils/cmsis/samd20/include/pio/samd20e16b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20e17.h" source="sam0/utils/cmsis/samd20/include/pio/samd20e17.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20e18.h" source="sam0/utils/cmsis/samd20/include/pio/samd20e18.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20g14.h" source="sam0/utils/cmsis/samd20/include/pio/samd20g14.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20g14b.h" source="sam0/utils/cmsis/samd20/include/pio/samd20g14b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20g15.h" source="sam0/utils/cmsis/samd20/include/pio/samd20g15.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20g15b.h" source="sam0/utils/cmsis/samd20/include/pio/samd20g15b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20g16.h" source="sam0/utils/cmsis/samd20/include/pio/samd20g16.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20g16b.h" source="sam0/utils/cmsis/samd20/include/pio/samd20g16b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20g17.h" source="sam0/utils/cmsis/samd20/include/pio/samd20g17.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20g17u.h" source="sam0/utils/cmsis/samd20/include/pio/samd20g17u.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20g18.h" source="sam0/utils/cmsis/samd20/include/pio/samd20g18.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20g18u.h" source="sam0/utils/cmsis/samd20/include/pio/samd20g18u.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20j14.h" source="sam0/utils/cmsis/samd20/include/pio/samd20j14.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20j14b.h" source="sam0/utils/cmsis/samd20/include/pio/samd20j14b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20j15.h" source="sam0/utils/cmsis/samd20/include/pio/samd20j15.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20j15b.h" source="sam0/utils/cmsis/samd20/include/pio/samd20j15b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20j16.h" source="sam0/utils/cmsis/samd20/include/pio/samd20j16.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20j16b.h" source="sam0/utils/cmsis/samd20/include/pio/samd20j16b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20j17.h" source="sam0/utils/cmsis/samd20/include/pio/samd20j17.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/pio/samd20j18.h" source="sam0/utils/cmsis/samd20/include/pio/samd20j18.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20.h" source="sam0/utils/cmsis/samd20/include/samd20.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20e14.h" source="sam0/utils/cmsis/samd20/include/samd20e14.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20e14b.h" source="sam0/utils/cmsis/samd20/include/samd20e14b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20e15.h" source="sam0/utils/cmsis/samd20/include/samd20e15.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20e15b.h" source="sam0/utils/cmsis/samd20/include/samd20e15b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20e16.h" source="sam0/utils/cmsis/samd20/include/samd20e16.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20e16b.h" source="sam0/utils/cmsis/samd20/include/samd20e16b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20e17.h" source="sam0/utils/cmsis/samd20/include/samd20e17.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20e18.h" source="sam0/utils/cmsis/samd20/include/samd20e18.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20g14.h" source="sam0/utils/cmsis/samd20/include/samd20g14.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20g14b.h" source="sam0/utils/cmsis/samd20/include/samd20g14b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20g15.h" source="sam0/utils/cmsis/samd20/include/samd20g15.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20g15b.h" source="sam0/utils/cmsis/samd20/include/samd20g15b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20g16.h" source="sam0/utils/cmsis/samd20/include/samd20g16.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20g16b.h" source="sam0/utils/cmsis/samd20/include/samd20g16b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20g17.h" source="sam0/utils/cmsis/samd20/include/samd20g17.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20g17u.h" source="sam0/utils/cmsis/samd20/include/samd20g17u.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20g18.h" source="sam0/utils/cmsis/samd20/include/samd20g18.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20g18u.h" source="sam0/utils/cmsis/samd20/include/samd20g18u.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20j14.h" source="sam0/utils/cmsis/samd20/include/samd20j14.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20j14b.h" source="sam0/utils/cmsis/samd20/include/samd20j14b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20j15.h" source="sam0/utils/cmsis/samd20/include/samd20j15.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20j15b.h" source="sam0/utils/cmsis/samd20/include/samd20j15b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20j16.h" source="sam0/utils/cmsis/samd20/include/samd20j16.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20j16b.h" source="sam0/utils/cmsis/samd20/include/samd20j16b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20j17.h" source="sam0/utils/cmsis/samd20/include/samd20j17.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/include/samd20j18.h" source="sam0/utils/cmsis/samd20/include/samd20j18.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/source/gcc/startup_samd20.c" source="sam0/utils/cmsis/samd20/source/gcc/startup_samd20.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/source/system_samd20.c" source="sam0/utils/cmsis/samd20/source/system_samd20.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/cmsis/samd20/source/system_samd20.h" source="sam0/utils/cmsis/samd20/source/system_samd20.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/compiler.h" source="sam0/utils/compiler.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/header_files/io.h" source="sam0/utils/header_files/io.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/linker_scripts/samd20/gcc/samd20j18_flash.ld" source="sam0/utils/linker_scripts/samd20/gcc/samd20j18_flash.ld" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/make/Makefile.sam.in" source="sam0/utils/make/Makefile.sam.in" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/preprocessor/mrecursion.h" source="sam0/utils/preprocessor/mrecursion.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/preprocessor/mrepeat.h" source="sam0/utils/preprocessor/mrepeat.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/preprocessor/preprocessor.h" source="sam0/utils/preprocessor/preprocessor.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/preprocessor/stringz.h" source="sam0/utils/preprocessor/stringz.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/preprocessor/tpaste.h" source="sam0/utils/preprocessor/tpaste.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/status_codes.h" source="sam0/utils/status_codes.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/stdio/read.c" source="sam0/utils/stdio/read.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/stdio/stdio_serial/stdio_serial.h" source="sam0/utils/stdio/stdio_serial/stdio_serial.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/stdio/write.c" source="sam0/utils/stdio/write.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/sam0/utils/syscalls/gcc/syscalls.c" source="sam0/utils/syscalls/gcc/syscalls.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/CMSIS/ATMEL-disclaimer.txt" source="thirdparty/CMSIS/ATMEL-disclaimer.txt" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.pdf" source="thirdparty/CMSIS/CMSIS_END_USER_LICENCE_AGREEMENT.pdf" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/CMSIS/Include/arm_math.h" source="thirdparty/CMSIS/Include/arm_math.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/CMSIS/Include/cmsis_compiler.h" source="thirdparty/CMSIS/Include/cmsis_compiler.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/CMSIS/Include/cmsis_gcc.h" source="thirdparty/CMSIS/Include/cmsis_gcc.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/CMSIS/Include/cmsis_version.h" source="thirdparty/CMSIS/Include/cmsis_version.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/CMSIS/Include/core_cm0plus.h" source="thirdparty/CMSIS/Include/core_cm0plus.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/CMSIS/Include/mpu_armv7.h" source="thirdparty/CMSIS/Include/mpu_armv7.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/CMSIS/Lib/GCC/libarm_cortexM0l_math.a" source="thirdparty/CMSIS/Lib/GCC/libarm_cortexM0l_math.a" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/CMSIS/Lib/license.txt" source="thirdparty/CMSIS/Lib/license.txt" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/CMSIS/README.txt" source="thirdparty/CMSIS/README.txt" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/CMSIS/license.txt" source="thirdparty/CMSIS/license.txt" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/EULA.txt" source="thirdparty/wireless/EULA.txt" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.c" source="thirdparty/wireless/addons/sio2host/uart/sio2host.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/addons/sio2host/uart/sio2host.h" source="thirdparty/wireless/addons/sio2host/uart/sio2host.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/commands.c" source="thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/commands.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/commands.h" source="thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/commands.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/config.h" source="thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/config.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/main.c" source="thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/main.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_board.h" source="thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/samd20_xplained_pro_rf233/conf_board.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_clocks.h" source="thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/samd20_xplained_pro_rf233/conf_clocks.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_extint.h" source="thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/samd20_xplained_pro_rf233/conf_extint.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_hw_timer.h" source="thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/samd20_xplained_pro_rf233/conf_hw_timer.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_sio2host.h" source="thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/samd20_xplained_pro_rf233/conf_sio2host.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/samd20_xplained_pro_rf233/conf_sleepmgr.h" source="thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/samd20_xplained_pro_rf233/conf_sleepmgr.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_spi.h" source="thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/samd20_xplained_pro_rf233/conf_spi.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_trx_access.h" source="thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/samd20_xplained_pro_rf233/conf_trx_access.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/wsndemo.c" source="thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/wsndemo.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/wsndemo.h" source="thirdparty/wireless/avr2130_lwmesh/apps/wsndemo/wsndemo.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="AVR2130_LWMesh_Developer_Guide_v1.2.1.pdf" source="thirdparty/wireless/avr2130_lwmesh/doc/AVR2130_LWMesh_Developer_Guide_v1.2.1.pdf" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwk.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwk.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkCommand.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkCommand.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkDataReq.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkDataReq.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkFrame.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkFrame.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkGroup.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkGroup.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkRoute.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkRoute.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkRouteDiscovery.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkRouteDiscovery.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkRx.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkRx.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkSecurity.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkSecurity.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkTx.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkTx.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwk.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwk.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkDataReq.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkDataReq.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkFrame.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkFrame.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkGroup.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkGroup.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkRoute.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkRoute.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkRouteDiscovery.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkRouteDiscovery.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkRx.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkRx.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkSecurity.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkSecurity.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkTx.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkTx.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/phy/at86rf233/inc/at86rf233.h" source="thirdparty/wireless/avr2130_lwmesh/source/phy/at86rf233/inc/at86rf233.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/phy/at86rf233/inc/phy.h" source="thirdparty/wireless/avr2130_lwmesh/source/phy/at86rf233/inc/phy.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/phy/at86rf233/src/phy.c" source="thirdparty/wireless/avr2130_lwmesh/source/phy/at86rf233/src/phy.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sys.h" source="thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sys.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sysConfig.h" source="thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sysConfig.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sysEncrypt.h" source="thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sysEncrypt.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sysTimer.h" source="thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sysTimer.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/sys/src/sys.c" source="thirdparty/wireless/avr2130_lwmesh/source/sys/src/sys.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/sys/src/sysEncrypt.c" source="thirdparty/wireless/avr2130_lwmesh/source/sys/src/sysEncrypt.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/sys/src/sysTimer.c" source="thirdparty/wireless/avr2130_lwmesh/source/sys/src/sysTimer.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/common_hw_timer/common_hw_timer.h" source="thirdparty/wireless/services/common_hw_timer/common_hw_timer.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/common_hw_timer/sam0/hw_timer.c" source="thirdparty/wireless/services/common_hw_timer/sam0/hw_timer.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/common_hw_timer/sam0/hw_timer.h" source="thirdparty/wireless/services/common_hw_timer/sam0/hw_timer.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/common_hw_timer/sam0/lib/libsam0_lib_hw_timer.a" source="thirdparty/wireless/services/common_hw_timer/sam0/lib/libsam0_lib_hw_timer.a" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/sal/at86rf2xx/src/sal.c" source="thirdparty/wireless/services/sal/at86rf2xx/src/sal.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/sal/inc/sal.h" source="thirdparty/wireless/services/sal/inc/sal.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/sal/inc/sal_generic.h" source="thirdparty/wireless/services/sal/inc/sal_generic.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/sal/inc/sal_types.h" source="thirdparty/wireless/services/sal/inc/sal_types.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/sleep_mgr/sam0/sleep_mgr.c" source="thirdparty/wireless/services/sleep_mgr/sam0/sleep_mgr.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/sleep_mgr/sleep_mgr.h" source="thirdparty/wireless/services/sleep_mgr/sleep_mgr.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/trx_access/trx_access.c" source="thirdparty/wireless/services/trx_access/trx_access.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/trx_access/trx_access.h" source="thirdparty/wireless/services/trx_access/trx_access.h" changed="False" content-id="Atmel.ASF"/>
+				</files>
+				<dependencies>
+					<content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.51.0"/>
+				</dependencies>
+				<board id="board.samd20_xplained_pro" content-id="Atmel.ASF" config="" value="Add"/>
+				<project id="thirdparty.wireless.avr2130_lwmesh.apps.wsndemo.samd20_xplained_pro_rf233" content-id="Atmel.ASF" config="" value="Add"/>
+				<documentation help="https://asf.microchip.com/docs/3.51.0/thirdparty.wireless.avr2130_lwmesh.apps.wsndemo.samd20_xplained_pro_rf233/html/index.html"/>
+				<offline-documentation help=""/>
+			</framework-data>
+		</AsfFrameworkConfig>
+		<avrdevice>ATSAMD20J18</avrdevice>
+		<avrdeviceseries>samd20</avrdeviceseries>
+		<Language>C</Language>
+		<ToolchainName>com.Atmel.ARMGCC</ToolchainName>
+		<ArmGccProjectExtensions/>
+		<OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+		<OutputFileName>$(MSBuildProjectName)</OutputFileName>
+		<OutputFileExtension>.elf</OutputFileExtension>
+		<OutputType>Executable</OutputType>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+		<ToolchainSettings>
+			<ArmGcc>
+				<armgcc.compiler.symbols.DefSymbols>
+					<ListValues>
+						<Value>ARM_MATH_CM0PLUS=true</Value>
+						<Value>BOARD=SAMD20_XPLAINED_PRO</Value>
+						<Value>EXTINT_CALLBACK_MODE=true</Value>
+						<Value>PHY_AT86RF233</Value>
+						<Value>RTC_COUNT_ASYNC=true</Value>
+						<Value>SAL_TYPE=AT86RF2xx</Value>
+						<Value>SPI_CALLBACK_MODE=false</Value>
+						<Value>SYSTICK_MODE</Value>
+						<Value>TC_ASYNC=true</Value>
+						<Value>USART_CALLBACK_MODE=true</Value>
+						<Value>__SAMD20J18__</Value>
+					</ListValues>
+				</armgcc.compiler.symbols.DefSymbols>
+				<armgcc.compiler.directories.IncludePaths>
+					<ListValues>
+						<Value>../..</Value>
+						<Value>../../..</Value>
+						<Value>../../../../../../../../common/boards</Value>
+						<Value>../../../../../../../../common/services/serial</Value>
+						<Value>../../../../../../../../common/utils</Value>
+						<Value>../../../../../../../../common2/services/delay</Value>
+						<Value>../../../../../../../../common2/services/delay/sam0</Value>
+						<Value>../../../../../../../../sam0/boards</Value>
+						<Value>../../../../../../../../sam0/boards/samd20_xplained_pro</Value>
+						<Value>../../../../../../../../sam0/drivers/extint</Value>
+						<Value>../../../../../../../../sam0/drivers/extint/extint_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/port</Value>
+						<Value>../../../../../../../../sam0/drivers/rtc</Value>
+						<Value>../../../../../../../../sam0/drivers/rtc/rtc_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom/spi</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom/usart</Value>
+						<Value>../../../../../../../../sam0/drivers/system</Value>
+						<Value>../../../../../../../../sam0/drivers/system/clock</Value>
+						<Value>../../../../../../../../sam0/drivers/system/clock/clock_samd20</Value>
+						<Value>../../../../../../../../sam0/drivers/system/interrupt</Value>
+						<Value>../../../../../../../../sam0/drivers/system/interrupt/system_interrupt_samd20</Value>
+						<Value>../../../../../../../../sam0/drivers/system/pinmux</Value>
+						<Value>../../../../../../../../sam0/drivers/system/power</Value>
+						<Value>../../../../../../../../sam0/drivers/system/power/power_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/system/reset</Value>
+						<Value>../../../../../../../../sam0/drivers/system/reset/reset_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/tc</Value>
+						<Value>../../../../../../../../sam0/drivers/tc/tc_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/utils</Value>
+						<Value>../../../../../../../../sam0/utils/cmsis/samd20/include</Value>
+						<Value>../../../../../../../../sam0/utils/cmsis/samd20/source</Value>
+						<Value>../../../../../../../../sam0/utils/header_files</Value>
+						<Value>../../../../../../../../sam0/utils/preprocessor</Value>
+						<Value>../../../../../../../../sam0/utils/stdio/stdio_serial</Value>
+						<Value>../../../../../../../CMSIS/Include</Value>
+						<Value>../../../../../../../CMSIS/Lib/GCC</Value>
+						<Value>../../../../../../addons/sio2host/uart</Value>
+						<Value>../../../../../../services/common_hw_timer</Value>
+						<Value>../../../../../../services/common_hw_timer/sam0</Value>
+						<Value>../../../../../../services/sal/inc</Value>
+						<Value>../../../../../../services/sleep_mgr</Value>
+						<Value>../../../../../../services/trx_access</Value>
+						<Value>../../../../../source/nwk/inc</Value>
+						<Value>../../../../../source/phy/at86rf233/inc</Value>
+						<Value>../../../../../source/sys/inc</Value>
+						<Value>../src</Value>
+					</ListValues>
+				</armgcc.compiler.directories.IncludePaths>
+				<armgcc.assembler.general.IncludePaths>
+					<ListValues>
+						<Value>../..</Value>
+						<Value>../../..</Value>
+						<Value>../../../../../../../../common/boards</Value>
+						<Value>../../../../../../../../common/services/serial</Value>
+						<Value>../../../../../../../../common/utils</Value>
+						<Value>../../../../../../../../common2/services/delay</Value>
+						<Value>../../../../../../../../common2/services/delay/sam0</Value>
+						<Value>../../../../../../../../sam0/boards</Value>
+						<Value>../../../../../../../../sam0/boards/samd20_xplained_pro</Value>
+						<Value>../../../../../../../../sam0/drivers/extint</Value>
+						<Value>../../../../../../../../sam0/drivers/extint/extint_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/port</Value>
+						<Value>../../../../../../../../sam0/drivers/rtc</Value>
+						<Value>../../../../../../../../sam0/drivers/rtc/rtc_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom/spi</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom/usart</Value>
+						<Value>../../../../../../../../sam0/drivers/system</Value>
+						<Value>../../../../../../../../sam0/drivers/system/clock</Value>
+						<Value>../../../../../../../../sam0/drivers/system/clock/clock_samd20</Value>
+						<Value>../../../../../../../../sam0/drivers/system/interrupt</Value>
+						<Value>../../../../../../../../sam0/drivers/system/interrupt/system_interrupt_samd20</Value>
+						<Value>../../../../../../../../sam0/drivers/system/pinmux</Value>
+						<Value>../../../../../../../../sam0/drivers/system/power</Value>
+						<Value>../../../../../../../../sam0/drivers/system/power/power_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/system/reset</Value>
+						<Value>../../../../../../../../sam0/drivers/system/reset/reset_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/tc</Value>
+						<Value>../../../../../../../../sam0/drivers/tc/tc_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/utils</Value>
+						<Value>../../../../../../../../sam0/utils/cmsis/samd20/include</Value>
+						<Value>../../../../../../../../sam0/utils/cmsis/samd20/source</Value>
+						<Value>../../../../../../../../sam0/utils/header_files</Value>
+						<Value>../../../../../../../../sam0/utils/preprocessor</Value>
+						<Value>../../../../../../../../sam0/utils/stdio/stdio_serial</Value>
+						<Value>../../../../../../../CMSIS/Include</Value>
+						<Value>../../../../../../../CMSIS/Lib/GCC</Value>
+						<Value>../../../../../../addons/sio2host/uart</Value>
+						<Value>../../../../../../services/common_hw_timer</Value>
+						<Value>../../../../../../services/common_hw_timer/sam0</Value>
+						<Value>../../../../../../services/sal/inc</Value>
+						<Value>../../../../../../services/sleep_mgr</Value>
+						<Value>../../../../../../services/trx_access</Value>
+						<Value>../../../../../source/nwk/inc</Value>
+						<Value>../../../../../source/phy/at86rf233/inc</Value>
+						<Value>../../../../../source/sys/inc</Value>
+						<Value>../src</Value>
+					</ListValues>
+				</armgcc.assembler.general.IncludePaths>
+				<armgcc.preprocessingassembler.general.IncludePaths>
+					<ListValues>
+						<Value>../..</Value>
+						<Value>../../..</Value>
+						<Value>../../../../../../../../common/boards</Value>
+						<Value>../../../../../../../../common/services/serial</Value>
+						<Value>../../../../../../../../common/utils</Value>
+						<Value>../../../../../../../../common2/services/delay</Value>
+						<Value>../../../../../../../../common2/services/delay/sam0</Value>
+						<Value>../../../../../../../../sam0/boards</Value>
+						<Value>../../../../../../../../sam0/boards/samd20_xplained_pro</Value>
+						<Value>../../../../../../../../sam0/drivers/extint</Value>
+						<Value>../../../../../../../../sam0/drivers/extint/extint_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/port</Value>
+						<Value>../../../../../../../../sam0/drivers/rtc</Value>
+						<Value>../../../../../../../../sam0/drivers/rtc/rtc_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom/spi</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom/usart</Value>
+						<Value>../../../../../../../../sam0/drivers/system</Value>
+						<Value>../../../../../../../../sam0/drivers/system/clock</Value>
+						<Value>../../../../../../../../sam0/drivers/system/clock/clock_samd20</Value>
+						<Value>../../../../../../../../sam0/drivers/system/interrupt</Value>
+						<Value>../../../../../../../../sam0/drivers/system/interrupt/system_interrupt_samd20</Value>
+						<Value>../../../../../../../../sam0/drivers/system/pinmux</Value>
+						<Value>../../../../../../../../sam0/drivers/system/power</Value>
+						<Value>../../../../../../../../sam0/drivers/system/power/power_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/system/reset</Value>
+						<Value>../../../../../../../../sam0/drivers/system/reset/reset_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/tc</Value>
+						<Value>../../../../../../../../sam0/drivers/tc/tc_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/utils</Value>
+						<Value>../../../../../../../../sam0/utils/cmsis/samd20/include</Value>
+						<Value>../../../../../../../../sam0/utils/cmsis/samd20/source</Value>
+						<Value>../../../../../../../../sam0/utils/header_files</Value>
+						<Value>../../../../../../../../sam0/utils/preprocessor</Value>
+						<Value>../../../../../../../../sam0/utils/stdio/stdio_serial</Value>
+						<Value>../../../../../../../CMSIS/Include</Value>
+						<Value>../../../../../../../CMSIS/Lib/GCC</Value>
+						<Value>../../../../../../addons/sio2host/uart</Value>
+						<Value>../../../../../../services/common_hw_timer</Value>
+						<Value>../../../../../../services/common_hw_timer/sam0</Value>
+						<Value>../../../../../../services/sal/inc</Value>
+						<Value>../../../../../../services/sleep_mgr</Value>
+						<Value>../../../../../../services/trx_access</Value>
+						<Value>../../../../../source/nwk/inc</Value>
+						<Value>../../../../../source/phy/at86rf233/inc</Value>
+						<Value>../../../../../source/sys/inc</Value>
+						<Value>../src</Value>
+					</ListValues>
+				</armgcc.preprocessingassembler.general.IncludePaths>
+				<!-- Project configurable options -->
+				<armgcc.compiler.optimization.level>Optimize most (-O3)</armgcc.compiler.optimization.level>
+				<armgcc.linker.miscellaneous.LinkerFlags>-Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T../../../../../../../../sam0/utils/linker_scripts/samd20/gcc/samd20j18_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+				<armgcc.linker.libraries.Libraries>
+					<ListValues>
+						<Value>arm_cortexM0l_math</Value>
+						<Value>sam0_lib_hw_timer</Value>
+					</ListValues>
+				</armgcc.linker.libraries.Libraries>
+				<armgcc.linker.libraries.LibrarySearchPaths>
+					<ListValues>
+						<Value>../../../../../../../CMSIS/Lib/GCC</Value>
+						<Value>../../../../../../services/common_hw_timer/sam0/lib</Value>
+					</ListValues>
+				</armgcc.linker.libraries.LibrarySearchPaths>
+				<armgcc.linker.general.DoNotUseStandardStartFiles>False</armgcc.linker.general.DoNotUseStandardStartFiles>
+				<armgcc.linker.general.DoNotUseDefaultLibraries>False</armgcc.linker.general.DoNotUseDefaultLibraries>
+				<armgcc.linker.general.NoStartupOrDefaultLibs>False</armgcc.linker.general.NoStartupOrDefaultLibs>
+				<!-- Fixed options, according to ASF 2 AVR32 Makefile -->
+				<armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+				<armgcc.compiler.optimization.DebugLevel>None</armgcc.compiler.optimization.DebugLevel>
+				<armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+				<armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+				<armgcc.compiler.optimization.OtherFlags>-fdata-sections</armgcc.compiler.optimization.OtherFlags>
+				<armgcc.compiler.miscellaneous.OtherFlags>-pipe -fno-strict-aliasing -Wall -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -std=gnu99 -ffunction-sections -fdata-sections -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int -Wmain -Wparentheses -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wundef -Wshadow -Wbad-function-cast -Wwrite-strings -Wsign-compare -Waggregate-return  -Wmissing-declarations -Wformat -Wmissing-format-attribute -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wcast-align --param max-inline-insns-single=500</armgcc.compiler.miscellaneous.OtherFlags>
+				<armgcc.assembler.general.AssemblerFlags/>
+				<armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=SAMD20_XPLAINED_PRO -DEXTINT_CALLBACK_MODE=true -DPHY_AT86RF233 -DRTC_COUNT_ASYNC=true -DSAL_TYPE=AT86RF2xx -DSPI_CALLBACK_MODE=false -DSYSTICK_MODE -DTC_ASYNC=true -DUSART_CALLBACK_MODE=true -D__SAMD20J18__</armgcc.preprocessingassembler.general.AssemblerFlags>
+				<armgcc.linker.general.UseNewlibNano>True</armgcc.linker.general.UseNewlibNano>
+				<armgcc.preprocessingassembler.debugging.DebugLevel>None</armgcc.preprocessingassembler.debugging.DebugLevel>
+				<armgcc.assembler.debugging.DebugLevel>None</armgcc.assembler.debugging.DebugLevel>
+			</ArmGcc>
+		</ToolchainSettings>
+		<GenerateHexFile>True</GenerateHexFile>
+		<GenerateMapFile>True</GenerateMapFile>
+		<GenerateListFile>True</GenerateListFile>
+		<GenerateEepFile>True</GenerateEepFile>
+		<PreBuildEvent></PreBuildEvent>
+		<PostBuildEvent></PostBuildEvent>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+		<ToolchainSettings>
+			<ArmGcc>
+				<armgcc.compiler.symbols.DefSymbols>
+					<ListValues>
+						<Value>ARM_MATH_CM0PLUS=true</Value>
+						<Value>BOARD=SAMD20_XPLAINED_PRO</Value>
+						<Value>EXTINT_CALLBACK_MODE=true</Value>
+						<Value>PHY_AT86RF233</Value>
+						<Value>RTC_COUNT_ASYNC=true</Value>
+						<Value>SAL_TYPE=AT86RF2xx</Value>
+						<Value>SPI_CALLBACK_MODE=false</Value>
+						<Value>SYSTICK_MODE</Value>
+						<Value>TC_ASYNC=true</Value>
+						<Value>USART_CALLBACK_MODE=true</Value>
+						<Value>__SAMD20J18__</Value>
+					</ListValues>
+				</armgcc.compiler.symbols.DefSymbols>
+				<armgcc.compiler.directories.IncludePaths>
+					<ListValues>
+						<Value>../..</Value>
+						<Value>../../..</Value>
+						<Value>../../../../../../../../common/boards</Value>
+						<Value>../../../../../../../../common/services/serial</Value>
+						<Value>../../../../../../../../common/utils</Value>
+						<Value>../../../../../../../../common2/services/delay</Value>
+						<Value>../../../../../../../../common2/services/delay/sam0</Value>
+						<Value>../../../../../../../../sam0/boards</Value>
+						<Value>../../../../../../../../sam0/boards/samd20_xplained_pro</Value>
+						<Value>../../../../../../../../sam0/drivers/extint</Value>
+						<Value>../../../../../../../../sam0/drivers/extint/extint_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/port</Value>
+						<Value>../../../../../../../../sam0/drivers/rtc</Value>
+						<Value>../../../../../../../../sam0/drivers/rtc/rtc_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom/spi</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom/usart</Value>
+						<Value>../../../../../../../../sam0/drivers/system</Value>
+						<Value>../../../../../../../../sam0/drivers/system/clock</Value>
+						<Value>../../../../../../../../sam0/drivers/system/clock/clock_samd20</Value>
+						<Value>../../../../../../../../sam0/drivers/system/interrupt</Value>
+						<Value>../../../../../../../../sam0/drivers/system/interrupt/system_interrupt_samd20</Value>
+						<Value>../../../../../../../../sam0/drivers/system/pinmux</Value>
+						<Value>../../../../../../../../sam0/drivers/system/power</Value>
+						<Value>../../../../../../../../sam0/drivers/system/power/power_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/system/reset</Value>
+						<Value>../../../../../../../../sam0/drivers/system/reset/reset_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/tc</Value>
+						<Value>../../../../../../../../sam0/drivers/tc/tc_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/utils</Value>
+						<Value>../../../../../../../../sam0/utils/cmsis/samd20/include</Value>
+						<Value>../../../../../../../../sam0/utils/cmsis/samd20/source</Value>
+						<Value>../../../../../../../../sam0/utils/header_files</Value>
+						<Value>../../../../../../../../sam0/utils/preprocessor</Value>
+						<Value>../../../../../../../../sam0/utils/stdio/stdio_serial</Value>
+						<Value>../../../../../../../CMSIS/Include</Value>
+						<Value>../../../../../../../CMSIS/Lib/GCC</Value>
+						<Value>../../../../../../addons/sio2host/uart</Value>
+						<Value>../../../../../../services/common_hw_timer</Value>
+						<Value>../../../../../../services/common_hw_timer/sam0</Value>
+						<Value>../../../../../../services/sal/inc</Value>
+						<Value>../../../../../../services/sleep_mgr</Value>
+						<Value>../../../../../../services/trx_access</Value>
+						<Value>../../../../../source/nwk/inc</Value>
+						<Value>../../../../../source/phy/at86rf233/inc</Value>
+						<Value>../../../../../source/sys/inc</Value>
+						<Value>../src</Value>
+					</ListValues>
+				</armgcc.compiler.directories.IncludePaths>
+				<armgcc.assembler.general.IncludePaths>
+					<ListValues>
+						<Value>../..</Value>
+						<Value>../../..</Value>
+						<Value>../../../../../../../../common/boards</Value>
+						<Value>../../../../../../../../common/services/serial</Value>
+						<Value>../../../../../../../../common/utils</Value>
+						<Value>../../../../../../../../common2/services/delay</Value>
+						<Value>../../../../../../../../common2/services/delay/sam0</Value>
+						<Value>../../../../../../../../sam0/boards</Value>
+						<Value>../../../../../../../../sam0/boards/samd20_xplained_pro</Value>
+						<Value>../../../../../../../../sam0/drivers/extint</Value>
+						<Value>../../../../../../../../sam0/drivers/extint/extint_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/port</Value>
+						<Value>../../../../../../../../sam0/drivers/rtc</Value>
+						<Value>../../../../../../../../sam0/drivers/rtc/rtc_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom/spi</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom/usart</Value>
+						<Value>../../../../../../../../sam0/drivers/system</Value>
+						<Value>../../../../../../../../sam0/drivers/system/clock</Value>
+						<Value>../../../../../../../../sam0/drivers/system/clock/clock_samd20</Value>
+						<Value>../../../../../../../../sam0/drivers/system/interrupt</Value>
+						<Value>../../../../../../../../sam0/drivers/system/interrupt/system_interrupt_samd20</Value>
+						<Value>../../../../../../../../sam0/drivers/system/pinmux</Value>
+						<Value>../../../../../../../../sam0/drivers/system/power</Value>
+						<Value>../../../../../../../../sam0/drivers/system/power/power_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/system/reset</Value>
+						<Value>../../../../../../../../sam0/drivers/system/reset/reset_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/tc</Value>
+						<Value>../../../../../../../../sam0/drivers/tc/tc_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/utils</Value>
+						<Value>../../../../../../../../sam0/utils/cmsis/samd20/include</Value>
+						<Value>../../../../../../../../sam0/utils/cmsis/samd20/source</Value>
+						<Value>../../../../../../../../sam0/utils/header_files</Value>
+						<Value>../../../../../../../../sam0/utils/preprocessor</Value>
+						<Value>../../../../../../../../sam0/utils/stdio/stdio_serial</Value>
+						<Value>../../../../../../../CMSIS/Include</Value>
+						<Value>../../../../../../../CMSIS/Lib/GCC</Value>
+						<Value>../../../../../../addons/sio2host/uart</Value>
+						<Value>../../../../../../services/common_hw_timer</Value>
+						<Value>../../../../../../services/common_hw_timer/sam0</Value>
+						<Value>../../../../../../services/sal/inc</Value>
+						<Value>../../../../../../services/sleep_mgr</Value>
+						<Value>../../../../../../services/trx_access</Value>
+						<Value>../../../../../source/nwk/inc</Value>
+						<Value>../../../../../source/phy/at86rf233/inc</Value>
+						<Value>../../../../../source/sys/inc</Value>
+						<Value>../src</Value>
+					</ListValues>
+				</armgcc.assembler.general.IncludePaths>
+				<armgcc.preprocessingassembler.general.IncludePaths>
+					<ListValues>
+						<Value>../..</Value>
+						<Value>../../..</Value>
+						<Value>../../../../../../../../common/boards</Value>
+						<Value>../../../../../../../../common/services/serial</Value>
+						<Value>../../../../../../../../common/utils</Value>
+						<Value>../../../../../../../../common2/services/delay</Value>
+						<Value>../../../../../../../../common2/services/delay/sam0</Value>
+						<Value>../../../../../../../../sam0/boards</Value>
+						<Value>../../../../../../../../sam0/boards/samd20_xplained_pro</Value>
+						<Value>../../../../../../../../sam0/drivers/extint</Value>
+						<Value>../../../../../../../../sam0/drivers/extint/extint_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/port</Value>
+						<Value>../../../../../../../../sam0/drivers/rtc</Value>
+						<Value>../../../../../../../../sam0/drivers/rtc/rtc_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom/spi</Value>
+						<Value>../../../../../../../../sam0/drivers/sercom/usart</Value>
+						<Value>../../../../../../../../sam0/drivers/system</Value>
+						<Value>../../../../../../../../sam0/drivers/system/clock</Value>
+						<Value>../../../../../../../../sam0/drivers/system/clock/clock_samd20</Value>
+						<Value>../../../../../../../../sam0/drivers/system/interrupt</Value>
+						<Value>../../../../../../../../sam0/drivers/system/interrupt/system_interrupt_samd20</Value>
+						<Value>../../../../../../../../sam0/drivers/system/pinmux</Value>
+						<Value>../../../../../../../../sam0/drivers/system/power</Value>
+						<Value>../../../../../../../../sam0/drivers/system/power/power_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/system/reset</Value>
+						<Value>../../../../../../../../sam0/drivers/system/reset/reset_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/drivers/tc</Value>
+						<Value>../../../../../../../../sam0/drivers/tc/tc_sam_d_r_h</Value>
+						<Value>../../../../../../../../sam0/utils</Value>
+						<Value>../../../../../../../../sam0/utils/cmsis/samd20/include</Value>
+						<Value>../../../../../../../../sam0/utils/cmsis/samd20/source</Value>
+						<Value>../../../../../../../../sam0/utils/header_files</Value>
+						<Value>../../../../../../../../sam0/utils/preprocessor</Value>
+						<Value>../../../../../../../../sam0/utils/stdio/stdio_serial</Value>
+						<Value>../../../../../../../CMSIS/Include</Value>
+						<Value>../../../../../../../CMSIS/Lib/GCC</Value>
+						<Value>../../../../../../addons/sio2host/uart</Value>
+						<Value>../../../../../../services/common_hw_timer</Value>
+						<Value>../../../../../../services/common_hw_timer/sam0</Value>
+						<Value>../../../../../../services/sal/inc</Value>
+						<Value>../../../../../../services/sleep_mgr</Value>
+						<Value>../../../../../../services/trx_access</Value>
+						<Value>../../../../../source/nwk/inc</Value>
+						<Value>../../../../../source/phy/at86rf233/inc</Value>
+						<Value>../../../../../source/sys/inc</Value>
+						<Value>../src</Value>
+					</ListValues>
+				</armgcc.preprocessingassembler.general.IncludePaths>
+				<!-- Project configurable options -->
+				<armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
+				<armgcc.linker.miscellaneous.LinkerFlags>-Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T../../../../../../../../sam0/utils/linker_scripts/samd20/gcc/samd20j18_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+				<armgcc.linker.libraries.Libraries>
+					<ListValues>
+						<Value>arm_cortexM0l_math</Value>
+						<Value>sam0_lib_hw_timer</Value>
+					</ListValues>
+				</armgcc.linker.libraries.Libraries>
+				<armgcc.linker.libraries.LibrarySearchPaths>
+					<ListValues>
+						<Value>../../../../../../../CMSIS/Lib/GCC</Value>
+						<Value>../../../../../../services/common_hw_timer/sam0/lib</Value>
+					</ListValues>
+				</armgcc.linker.libraries.LibrarySearchPaths>
+				<armgcc.linker.general.DoNotUseStandardStartFiles>False</armgcc.linker.general.DoNotUseStandardStartFiles>
+				<armgcc.linker.general.DoNotUseDefaultLibraries>False</armgcc.linker.general.DoNotUseDefaultLibraries>
+				<armgcc.linker.general.NoStartupOrDefaultLibs>False</armgcc.linker.general.NoStartupOrDefaultLibs>
+				<!-- Fixed options, according to ASF 2 AVR32 Makefile -->
+				<armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+				<armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+				<armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+				<armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+				<armgcc.compiler.optimization.OtherFlags>-fdata-sections</armgcc.compiler.optimization.OtherFlags>
+				<armgcc.compiler.miscellaneous.OtherFlags>-pipe -fno-strict-aliasing -Wall -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -std=gnu99 -ffunction-sections -fdata-sections -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int -Wmain -Wparentheses -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wundef -Wshadow -Wbad-function-cast -Wwrite-strings -Wsign-compare -Waggregate-return  -Wmissing-declarations -Wformat -Wmissing-format-attribute -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs -Wlong-long -Wunreachable-code -Wcast-align --param max-inline-insns-single=500</armgcc.compiler.miscellaneous.OtherFlags>
+				<armgcc.assembler.general.AssemblerFlags/>
+				<armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=SAMD20_XPLAINED_PRO -DEXTINT_CALLBACK_MODE=true -DPHY_AT86RF233 -DRTC_COUNT_ASYNC=true -DSAL_TYPE=AT86RF2xx -DSPI_CALLBACK_MODE=false -DSYSTICK_MODE -DTC_ASYNC=true -DUSART_CALLBACK_MODE=true -D__SAMD20J18__</armgcc.preprocessingassembler.general.AssemblerFlags>
+				<armgcc.linker.general.UseNewlibNano>True</armgcc.linker.general.UseNewlibNano>
+				<armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
+				<armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
+			</ArmGcc>
+		</ToolchainSettings>
+		<GenerateHexFile>True</GenerateHexFile>
+		<GenerateMapFile>True</GenerateMapFile>
+		<GenerateListFile>True</GenerateListFile>
+		<GenerateEepFile>True</GenerateEepFile>
+		<PreBuildEvent></PreBuildEvent>
+		<PostBuildEvent></PostBuildEvent>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Include="..\..\..\..\..\..\..\common2\services\delay\sam0\systick_counter.c">
+			<Link>src\ASF\common2\services\delay\sam0\systick_counter.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\common\utils\interrupt\interrupt_sam_nvic.c">
+			<Link>src\ASF\common\utils\interrupt\interrupt_sam_nvic.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\boards\samd20_xplained_pro\board_init.c">
+			<Link>src\ASF\sam0\boards\samd20_xplained_pro\board_init.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\extint\extint_callback.c">
+			<Link>src\ASF\sam0\drivers\extint\extint_callback.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\extint\extint_sam_d_r_h\extint.c">
+			<Link>src\ASF\sam0\drivers\extint\extint_sam_d_r_h\extint.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\port\port.c">
+			<Link>src\ASF\sam0\drivers\port\port.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\rtc\rtc_sam_d_r_h\rtc_count.c">
+			<Link>src\ASF\sam0\drivers\rtc\rtc_sam_d_r_h\rtc_count.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\rtc\rtc_sam_d_r_h\rtc_count_interrupt.c">
+			<Link>src\ASF\sam0\drivers\rtc\rtc_sam_d_r_h\rtc_count_interrupt.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\sercom\sercom.c">
+			<Link>src\ASF\sam0\drivers\sercom\sercom.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\sercom\sercom_interrupt.c">
+			<Link>src\ASF\sam0\drivers\sercom\sercom_interrupt.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\sercom\spi\spi.c">
+			<Link>src\ASF\sam0\drivers\sercom\spi\spi.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\sercom\usart\usart.c">
+			<Link>src\ASF\sam0\drivers\sercom\usart\usart.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\sercom\usart\usart_interrupt.c">
+			<Link>src\ASF\sam0\drivers\sercom\usart\usart_interrupt.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\system\clock\clock_samd20\clock.c">
+			<Link>src\ASF\sam0\drivers\system\clock\clock_samd20\clock.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\system\clock\clock_samd20\gclk.c">
+			<Link>src\ASF\sam0\drivers\system\clock\clock_samd20\gclk.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\system\interrupt\system_interrupt.c">
+			<Link>src\ASF\sam0\drivers\system\interrupt\system_interrupt.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\system\pinmux\pinmux.c">
+			<Link>src\ASF\sam0\drivers\system\pinmux\pinmux.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\system\system.c">
+			<Link>src\ASF\sam0\drivers\system\system.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\tc\tc_interrupt.c">
+			<Link>src\ASF\sam0\drivers\tc\tc_interrupt.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\drivers\tc\tc_sam_d_r_h\tc.c">
+			<Link>src\ASF\sam0\drivers\tc\tc_sam_d_r_h\tc.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\source\gcc\startup_samd20.c">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\source\gcc\startup_samd20.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\source\system_samd20.c">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\source\system_samd20.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\utils\stdio\read.c">
+			<Link>src\ASF\sam0\utils\stdio\read.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\utils\stdio\write.c">
+			<Link>src\ASF\sam0\utils\stdio\write.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\sam0\utils\syscalls\gcc\syscalls.c">
+			<Link>src\ASF\sam0\utils\syscalls\gcc\syscalls.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\addons\sio2host\uart\sio2host.c">
+			<Link>src\ASF\thirdparty\wireless\addons\sio2host\uart\sio2host.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\commands.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\apps\wsndemo\commands.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\main.c">
+			<Link>src\main.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\wsndemo.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\apps\wsndemo\wsndemo.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwk.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwk.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkDataReq.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkDataReq.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkFrame.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkFrame.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkGroup.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkGroup.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkRoute.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkRoute.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkRouteDiscovery.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkRouteDiscovery.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkRx.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkRx.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkSecurity.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkSecurity.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkTx.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkTx.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\phy\at86rf233\src\phy.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\phy\at86rf233\src\phy.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\sys\src\sys.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\src\sys.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\sys\src\sysEncrypt.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\src\sysEncrypt.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\sys\src\sysTimer.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\src\sysTimer.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\services\common_hw_timer\sam0\hw_timer.c">
+			<Link>src\ASF\thirdparty\wireless\services\common_hw_timer\sam0\hw_timer.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\services\sal\at86rf2xx\src\sal.c">
+			<Link>src\ASF\thirdparty\wireless\services\sal\at86rf2xx\src\sal.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\services\sleep_mgr\sam0\sleep_mgr.c">
+			<Link>src\ASF\thirdparty\wireless\services\sleep_mgr\sam0\sleep_mgr.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\services\trx_access\trx_access.c">
+			<Link>src\ASF\thirdparty\wireless\services\trx_access\trx_access.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<None Include="src\asf.h"/>
+		<None Include="..\..\..\..\..\..\..\common2\services\delay\delay.h">
+			<Link>src\ASF\common2\services\delay\delay.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common2\services\delay\sam0\systick_counter.h">
+			<Link>src\ASF\common2\services\delay\sam0\systick_counter.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\boards\board.h">
+			<Link>src\ASF\common\boards\board.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\serial\sam0_usart\usart_serial.h">
+			<Link>src\ASF\common\services\serial\sam0_usart\usart_serial.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\serial\serial.h">
+			<Link>src\ASF\common\services\serial\serial.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\utils\interrupt.h">
+			<Link>src\ASF\common\utils\interrupt.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\utils\interrupt\interrupt_sam_nvic.h">
+			<Link>src\ASF\common\utils\interrupt\interrupt_sam_nvic.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\utils\parts.h">
+			<Link>src\ASF\common\utils\parts.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\boards\samd20_xplained_pro\samd20_xplained_pro.h">
+			<Link>src\ASF\sam0\boards\samd20_xplained_pro\samd20_xplained_pro.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\extint\extint.h">
+			<Link>src\ASF\sam0\drivers\extint\extint.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\extint\extint_callback.h">
+			<Link>src\ASF\sam0\drivers\extint\extint_callback.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\port\port.h">
+			<Link>src\ASF\sam0\drivers\port\port.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\port\quick_start\qs_port_basic.h">
+			<Link>src\ASF\sam0\drivers\port\quick_start\qs_port_basic.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\rtc\rtc_count.h">
+			<Link>src\ASF\sam0\drivers\rtc\rtc_count.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\rtc\rtc_count_interrupt.h">
+			<Link>src\ASF\sam0\drivers\rtc\rtc_count_interrupt.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\rtc\rtc_tamper.h">
+			<Link>src\ASF\sam0\drivers\rtc\rtc_tamper.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\sercom\sercom.h">
+			<Link>src\ASF\sam0\drivers\sercom\sercom.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\sercom\sercom_interrupt.h">
+			<Link>src\ASF\sam0\drivers\sercom\sercom_interrupt.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\sercom\sercom_pinout.h">
+			<Link>src\ASF\sam0\drivers\sercom\sercom_pinout.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\sercom\spi\quick_start_dma\qs_spi_dma_use.h">
+			<Link>src\ASF\sam0\drivers\sercom\spi\quick_start_dma\qs_spi_dma_use.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\sercom\spi\quick_start_master\qs_spi_master_basic.h">
+			<Link>src\ASF\sam0\drivers\sercom\spi\quick_start_master\qs_spi_master_basic.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\sercom\spi\quick_start_slave\qs_spi_slave_basic.h">
+			<Link>src\ASF\sam0\drivers\sercom\spi\quick_start_slave\qs_spi_slave_basic.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\sercom\spi\spi.h">
+			<Link>src\ASF\sam0\drivers\sercom\spi\spi.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\sercom\usart\quick_start\qs_usart_basic_use.h">
+			<Link>src\ASF\sam0\drivers\sercom\usart\quick_start\qs_usart_basic_use.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\sercom\usart\quick_start_callback\qs_usart_callback.h">
+			<Link>src\ASF\sam0\drivers\sercom\usart\quick_start_callback\qs_usart_callback.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\sercom\usart\quick_start_dma\qs_usart_dma_use.h">
+			<Link>src\ASF\sam0\drivers\sercom\usart\quick_start_dma\qs_usart_dma_use.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\sercom\usart\quick_start_lin\qs_lin.h">
+			<Link>src\ASF\sam0\drivers\sercom\usart\quick_start_lin\qs_lin.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\sercom\usart\usart.h">
+			<Link>src\ASF\sam0\drivers\sercom\usart\usart.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\sercom\usart\usart_interrupt.h">
+			<Link>src\ASF\sam0\drivers\sercom\usart\usart_interrupt.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\system\clock\clock.h">
+			<Link>src\ASF\sam0\drivers\system\clock\clock.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\system\clock\clock_samd20\clock_config_check.h">
+			<Link>src\ASF\sam0\drivers\system\clock\clock_samd20\clock_config_check.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\system\clock\clock_samd20\clock_feature.h">
+			<Link>src\ASF\sam0\drivers\system\clock\clock_samd20\clock_feature.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\system\clock\gclk.h">
+			<Link>src\ASF\sam0\drivers\system\clock\gclk.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\system\interrupt\system_interrupt.h">
+			<Link>src\ASF\sam0\drivers\system\interrupt\system_interrupt.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\system\interrupt\system_interrupt_samd20\system_interrupt_features.h">
+			<Link>src\ASF\sam0\drivers\system\interrupt\system_interrupt_samd20\system_interrupt_features.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\system\pinmux\pinmux.h">
+			<Link>src\ASF\sam0\drivers\system\pinmux\pinmux.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\system\pinmux\quick_start\qs_pinmux_basic.h">
+			<Link>src\ASF\sam0\drivers\system\pinmux\quick_start\qs_pinmux_basic.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\system\power\power_sam_d_r_h\power.h">
+			<Link>src\ASF\sam0\drivers\system\power\power_sam_d_r_h\power.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\system\reset\reset_sam_d_r_h\reset.h">
+			<Link>src\ASF\sam0\drivers\system\reset\reset_sam_d_r_h\reset.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\system\system.h">
+			<Link>src\ASF\sam0\drivers\system\system.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\tc\tc.h">
+			<Link>src\ASF\sam0\drivers\tc\tc.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\drivers\tc\tc_interrupt.h">
+			<Link>src\ASF\sam0\drivers\tc\tc_interrupt.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\ac.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\ac.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\adc.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\adc.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\dac.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\dac.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\dsu.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\dsu.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\eic.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\eic.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\evsys.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\evsys.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\gclk.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\gclk.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\nvmctrl.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\nvmctrl.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\pac.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\pac.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\pm.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\pm.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\port.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\port.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\rtc.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\rtc.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\sercom.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\sercom.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\sysctrl.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\sysctrl.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\tc.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\tc.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\component\wdt.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\component\wdt.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\ac.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\ac.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\adc.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\adc.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\dac.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\dac.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\dsu.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\dsu.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\eic.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\eic.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\evsys.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\evsys.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\gclk.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\gclk.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\nvmctrl.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\nvmctrl.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\pac0.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\pac0.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\pac1.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\pac1.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\pac2.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\pac2.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\pm.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\pm.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\port.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\port.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\rtc.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\rtc.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\sercom0.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\sercom0.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\sercom1.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\sercom1.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\sercom2.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\sercom2.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\sercom3.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\sercom3.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\sercom4.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\sercom4.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\sercom5.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\sercom5.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\sysctrl.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\sysctrl.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\tc0.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\tc0.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\tc1.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\tc1.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\tc2.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\tc2.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\tc3.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\tc3.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\tc4.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\tc4.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\tc5.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\tc5.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\tc6.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\tc6.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\tc7.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\tc7.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\instance\wdt.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\instance\wdt.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20e14.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20e14.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20e14b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20e14b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20e15.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20e15.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20e15b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20e15b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20e16.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20e16.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20e16b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20e16b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20e17.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20e17.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20e18.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20e18.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20g14.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20g14.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20g14b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20g14b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20g15.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20g15.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20g15b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20g15b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20g16.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20g16.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20g16b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20g16b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20g17.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20g17.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20g17u.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20g17u.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20g18.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20g18.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20g18u.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20g18u.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20j14.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20j14.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20j14b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20j14b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20j15.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20j15.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20j15b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20j15b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20j16.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20j16.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20j16b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20j16b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20j17.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20j17.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\pio\samd20j18.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\pio\samd20j18.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20e14.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20e14.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20e14b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20e14b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20e15.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20e15.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20e15b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20e15b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20e16.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20e16.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20e16b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20e16b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20e17.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20e17.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20e18.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20e18.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20g14.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20g14.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20g14b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20g14b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20g15.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20g15.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20g15b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20g15b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20g16.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20g16.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20g16b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20g16b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20g17.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20g17.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20g17u.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20g17u.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20g18.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20g18.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20g18u.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20g18u.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20j14.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20j14.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20j14b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20j14b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20j15.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20j15.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20j15b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20j15b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20j16.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20j16.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20j16b.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20j16b.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20j17.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20j17.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\include\samd20j18.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\include\samd20j18.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\cmsis\samd20\source\system_samd20.h">
+			<Link>src\ASF\sam0\utils\cmsis\samd20\source\system_samd20.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\compiler.h">
+			<Link>src\ASF\sam0\utils\compiler.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\header_files\io.h">
+			<Link>src\ASF\sam0\utils\header_files\io.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\linker_scripts\samd20\gcc\samd20j18_flash.ld">
+			<Link>src\ASF\sam0\utils\linker_scripts\samd20\gcc\samd20j18_flash.ld</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\make\Makefile.sam.in">
+			<Link>src\ASF\sam0\utils\make\Makefile.sam.in</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\preprocessor\mrecursion.h">
+			<Link>src\ASF\sam0\utils\preprocessor\mrecursion.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\preprocessor\mrepeat.h">
+			<Link>src\ASF\sam0\utils\preprocessor\mrepeat.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\preprocessor\preprocessor.h">
+			<Link>src\ASF\sam0\utils\preprocessor\preprocessor.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\preprocessor\stringz.h">
+			<Link>src\ASF\sam0\utils\preprocessor\stringz.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\preprocessor\tpaste.h">
+			<Link>src\ASF\sam0\utils\preprocessor\tpaste.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\status_codes.h">
+			<Link>src\ASF\sam0\utils\status_codes.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\sam0\utils\stdio\stdio_serial\stdio_serial.h">
+			<Link>src\ASF\sam0\utils\stdio\stdio_serial\stdio_serial.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\CMSIS\ATMEL-disclaimer.txt">
+			<Link>src\ASF\thirdparty\CMSIS\ATMEL-disclaimer.txt</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\CMSIS\CMSIS_END_USER_LICENCE_AGREEMENT.pdf">
+			<Link>src\ASF\thirdparty\CMSIS\CMSIS_END_USER_LICENCE_AGREEMENT.pdf</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\CMSIS\Include\arm_math.h">
+			<Link>src\ASF\thirdparty\CMSIS\Include\arm_math.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\CMSIS\Include\cmsis_compiler.h">
+			<Link>src\ASF\thirdparty\CMSIS\Include\cmsis_compiler.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\CMSIS\Include\cmsis_gcc.h">
+			<Link>src\ASF\thirdparty\CMSIS\Include\cmsis_gcc.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\CMSIS\Include\cmsis_version.h">
+			<Link>src\ASF\thirdparty\CMSIS\Include\cmsis_version.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\CMSIS\Include\core_cm0plus.h">
+			<Link>src\ASF\thirdparty\CMSIS\Include\core_cm0plus.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\CMSIS\Include\mpu_armv7.h">
+			<Link>src\ASF\thirdparty\CMSIS\Include\mpu_armv7.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\CMSIS\Lib\GCC\libarm_cortexM0l_math.a">
+			<Link>src\ASF\thirdparty\CMSIS\Lib\GCC\libarm_cortexM0l_math.a</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\CMSIS\Lib\license.txt">
+			<Link>src\ASF\thirdparty\CMSIS\Lib\license.txt</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\CMSIS\README.txt">
+			<Link>src\ASF\thirdparty\CMSIS\README.txt</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\CMSIS\license.txt">
+			<Link>src\ASF\thirdparty\CMSIS\license.txt</Link>
+		</None>
+		<None Include="..\..\..\..\..\EULA.txt">
+			<Link>src\ASF\thirdparty\wireless\EULA.txt</Link>
+		</None>
+		<None Include="..\..\..\..\..\addons\sio2host\uart\sio2host.h">
+			<Link>src\ASF\thirdparty\wireless\addons\sio2host\uart\sio2host.h</Link>
+		</None>
+		<None Include="..\..\commands.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\apps\wsndemo\commands.h</Link>
+		</None>
+		<None Include="..\..\config.h">
+			<Link>src\config\config.h</Link>
+		</None>
+		<None Include="..\conf_board.h">
+			<Link>src\config\conf_board.h</Link>
+		</None>
+		<None Include="..\conf_clocks.h">
+			<Link>src\config\conf_clocks.h</Link>
+		</None>
+		<None Include="..\conf_extint.h">
+			<Link>src\config\conf_extint.h</Link>
+		</None>
+		<None Include="..\conf_hw_timer.h">
+			<Link>src\config\conf_hw_timer.h</Link>
+		</None>
+		<None Include="..\conf_sio2host.h">
+			<Link>src\config\conf_sio2host.h</Link>
+		</None>
+		<None Include="..\conf_sleepmgr.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\apps\wsndemo\samd20_xplained_pro_rf233\conf_sleepmgr.h</Link>
+		</None>
+		<None Include="..\conf_spi.h">
+			<Link>src\config\conf_spi.h</Link>
+		</None>
+		<None Include="..\conf_trx_access.h">
+			<Link>src\config\conf_trx_access.h</Link>
+		</None>
+		<None Include="..\..\wsndemo.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\apps\wsndemo\wsndemo.h</Link>
+		</None>
+		<None Include="..\..\..\..\doc\AVR2130_LWMesh_Developer_Guide_v1.2.1.pdf">
+			<Link>AVR2130_LWMesh_Developer_Guide_v1.2.1.pdf</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwk.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwk.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkCommand.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkCommand.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkDataReq.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkDataReq.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkFrame.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkFrame.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkGroup.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkGroup.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkRoute.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkRoute.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkRouteDiscovery.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkRouteDiscovery.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkRx.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkRx.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkSecurity.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkSecurity.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkTx.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkTx.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\phy\at86rf233\inc\at86rf233.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\phy\at86rf233\inc\at86rf233.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\phy\at86rf233\inc\phy.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\phy\at86rf233\inc\phy.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\sys\inc\sys.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\inc\sys.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\sys\inc\sysConfig.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\inc\sysConfig.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\sys\inc\sysEncrypt.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\inc\sysEncrypt.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\sys\inc\sysTimer.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\inc\sysTimer.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\common_hw_timer\common_hw_timer.h">
+			<Link>src\ASF\thirdparty\wireless\services\common_hw_timer\common_hw_timer.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\common_hw_timer\sam0\hw_timer.h">
+			<Link>src\ASF\thirdparty\wireless\services\common_hw_timer\sam0\hw_timer.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\common_hw_timer\sam0\lib\libsam0_lib_hw_timer.a">
+			<Link>src\ASF\thirdparty\wireless\services\common_hw_timer\sam0\lib\libsam0_lib_hw_timer.a</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\sal\inc\sal.h">
+			<Link>src\ASF\thirdparty\wireless\services\sal\inc\sal.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\sal\inc\sal_generic.h">
+			<Link>src\ASF\thirdparty\wireless\services\sal\inc\sal_generic.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\sal\inc\sal_types.h">
+			<Link>src\ASF\thirdparty\wireless\services\sal\inc\sal_types.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\sleep_mgr\sleep_mgr.h">
+			<Link>src\ASF\thirdparty\wireless\services\sleep_mgr\sleep_mgr.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\trx_access\trx_access.h">
+			<Link>src\ASF\thirdparty\wireless\services\trx_access\trx_access.h</Link>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="src\"/>
+		<Folder Include="src\ASF\"/>
+		<Folder Include="src\ASF\common\"/>
+		<Folder Include="src\ASF\common2\"/>
+		<Folder Include="src\ASF\common2\services\"/>
+		<Folder Include="src\ASF\common2\services\delay\"/>
+		<Folder Include="src\ASF\common2\services\delay\sam0\"/>
+		<Folder Include="src\ASF\common\boards\"/>
+		<Folder Include="src\ASF\common\services\"/>
+		<Folder Include="src\ASF\common\services\serial\"/>
+		<Folder Include="src\ASF\common\services\serial\sam0_usart\"/>
+		<Folder Include="src\ASF\common\utils\"/>
+		<Folder Include="src\ASF\common\utils\interrupt\"/>
+		<Folder Include="src\ASF\sam0\"/>
+		<Folder Include="src\ASF\sam0\boards\"/>
+		<Folder Include="src\ASF\sam0\boards\samd20_xplained_pro\"/>
+		<Folder Include="src\ASF\sam0\drivers\"/>
+		<Folder Include="src\ASF\sam0\drivers\extint\"/>
+		<Folder Include="src\ASF\sam0\drivers\extint\extint_sam_d_r_h\"/>
+		<Folder Include="src\ASF\sam0\drivers\port\"/>
+		<Folder Include="src\ASF\sam0\drivers\port\quick_start\"/>
+		<Folder Include="src\ASF\sam0\drivers\rtc\"/>
+		<Folder Include="src\ASF\sam0\drivers\rtc\rtc_sam_d_r_h\"/>
+		<Folder Include="src\ASF\sam0\drivers\sercom\"/>
+		<Folder Include="src\ASF\sam0\drivers\sercom\spi\"/>
+		<Folder Include="src\ASF\sam0\drivers\sercom\spi\quick_start_dma\"/>
+		<Folder Include="src\ASF\sam0\drivers\sercom\spi\quick_start_master\"/>
+		<Folder Include="src\ASF\sam0\drivers\sercom\spi\quick_start_slave\"/>
+		<Folder Include="src\ASF\sam0\drivers\sercom\usart\"/>
+		<Folder Include="src\ASF\sam0\drivers\sercom\usart\quick_start\"/>
+		<Folder Include="src\ASF\sam0\drivers\sercom\usart\quick_start_callback\"/>
+		<Folder Include="src\ASF\sam0\drivers\sercom\usart\quick_start_dma\"/>
+		<Folder Include="src\ASF\sam0\drivers\sercom\usart\quick_start_lin\"/>
+		<Folder Include="src\ASF\sam0\drivers\system\"/>
+		<Folder Include="src\ASF\sam0\drivers\system\clock\"/>
+		<Folder Include="src\ASF\sam0\drivers\system\clock\clock_samd20\"/>
+		<Folder Include="src\ASF\sam0\drivers\system\interrupt\"/>
+		<Folder Include="src\ASF\sam0\drivers\system\interrupt\system_interrupt_samd20\"/>
+		<Folder Include="src\ASF\sam0\drivers\system\pinmux\"/>
+		<Folder Include="src\ASF\sam0\drivers\system\pinmux\quick_start\"/>
+		<Folder Include="src\ASF\sam0\drivers\system\power\"/>
+		<Folder Include="src\ASF\sam0\drivers\system\power\power_sam_d_r_h\"/>
+		<Folder Include="src\ASF\sam0\drivers\system\reset\"/>
+		<Folder Include="src\ASF\sam0\drivers\system\reset\reset_sam_d_r_h\"/>
+		<Folder Include="src\ASF\sam0\drivers\tc\"/>
+		<Folder Include="src\ASF\sam0\drivers\tc\tc_sam_d_r_h\"/>
+		<Folder Include="src\ASF\sam0\utils\"/>
+		<Folder Include="src\ASF\sam0\utils\cmsis\"/>
+		<Folder Include="src\ASF\sam0\utils\cmsis\samd20\"/>
+		<Folder Include="src\ASF\sam0\utils\cmsis\samd20\include\"/>
+		<Folder Include="src\ASF\sam0\utils\cmsis\samd20\include\component\"/>
+		<Folder Include="src\ASF\sam0\utils\cmsis\samd20\include\instance\"/>
+		<Folder Include="src\ASF\sam0\utils\cmsis\samd20\include\pio\"/>
+		<Folder Include="src\ASF\sam0\utils\cmsis\samd20\source\"/>
+		<Folder Include="src\ASF\sam0\utils\cmsis\samd20\source\gcc\"/>
+		<Folder Include="src\ASF\sam0\utils\header_files\"/>
+		<Folder Include="src\ASF\sam0\utils\linker_scripts\"/>
+		<Folder Include="src\ASF\sam0\utils\linker_scripts\samd20\"/>
+		<Folder Include="src\ASF\sam0\utils\linker_scripts\samd20\gcc\"/>
+		<Folder Include="src\ASF\sam0\utils\make\"/>
+		<Folder Include="src\ASF\sam0\utils\preprocessor\"/>
+		<Folder Include="src\ASF\sam0\utils\stdio\"/>
+		<Folder Include="src\ASF\sam0\utils\stdio\stdio_serial\"/>
+		<Folder Include="src\ASF\sam0\utils\syscalls\"/>
+		<Folder Include="src\ASF\sam0\utils\syscalls\gcc\"/>
+		<Folder Include="src\ASF\thirdparty\"/>
+		<Folder Include="src\ASF\thirdparty\CMSIS\"/>
+		<Folder Include="src\ASF\thirdparty\CMSIS\Include\"/>
+		<Folder Include="src\ASF\thirdparty\CMSIS\Lib\"/>
+		<Folder Include="src\ASF\thirdparty\CMSIS\Lib\GCC\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\addons\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\addons\sio2host\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\addons\sio2host\uart\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\apps\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\apps\wsndemo\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\apps\wsndemo\samd20_xplained_pro_rf233\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\phy\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\phy\at86rf233\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\phy\at86rf233\inc\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\phy\at86rf233\src\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\inc\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\src\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\common_hw_timer\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\common_hw_timer\sam0\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\common_hw_timer\sam0\lib\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\sal\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\sal\at86rf2xx\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\sal\at86rf2xx\src\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\sal\inc\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\sleep_mgr\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\sleep_mgr\sam0\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\trx_access\"/>
+		<Folder Include="src\config\"/>
+	</ItemGroup>
+	<Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets"/>
+</Project>
