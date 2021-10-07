@@ -1,0 +1,915 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+	<PropertyGroup>
+		<SchemaVersion>2.0</SchemaVersion>
+		<ProjectVersion>6.1</ProjectVersion>
+		<ProjectGuid>bfd9a887-9099-3b46-b5fe-89626849c3b6</ProjectGuid>
+		<Name>$(MSBuildProjectName)</Name>
+		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
+		<RootNamespace>$(MSBuildProjectName)</RootNamespace>
+		<AsfFrameworkConfig>
+			<framework-data>
+				<options>
+					<option id="common.boards" value="Add" config="" content-id="Atmel.ASF"/>
+					<option id="common.services.basic.gpio" value="Add" config="" content-id="Atmel.ASF"/>
+					<option id="thirdparty.wireless.addons.sio2host" value="Add" config="usb" content-id="Atmel.ASF"/>
+					<option id="thirdparty.wireless.avr2130_lwmesh" value="Add" config="" content-id="Atmel.ASF"/>
+					<option id="thirdparty.wireless.avr2130_lwmesh.apps.peer2peer" value="Add" config="" content-id="Atmel.ASF"/>
+					<option id="xmega.drivers.ioport" value="Add" config="" content-id="Atmel.ASF"/>
+				</options>
+				<configurations>
+					<configuration key="config.spi_master_type" value="standard_spi" default="standard_spi" content-id="Atmel.ASF"/>
+					<configuration key="config.thirdparty.wireless.avr2130_lwmesh.source.phy.ext" value="at86rf212b" default="at86rf212b" content-id="Atmel.ASF"/>
+					<configuration key="config.thirdparty.wireless.addons.sio2host" value="usb" default="usb" content-id="Atmel.ASF"/>
+				</configurations>
+				<files>
+					<file path="src/ASF/common/boards/board.h" source="common/boards/board.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/clock/genclk.h" source="common/services/clock/genclk.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/clock/osc.h" source="common/services/clock/osc.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/clock/pll.h" source="common/services/clock/pll.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/clock/sysclk.h" source="common/services/clock/sysclk.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/clock/xmega/osc.h" source="common/services/clock/xmega/osc.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/clock/xmega/pll.h" source="common/services/clock/xmega/pll.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/clock/xmega/sysclk.c" source="common/services/clock/xmega/sysclk.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/clock/xmega/sysclk.h" source="common/services/clock/xmega/sysclk.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/delay/delay.h" source="common/services/delay/delay.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/delay/xmega/cycle_counter.h" source="common/services/delay/xmega/cycle_counter.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/gpio/gpio.h" source="common/services/gpio/gpio.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/gpio/xmega_gpio/xmega_gpio.h" source="common/services/gpio/xmega_gpio/xmega_gpio.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/ioport/ioport.h" source="common/services/ioport/ioport.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/ioport/xmega/ioport.h" source="common/services/ioport/xmega/ioport.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/ioport/xmega/ioport_compat.c" source="common/services/ioport/xmega/ioport_compat.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/ioport/xmega/ioport_compat.h" source="common/services/ioport/xmega/ioport_compat.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/sleepmgr/sleepmgr.h" source="common/services/sleepmgr/sleepmgr.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/sleepmgr/xmega/sleepmgr.c" source="common/services/sleepmgr/xmega/sleepmgr.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/sleepmgr/xmega/sleepmgr.h" source="common/services/sleepmgr/xmega/sleepmgr.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/spi/spi_master.h" source="common/services/spi/spi_master.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/spi/xmega_spi/spi_master.c" source="common/services/spi/xmega_spi/spi_master.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/spi/xmega_spi/spi_master.h" source="common/services/spi/xmega_spi/spi_master.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="atmel_devices_cdc.cat" source="common/services/usb/class/cdc/device/atmel_devices_cdc.cat" changed="False" content-id="Atmel.ASF"/>
+					<file path="atmel_devices_cdc.inf" source="common/services/usb/class/cdc/device/atmel_devices_cdc.inf" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/usb/class/cdc/device/udi_cdc.c" source="common/services/usb/class/cdc/device/udi_cdc.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/usb/class/cdc/device/udi_cdc.h" source="common/services/usb/class/cdc/device/udi_cdc.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/usb/class/cdc/device/udi_cdc_conf.h" source="common/services/usb/class/cdc/device/udi_cdc_conf.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.c" source="common/services/usb/class/cdc/device/udi_cdc_desc.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/usb/class/cdc/usb_protocol_cdc.h" source="common/services/usb/class/cdc/usb_protocol_cdc.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/usb/udc/udc.c" source="common/services/usb/udc/udc.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/usb/udc/udc.h" source="common/services/usb/udc/udc.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/usb/udc/udc_desc.h" source="common/services/usb/udc/udc_desc.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/usb/udc/udd.h" source="common/services/usb/udc/udd.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/usb/udc/udi.h" source="common/services/usb/udc/udi.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/usb/usb_atmel.h" source="common/services/usb/usb_atmel.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/services/usb/usb_protocol.h" source="common/services/usb/usb_protocol.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/utils/interrupt.h" source="common/utils/interrupt.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/utils/interrupt/interrupt_avr8.h" source="common/utils/interrupt/interrupt_avr8.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/utils/make/Makefile.avr.in" source="common/utils/make/Makefile.avr.in" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/utils/parts.h" source="common/utils/parts.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/utils/stdio/read.c" source="common/utils/stdio/read.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/utils/stdio/stdio_usb/stdio_usb.c" source="common/utils/stdio/stdio_usb/stdio_usb.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/utils/stdio/stdio_usb/stdio_usb.h" source="common/utils/stdio/stdio_usb/stdio_usb.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/common/utils/stdio/write.c" source="common/utils/stdio/write.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/EULA.txt" source="thirdparty/wireless/EULA.txt" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/addons/sio2host/usb/sio2host.c" source="thirdparty/wireless/addons/sio2host/usb/sio2host.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/addons/sio2host/usb/sio2host.h" source="thirdparty/wireless/addons/sio2host/usb/sio2host.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/Peer2Peer.c" source="thirdparty/wireless/avr2130_lwmesh/apps/PeertoPeer/Peer2Peer.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_board.h" source="thirdparty/wireless/avr2130_lwmesh/apps/PeertoPeer/atxmega256a3u_rf212b_zigbit_usb/conf_board.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_clock.h" source="thirdparty/wireless/avr2130_lwmesh/apps/PeertoPeer/atxmega256a3u_rf212b_zigbit_usb/conf_clock.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_hw_timer.h" source="thirdparty/wireless/avr2130_lwmesh/apps/PeertoPeer/atxmega256a3u_rf212b_zigbit_usb/conf_hw_timer.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_sio2host.h" source="thirdparty/wireless/avr2130_lwmesh/apps/PeertoPeer/atxmega256a3u_rf212b_zigbit_usb/conf_sio2host.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_sleepmgr.h" source="thirdparty/wireless/avr2130_lwmesh/apps/PeertoPeer/atxmega256a3u_rf212b_zigbit_usb/conf_sleepmgr.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_spi_master.h" source="thirdparty/wireless/avr2130_lwmesh/apps/PeertoPeer/atxmega256a3u_rf212b_zigbit_usb/conf_spi_master.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_usb.h" source="thirdparty/wireless/avr2130_lwmesh/apps/PeertoPeer/atxmega256a3u_rf212b_zigbit_usb/conf_usb.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/conf_trx_access.h" source="thirdparty/wireless/avr2130_lwmesh/apps/PeertoPeer/conf_trx_access.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/config/config.h" source="thirdparty/wireless/avr2130_lwmesh/apps/PeertoPeer/config.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="AVR2130_LWMesh_Developer_Guide_v1.2.1.pdf" source="thirdparty/wireless/avr2130_lwmesh/doc/AVR2130_LWMesh_Developer_Guide_v1.2.1.pdf" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwk.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwk.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkCommand.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkCommand.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkDataReq.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkDataReq.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkFrame.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkFrame.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkGroup.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkGroup.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkRoute.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkRoute.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkRouteDiscovery.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkRouteDiscovery.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkRx.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkRx.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkSecurity.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkSecurity.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkTx.h" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/inc/nwkTx.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwk.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwk.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkDataReq.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkDataReq.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkFrame.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkFrame.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkGroup.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkGroup.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkRoute.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkRoute.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkRouteDiscovery.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkRouteDiscovery.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkRx.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkRx.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkSecurity.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkSecurity.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkTx.c" source="thirdparty/wireless/avr2130_lwmesh/source/nwk/src/nwkTx.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/phy/at86rf212b/inc/at86rf212b.h" source="thirdparty/wireless/avr2130_lwmesh/source/phy/at86rf212b/inc/at86rf212b.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/phy/at86rf212b/inc/phy.h" source="thirdparty/wireless/avr2130_lwmesh/source/phy/at86rf212b/inc/phy.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/phy/at86rf212b/src/phy.c" source="thirdparty/wireless/avr2130_lwmesh/source/phy/at86rf212b/src/phy.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sys.h" source="thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sys.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sysConfig.h" source="thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sysConfig.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sysEncrypt.h" source="thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sysEncrypt.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sysTimer.h" source="thirdparty/wireless/avr2130_lwmesh/source/sys/inc/sysTimer.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/sys/src/sys.c" source="thirdparty/wireless/avr2130_lwmesh/source/sys/src/sys.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/sys/src/sysEncrypt.c" source="thirdparty/wireless/avr2130_lwmesh/source/sys/src/sysEncrypt.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/avr2130_lwmesh/source/sys/src/sysTimer.c" source="thirdparty/wireless/avr2130_lwmesh/source/sys/src/sysTimer.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/common_hw_timer/common_hw_timer.h" source="thirdparty/wireless/services/common_hw_timer/common_hw_timer.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/common_hw_timer/xmega/hw_timer.c" source="thirdparty/wireless/services/common_hw_timer/xmega/hw_timer.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/common_hw_timer/xmega/hw_timer.h" source="thirdparty/wireless/services/common_hw_timer/xmega/hw_timer.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/common_hw_timer/xmega/lib/libxmegaa3_hw_timer_lib.a" source="thirdparty/wireless/services/common_hw_timer/xmega/lib/libxmegaa3_hw_timer_lib.a" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/sal/atxmega_sal/src/sal.c" source="thirdparty/wireless/services/sal/atxmega_sal/src/sal.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/sal/inc/sal.h" source="thirdparty/wireless/services/sal/inc/sal.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/sal/inc/sal_generic.h" source="thirdparty/wireless/services/sal/inc/sal_generic.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/sal/inc/sal_types.h" source="thirdparty/wireless/services/sal/inc/sal_types.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/trx_access/trx_access.c" source="thirdparty/wireless/services/trx_access/trx_access.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/thirdparty/wireless/services/trx_access/trx_access.h" source="thirdparty/wireless/services/trx_access/trx_access.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/boards/xmega_rf212b_zigbit/init.c" source="xmega/boards/xmega_rf212b_zigbit/init.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/boards/xmega_rf212b_zigbit/led.h" source="xmega/boards/xmega_rf212b_zigbit/led.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/boards/xmega_rf212b_zigbit/xmega_rf212b_zigbit.h" source="xmega/boards/xmega_rf212b_zigbit/xmega_rf212b_zigbit.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/drivers/cpu/ccp.h" source="xmega/drivers/cpu/ccp.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/drivers/cpu/ccp.s" source="xmega/drivers/cpu/ccp.s" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/drivers/cpu/xmega_reset_cause.h" source="xmega/drivers/cpu/xmega_reset_cause.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/drivers/nvm/nvm.c" source="xmega/drivers/nvm/nvm.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/drivers/nvm/nvm.h" source="xmega/drivers/nvm/nvm.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/drivers/nvm/nvm_asm.s" source="xmega/drivers/nvm/nvm_asm.s" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/drivers/pmic/pmic.h" source="xmega/drivers/pmic/pmic.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/drivers/sleep/sleep.h" source="xmega/drivers/sleep/sleep.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/drivers/spi/spi.c" source="xmega/drivers/spi/spi.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/drivers/spi/spi.h" source="xmega/drivers/spi/spi.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/drivers/tc/tc.c" source="xmega/drivers/tc/tc.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/drivers/tc/tc.h" source="xmega/drivers/tc/tc.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/drivers/usb/usb_device.c" source="xmega/drivers/usb/usb_device.c" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/drivers/usb/usb_device.h" source="xmega/drivers/usb/usb_device.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/utils/assembler.h" source="xmega/utils/assembler.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/utils/assembler/gas.h" source="xmega/utils/assembler/gas.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/utils/bit_handling/clz_ctz.h" source="xmega/utils/bit_handling/clz_ctz.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/utils/compiler.h" source="xmega/utils/compiler.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/utils/preprocessor/mrepeat.h" source="xmega/utils/preprocessor/mrepeat.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/utils/preprocessor/preprocessor.h" source="xmega/utils/preprocessor/preprocessor.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/utils/preprocessor/stringz.h" source="xmega/utils/preprocessor/stringz.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/utils/preprocessor/tpaste.h" source="xmega/utils/preprocessor/tpaste.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/utils/progmem.h" source="xmega/utils/progmem.h" changed="False" content-id="Atmel.ASF"/>
+					<file path="src/ASF/xmega/utils/status_codes.h" source="xmega/utils/status_codes.h" changed="False" content-id="Atmel.ASF"/>
+				</files>
+				<dependencies>
+					<content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.51.0"/>
+				</dependencies>
+				<board id="board.xmega_rf212b_zigbit" content-id="Atmel.ASF" config="" value="Add"/>
+				<project id="thirdparty.wireless.avr2130_lwmesh.apps.peer2peer.atxmega256a3u_rf212b_zigbit_usb" content-id="Atmel.ASF" config="" value="Add"/>
+				<documentation help="https://asf.microchip.com/docs/3.51.0/thirdparty.wireless.avr2130_lwmesh.apps.peer2peer.atxmega256a3u_rf212b_zigbit_usb/html/index.html"/>
+				<offline-documentation help=""/>
+			</framework-data>
+		</AsfFrameworkConfig>
+		<avrdevice>ATxmega256A3U</avrdevice>
+		<avrdeviceseries>xmegaau</avrdeviceseries>
+		<Language>C</Language>
+		<ToolchainName>com.Atmel.AVRGCC8</ToolchainName>
+		<AvrGccProjectExtensions/>
+		<OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+		<OutputFileName>$(MSBuildProjectName)</OutputFileName>
+		<OutputFileExtension>.elf</OutputFileExtension>
+		<OutputType>Executable</OutputType>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+		<ToolchainSettings>
+			<AvrGcc>
+				<avrgcc.compiler.symbols.DefSymbols>
+					<ListValues>
+						<Value>BOARD=XMEGA_RF212B_ZIGBIT</Value>
+						<Value>CONFIG_NVM_IGNORE_XMEGA_A3_D3_REVB_ERRATA</Value>
+						<Value>IOPORT_XMEGA_COMPAT</Value>
+						<Value>PHY_AT86RF212B</Value>
+						<Value>SAL_TYPE=ATXMEGA_SAL</Value>
+					</ListValues>
+				</avrgcc.compiler.symbols.DefSymbols>
+				<avrgcc.compiler.directories.IncludePaths>
+					<ListValues>
+						<Value>../..</Value>
+						<Value>../../..</Value>
+						<Value>../../../../../../../../common/boards</Value>
+						<Value>../../../../../../../../common/services/clock</Value>
+						<Value>../../../../../../../../common/services/delay</Value>
+						<Value>../../../../../../../../common/services/gpio</Value>
+						<Value>../../../../../../../../common/services/ioport</Value>
+						<Value>../../../../../../../../common/services/sleepmgr</Value>
+						<Value>../../../../../../../../common/services/spi</Value>
+						<Value>../../../../../../../../common/services/spi/xmega_spi</Value>
+						<Value>../../../../../../../../common/services/usb</Value>
+						<Value>../../../../../../../../common/services/usb/class/cdc</Value>
+						<Value>../../../../../../../../common/services/usb/class/cdc/device</Value>
+						<Value>../../../../../../../../common/services/usb/udc</Value>
+						<Value>../../../../../../../../common/utils</Value>
+						<Value>../../../../../../../../common/utils/stdio/stdio_usb</Value>
+						<Value>../../../../../../../../xmega/boards</Value>
+						<Value>../../../../../../../../xmega/boards/xmega_rf212b_zigbit</Value>
+						<Value>../../../../../../../../xmega/drivers/cpu</Value>
+						<Value>../../../../../../../../xmega/drivers/nvm</Value>
+						<Value>../../../../../../../../xmega/drivers/pmic</Value>
+						<Value>../../../../../../../../xmega/drivers/sleep</Value>
+						<Value>../../../../../../../../xmega/drivers/spi</Value>
+						<Value>../../../../../../../../xmega/drivers/tc</Value>
+						<Value>../../../../../../../../xmega/drivers/usb</Value>
+						<Value>../../../../../../../../xmega/utils</Value>
+						<Value>../../../../../../../../xmega/utils/preprocessor</Value>
+						<Value>../../../../../../addons/sio2host/usb</Value>
+						<Value>../../../../../../services/common_hw_timer</Value>
+						<Value>../../../../../../services/common_hw_timer/xmega</Value>
+						<Value>../../../../../../services/sal/inc</Value>
+						<Value>../../../../../../services/trx_access</Value>
+						<Value>../../../../../source/nwk/inc</Value>
+						<Value>../../../../../source/phy/at86rf212b/inc</Value>
+						<Value>../../../../../source/sys/inc</Value>
+						<Value>../src</Value>
+					</ListValues>
+				</avrgcc.compiler.directories.IncludePaths>
+				<avrgcc.assembler.general.IncludePaths>
+					<ListValues>
+						<Value>../..</Value>
+						<Value>../../..</Value>
+						<Value>../../../../../../../../common/boards</Value>
+						<Value>../../../../../../../../common/services/clock</Value>
+						<Value>../../../../../../../../common/services/delay</Value>
+						<Value>../../../../../../../../common/services/gpio</Value>
+						<Value>../../../../../../../../common/services/ioport</Value>
+						<Value>../../../../../../../../common/services/sleepmgr</Value>
+						<Value>../../../../../../../../common/services/spi</Value>
+						<Value>../../../../../../../../common/services/spi/xmega_spi</Value>
+						<Value>../../../../../../../../common/services/usb</Value>
+						<Value>../../../../../../../../common/services/usb/class/cdc</Value>
+						<Value>../../../../../../../../common/services/usb/class/cdc/device</Value>
+						<Value>../../../../../../../../common/services/usb/udc</Value>
+						<Value>../../../../../../../../common/utils</Value>
+						<Value>../../../../../../../../common/utils/stdio/stdio_usb</Value>
+						<Value>../../../../../../../../xmega/boards</Value>
+						<Value>../../../../../../../../xmega/boards/xmega_rf212b_zigbit</Value>
+						<Value>../../../../../../../../xmega/drivers/cpu</Value>
+						<Value>../../../../../../../../xmega/drivers/nvm</Value>
+						<Value>../../../../../../../../xmega/drivers/pmic</Value>
+						<Value>../../../../../../../../xmega/drivers/sleep</Value>
+						<Value>../../../../../../../../xmega/drivers/spi</Value>
+						<Value>../../../../../../../../xmega/drivers/tc</Value>
+						<Value>../../../../../../../../xmega/drivers/usb</Value>
+						<Value>../../../../../../../../xmega/utils</Value>
+						<Value>../../../../../../../../xmega/utils/preprocessor</Value>
+						<Value>../../../../../../addons/sio2host/usb</Value>
+						<Value>../../../../../../services/common_hw_timer</Value>
+						<Value>../../../../../../services/common_hw_timer/xmega</Value>
+						<Value>../../../../../../services/sal/inc</Value>
+						<Value>../../../../../../services/trx_access</Value>
+						<Value>../../../../../source/nwk/inc</Value>
+						<Value>../../../../../source/phy/at86rf212b/inc</Value>
+						<Value>../../../../../source/sys/inc</Value>
+						<Value>../src</Value>
+					</ListValues>
+				</avrgcc.assembler.general.IncludePaths>
+				<!-- Project configurable options -->
+				<avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+				<avrgcc.linker.miscellaneous.LinkerFlags>-Wl,--relax -Wl,--section-start=.BOOT=0x40000</avrgcc.linker.miscellaneous.LinkerFlags>
+				<avrgcc.linker.libraries.Libraries>
+					<ListValues>
+						<Value>xmegaa3_hw_timer_lib</Value>
+					</ListValues>
+				</avrgcc.linker.libraries.Libraries>
+				<avrgcc.linker.libraries.LibrarySearchPaths>
+					<ListValues>
+						<Value>../../../../../../services/common_hw_timer/xmega/lib</Value>
+					</ListValues>
+				</avrgcc.linker.libraries.LibrarySearchPaths>
+				<avrgcc.linker.general.DoNotUseStandardStartFiles>False</avrgcc.linker.general.DoNotUseStandardStartFiles>
+				<avrgcc.linker.general.DoNotUseDefaultLibraries>False</avrgcc.linker.general.DoNotUseDefaultLibraries>
+				<avrgcc.linker.general.NoStartupOrDefaultLibs>False</avrgcc.linker.general.NoStartupOrDefaultLibs>
+				<!-- Fixed options, according to ASF 2 MEGA/XMEGA Makefile -->
+				<avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+				<avrgcc.compiler.optimization.DebugLevel>None</avrgcc.compiler.optimization.DebugLevel>
+				<avrgcc.linker.optimization.RelaxBranches>True</avrgcc.linker.optimization.RelaxBranches>
+				<avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>False</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+				<avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>False</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+				<avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+				<avrgcc.linker.optimization.GarbageCollectUnusedSections>True</avrgcc.linker.optimization.GarbageCollectUnusedSections>
+				<avrgcc.compiler.optimization.OtherFlags>-fdata-sections</avrgcc.compiler.optimization.OtherFlags>
+				<avrgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -fno-strict-aliasing -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -mrelax</avrgcc.compiler.miscellaneous.OtherFlags>
+				<avrgcc.assembler.general.AssemblerFlags>-mrelax -DBOARD=XMEGA_RF212B_ZIGBIT -DCONFIG_NVM_IGNORE_XMEGA_A3_D3_REVB_ERRATA -DIOPORT_XMEGA_COMPAT -DPHY_AT86RF212B -DSAL_TYPE=ATXMEGA_SAL</avrgcc.assembler.general.AssemblerFlags>
+				<avrgcc.assembler.debugging.DebugLevel>None</avrgcc.assembler.debugging.DebugLevel>
+			</AvrGcc>
+		</ToolchainSettings>
+		<MemorySettings/>
+		<GenerateHexFile>True</GenerateHexFile>
+		<GenerateMapFile>True</GenerateMapFile>
+		<GenerateListFile>True</GenerateListFile>
+		<GenerateEepFile>True</GenerateEepFile>
+		<PreBuildEvent></PreBuildEvent>
+		<PostBuildEvent></PostBuildEvent>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+		<ToolchainSettings>
+			<AvrGcc>
+				<avrgcc.compiler.symbols.DefSymbols>
+					<ListValues>
+						<Value>BOARD=XMEGA_RF212B_ZIGBIT</Value>
+						<Value>CONFIG_NVM_IGNORE_XMEGA_A3_D3_REVB_ERRATA</Value>
+						<Value>IOPORT_XMEGA_COMPAT</Value>
+						<Value>PHY_AT86RF212B</Value>
+						<Value>SAL_TYPE=ATXMEGA_SAL</Value>
+					</ListValues>
+				</avrgcc.compiler.symbols.DefSymbols>
+				<avrgcc.compiler.directories.IncludePaths>
+					<ListValues>
+						<Value>../..</Value>
+						<Value>../../..</Value>
+						<Value>../../../../../../../../common/boards</Value>
+						<Value>../../../../../../../../common/services/clock</Value>
+						<Value>../../../../../../../../common/services/delay</Value>
+						<Value>../../../../../../../../common/services/gpio</Value>
+						<Value>../../../../../../../../common/services/ioport</Value>
+						<Value>../../../../../../../../common/services/sleepmgr</Value>
+						<Value>../../../../../../../../common/services/spi</Value>
+						<Value>../../../../../../../../common/services/spi/xmega_spi</Value>
+						<Value>../../../../../../../../common/services/usb</Value>
+						<Value>../../../../../../../../common/services/usb/class/cdc</Value>
+						<Value>../../../../../../../../common/services/usb/class/cdc/device</Value>
+						<Value>../../../../../../../../common/services/usb/udc</Value>
+						<Value>../../../../../../../../common/utils</Value>
+						<Value>../../../../../../../../common/utils/stdio/stdio_usb</Value>
+						<Value>../../../../../../../../xmega/boards</Value>
+						<Value>../../../../../../../../xmega/boards/xmega_rf212b_zigbit</Value>
+						<Value>../../../../../../../../xmega/drivers/cpu</Value>
+						<Value>../../../../../../../../xmega/drivers/nvm</Value>
+						<Value>../../../../../../../../xmega/drivers/pmic</Value>
+						<Value>../../../../../../../../xmega/drivers/sleep</Value>
+						<Value>../../../../../../../../xmega/drivers/spi</Value>
+						<Value>../../../../../../../../xmega/drivers/tc</Value>
+						<Value>../../../../../../../../xmega/drivers/usb</Value>
+						<Value>../../../../../../../../xmega/utils</Value>
+						<Value>../../../../../../../../xmega/utils/preprocessor</Value>
+						<Value>../../../../../../addons/sio2host/usb</Value>
+						<Value>../../../../../../services/common_hw_timer</Value>
+						<Value>../../../../../../services/common_hw_timer/xmega</Value>
+						<Value>../../../../../../services/sal/inc</Value>
+						<Value>../../../../../../services/trx_access</Value>
+						<Value>../../../../../source/nwk/inc</Value>
+						<Value>../../../../../source/phy/at86rf212b/inc</Value>
+						<Value>../../../../../source/sys/inc</Value>
+						<Value>../src</Value>
+					</ListValues>
+				</avrgcc.compiler.directories.IncludePaths>
+				<avrgcc.assembler.general.IncludePaths>
+					<ListValues>
+						<Value>../..</Value>
+						<Value>../../..</Value>
+						<Value>../../../../../../../../common/boards</Value>
+						<Value>../../../../../../../../common/services/clock</Value>
+						<Value>../../../../../../../../common/services/delay</Value>
+						<Value>../../../../../../../../common/services/gpio</Value>
+						<Value>../../../../../../../../common/services/ioport</Value>
+						<Value>../../../../../../../../common/services/sleepmgr</Value>
+						<Value>../../../../../../../../common/services/spi</Value>
+						<Value>../../../../../../../../common/services/spi/xmega_spi</Value>
+						<Value>../../../../../../../../common/services/usb</Value>
+						<Value>../../../../../../../../common/services/usb/class/cdc</Value>
+						<Value>../../../../../../../../common/services/usb/class/cdc/device</Value>
+						<Value>../../../../../../../../common/services/usb/udc</Value>
+						<Value>../../../../../../../../common/utils</Value>
+						<Value>../../../../../../../../common/utils/stdio/stdio_usb</Value>
+						<Value>../../../../../../../../xmega/boards</Value>
+						<Value>../../../../../../../../xmega/boards/xmega_rf212b_zigbit</Value>
+						<Value>../../../../../../../../xmega/drivers/cpu</Value>
+						<Value>../../../../../../../../xmega/drivers/nvm</Value>
+						<Value>../../../../../../../../xmega/drivers/pmic</Value>
+						<Value>../../../../../../../../xmega/drivers/sleep</Value>
+						<Value>../../../../../../../../xmega/drivers/spi</Value>
+						<Value>../../../../../../../../xmega/drivers/tc</Value>
+						<Value>../../../../../../../../xmega/drivers/usb</Value>
+						<Value>../../../../../../../../xmega/utils</Value>
+						<Value>../../../../../../../../xmega/utils/preprocessor</Value>
+						<Value>../../../../../../addons/sio2host/usb</Value>
+						<Value>../../../../../../services/common_hw_timer</Value>
+						<Value>../../../../../../services/common_hw_timer/xmega</Value>
+						<Value>../../../../../../services/sal/inc</Value>
+						<Value>../../../../../../services/trx_access</Value>
+						<Value>../../../../../source/nwk/inc</Value>
+						<Value>../../../../../source/phy/at86rf212b/inc</Value>
+						<Value>../../../../../source/sys/inc</Value>
+						<Value>../src</Value>
+					</ListValues>
+				</avrgcc.assembler.general.IncludePaths>
+				<!-- Project configurable options -->
+				<avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+				<avrgcc.linker.miscellaneous.LinkerFlags>-Wl,--relax -Wl,--section-start=.BOOT=0x40000</avrgcc.linker.miscellaneous.LinkerFlags>
+				<avrgcc.linker.libraries.Libraries>
+					<ListValues>
+						<Value>xmegaa3_hw_timer_lib</Value>
+					</ListValues>
+				</avrgcc.linker.libraries.Libraries>
+				<avrgcc.linker.libraries.LibrarySearchPaths>
+					<ListValues>
+						<Value>../../../../../../services/common_hw_timer/xmega/lib</Value>
+					</ListValues>
+				</avrgcc.linker.libraries.LibrarySearchPaths>
+				<avrgcc.linker.general.DoNotUseStandardStartFiles>False</avrgcc.linker.general.DoNotUseStandardStartFiles>
+				<avrgcc.linker.general.DoNotUseDefaultLibraries>False</avrgcc.linker.general.DoNotUseDefaultLibraries>
+				<avrgcc.linker.general.NoStartupOrDefaultLibs>False</avrgcc.linker.general.NoStartupOrDefaultLibs>
+				<!-- Fixed options, according to ASF 2 MEGA/XMEGA Makefile -->
+				<avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+				<avrgcc.compiler.optimization.DebugLevel>Maximum (-g3)</avrgcc.compiler.optimization.DebugLevel>
+				<avrgcc.linker.optimization.RelaxBranches>True</avrgcc.linker.optimization.RelaxBranches>
+				<avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>False</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+				<avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>False</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+				<avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avrgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+				<avrgcc.linker.optimization.GarbageCollectUnusedSections>True</avrgcc.linker.optimization.GarbageCollectUnusedSections>
+				<avrgcc.compiler.optimization.OtherFlags>-fdata-sections</avrgcc.compiler.optimization.OtherFlags>
+				<avrgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -fno-strict-aliasing -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -mrelax</avrgcc.compiler.miscellaneous.OtherFlags>
+				<avrgcc.assembler.general.AssemblerFlags>-mrelax -DBOARD=XMEGA_RF212B_ZIGBIT -DCONFIG_NVM_IGNORE_XMEGA_A3_D3_REVB_ERRATA -DIOPORT_XMEGA_COMPAT -DPHY_AT86RF212B -DSAL_TYPE=ATXMEGA_SAL</avrgcc.assembler.general.AssemblerFlags>
+				<avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+			</AvrGcc>
+		</ToolchainSettings>
+		<MemorySettings/>
+		<GenerateHexFile>True</GenerateHexFile>
+		<GenerateMapFile>True</GenerateMapFile>
+		<GenerateListFile>True</GenerateListFile>
+		<GenerateEepFile>True</GenerateEepFile>
+		<PreBuildEvent></PreBuildEvent>
+		<PostBuildEvent></PostBuildEvent>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Include="..\..\..\..\..\..\..\common\services\clock\xmega\sysclk.c">
+			<Link>src\ASF\common\services\clock\xmega\sysclk.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\common\services\ioport\xmega\ioport_compat.c">
+			<Link>src\ASF\common\services\ioport\xmega\ioport_compat.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\common\services\sleepmgr\xmega\sleepmgr.c">
+			<Link>src\ASF\common\services\sleepmgr\xmega\sleepmgr.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\common\services\spi\xmega_spi\spi_master.c">
+			<Link>src\ASF\common\services\spi\xmega_spi\spi_master.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\common\services\usb\class\cdc\device\udi_cdc.c">
+			<Link>src\ASF\common\services\usb\class\cdc\device\udi_cdc.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\common\services\usb\class\cdc\device\udi_cdc_desc.c">
+			<Link>src\ASF\common\services\usb\class\cdc\device\udi_cdc_desc.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\common\services\usb\udc\udc.c">
+			<Link>src\ASF\common\services\usb\udc\udc.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\common\utils\stdio\read.c">
+			<Link>src\ASF\common\utils\stdio\read.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\common\utils\stdio\stdio_usb\stdio_usb.c">
+			<Link>src\ASF\common\utils\stdio\stdio_usb\stdio_usb.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\common\utils\stdio\write.c">
+			<Link>src\ASF\common\utils\stdio\write.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\addons\sio2host\usb\sio2host.c">
+			<Link>src\ASF\thirdparty\wireless\addons\sio2host\usb\sio2host.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\Peer2Peer.c">
+			<Link>src\Peer2Peer.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwk.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwk.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkDataReq.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkDataReq.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkFrame.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkFrame.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkGroup.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkGroup.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkRoute.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkRoute.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkRouteDiscovery.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkRouteDiscovery.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkRx.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkRx.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkSecurity.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkSecurity.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\nwk\src\nwkTx.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\nwkTx.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\phy\at86rf212b\src\phy.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\phy\at86rf212b\src\phy.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\sys\src\sys.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\src\sys.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\sys\src\sysEncrypt.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\src\sysEncrypt.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\source\sys\src\sysTimer.c">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\src\sysTimer.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\services\common_hw_timer\xmega\hw_timer.c">
+			<Link>src\ASF\thirdparty\wireless\services\common_hw_timer\xmega\hw_timer.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\services\sal\atxmega_sal\src\sal.c">
+			<Link>src\ASF\thirdparty\wireless\services\sal\atxmega_sal\src\sal.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\services\trx_access\trx_access.c">
+			<Link>src\ASF\thirdparty\wireless\services\trx_access\trx_access.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\xmega\boards\xmega_rf212b_zigbit\init.c">
+			<Link>src\ASF\xmega\boards\xmega_rf212b_zigbit\init.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\xmega\drivers\cpu\ccp.s">
+			<Link>src\ASF\xmega\drivers\cpu\ccp.s</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\xmega\drivers\nvm\nvm.c">
+			<Link>src\ASF\xmega\drivers\nvm\nvm.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\xmega\drivers\nvm\nvm_asm.s">
+			<Link>src\ASF\xmega\drivers\nvm\nvm_asm.s</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\xmega\drivers\spi\spi.c">
+			<Link>src\ASF\xmega\drivers\spi\spi.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\xmega\drivers\tc\tc.c">
+			<Link>src\ASF\xmega\drivers\tc\tc.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<Compile Include="..\..\..\..\..\..\..\xmega\drivers\usb\usb_device.c">
+			<Link>src\ASF\xmega\drivers\usb\usb_device.c</Link>
+			<SubType>compile</SubType>
+		</Compile>
+		<None Include="src\asf.h"/>
+		<None Include="..\..\..\..\..\..\..\common\boards\board.h">
+			<Link>src\ASF\common\boards\board.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\clock\genclk.h">
+			<Link>src\ASF\common\services\clock\genclk.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\clock\osc.h">
+			<Link>src\ASF\common\services\clock\osc.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\clock\pll.h">
+			<Link>src\ASF\common\services\clock\pll.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\clock\sysclk.h">
+			<Link>src\ASF\common\services\clock\sysclk.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\clock\xmega\osc.h">
+			<Link>src\ASF\common\services\clock\xmega\osc.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\clock\xmega\pll.h">
+			<Link>src\ASF\common\services\clock\xmega\pll.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\clock\xmega\sysclk.h">
+			<Link>src\ASF\common\services\clock\xmega\sysclk.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\delay\delay.h">
+			<Link>src\ASF\common\services\delay\delay.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\delay\xmega\cycle_counter.h">
+			<Link>src\ASF\common\services\delay\xmega\cycle_counter.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\gpio\gpio.h">
+			<Link>src\ASF\common\services\gpio\gpio.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\gpio\xmega_gpio\xmega_gpio.h">
+			<Link>src\ASF\common\services\gpio\xmega_gpio\xmega_gpio.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\ioport\ioport.h">
+			<Link>src\ASF\common\services\ioport\ioport.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\ioport\xmega\ioport.h">
+			<Link>src\ASF\common\services\ioport\xmega\ioport.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\ioport\xmega\ioport_compat.h">
+			<Link>src\ASF\common\services\ioport\xmega\ioport_compat.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\sleepmgr\sleepmgr.h">
+			<Link>src\ASF\common\services\sleepmgr\sleepmgr.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\sleepmgr\xmega\sleepmgr.h">
+			<Link>src\ASF\common\services\sleepmgr\xmega\sleepmgr.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\spi\spi_master.h">
+			<Link>src\ASF\common\services\spi\spi_master.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\spi\xmega_spi\spi_master.h">
+			<Link>src\ASF\common\services\spi\xmega_spi\spi_master.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\usb\class\cdc\device\atmel_devices_cdc.cat">
+			<Link>atmel_devices_cdc.cat</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\usb\class\cdc\device\atmel_devices_cdc.inf">
+			<Link>atmel_devices_cdc.inf</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\usb\class\cdc\device\udi_cdc.h">
+			<Link>src\ASF\common\services\usb\class\cdc\device\udi_cdc.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\usb\class\cdc\device\udi_cdc_conf.h">
+			<Link>src\ASF\common\services\usb\class\cdc\device\udi_cdc_conf.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\usb\class\cdc\usb_protocol_cdc.h">
+			<Link>src\ASF\common\services\usb\class\cdc\usb_protocol_cdc.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\usb\udc\udc.h">
+			<Link>src\ASF\common\services\usb\udc\udc.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\usb\udc\udc_desc.h">
+			<Link>src\ASF\common\services\usb\udc\udc_desc.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\usb\udc\udd.h">
+			<Link>src\ASF\common\services\usb\udc\udd.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\usb\udc\udi.h">
+			<Link>src\ASF\common\services\usb\udc\udi.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\usb\usb_atmel.h">
+			<Link>src\ASF\common\services\usb\usb_atmel.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\services\usb\usb_protocol.h">
+			<Link>src\ASF\common\services\usb\usb_protocol.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\utils\interrupt.h">
+			<Link>src\ASF\common\utils\interrupt.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\utils\interrupt\interrupt_avr8.h">
+			<Link>src\ASF\common\utils\interrupt\interrupt_avr8.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\utils\make\Makefile.avr.in">
+			<Link>src\ASF\common\utils\make\Makefile.avr.in</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\utils\parts.h">
+			<Link>src\ASF\common\utils\parts.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\common\utils\stdio\stdio_usb\stdio_usb.h">
+			<Link>src\ASF\common\utils\stdio\stdio_usb\stdio_usb.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\EULA.txt">
+			<Link>src\ASF\thirdparty\wireless\EULA.txt</Link>
+		</None>
+		<None Include="..\..\..\..\..\addons\sio2host\usb\sio2host.h">
+			<Link>src\ASF\thirdparty\wireless\addons\sio2host\usb\sio2host.h</Link>
+		</None>
+		<None Include="..\conf_board.h">
+			<Link>src\config\conf_board.h</Link>
+		</None>
+		<None Include="..\conf_clock.h">
+			<Link>src\config\conf_clock.h</Link>
+		</None>
+		<None Include="..\conf_hw_timer.h">
+			<Link>src\config\conf_hw_timer.h</Link>
+		</None>
+		<None Include="..\conf_sio2host.h">
+			<Link>src\config\conf_sio2host.h</Link>
+		</None>
+		<None Include="..\conf_sleepmgr.h">
+			<Link>src\config\conf_sleepmgr.h</Link>
+		</None>
+		<None Include="..\conf_spi_master.h">
+			<Link>src\config\conf_spi_master.h</Link>
+		</None>
+		<None Include="..\conf_usb.h">
+			<Link>src\config\conf_usb.h</Link>
+		</None>
+		<None Include="..\..\conf_trx_access.h">
+			<Link>src\config\conf_trx_access.h</Link>
+		</None>
+		<None Include="..\..\config.h">
+			<Link>src\config\config.h</Link>
+		</None>
+		<None Include="..\..\..\..\doc\AVR2130_LWMesh_Developer_Guide_v1.2.1.pdf">
+			<Link>AVR2130_LWMesh_Developer_Guide_v1.2.1.pdf</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwk.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwk.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkCommand.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkCommand.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkDataReq.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkDataReq.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkFrame.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkFrame.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkGroup.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkGroup.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkRoute.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkRoute.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkRouteDiscovery.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkRouteDiscovery.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkRx.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkRx.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkSecurity.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkSecurity.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\nwk\inc\nwkTx.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\nwkTx.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\phy\at86rf212b\inc\at86rf212b.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\phy\at86rf212b\inc\at86rf212b.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\phy\at86rf212b\inc\phy.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\phy\at86rf212b\inc\phy.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\sys\inc\sys.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\inc\sys.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\sys\inc\sysConfig.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\inc\sysConfig.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\sys\inc\sysEncrypt.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\inc\sysEncrypt.h</Link>
+		</None>
+		<None Include="..\..\..\..\source\sys\inc\sysTimer.h">
+			<Link>src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\inc\sysTimer.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\common_hw_timer\common_hw_timer.h">
+			<Link>src\ASF\thirdparty\wireless\services\common_hw_timer\common_hw_timer.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\common_hw_timer\xmega\hw_timer.h">
+			<Link>src\ASF\thirdparty\wireless\services\common_hw_timer\xmega\hw_timer.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\common_hw_timer\xmega\lib\libxmegaa3_hw_timer_lib.a">
+			<Link>src\ASF\thirdparty\wireless\services\common_hw_timer\xmega\lib\libxmegaa3_hw_timer_lib.a</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\sal\inc\sal.h">
+			<Link>src\ASF\thirdparty\wireless\services\sal\inc\sal.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\sal\inc\sal_generic.h">
+			<Link>src\ASF\thirdparty\wireless\services\sal\inc\sal_generic.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\sal\inc\sal_types.h">
+			<Link>src\ASF\thirdparty\wireless\services\sal\inc\sal_types.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\services\trx_access\trx_access.h">
+			<Link>src\ASF\thirdparty\wireless\services\trx_access\trx_access.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\boards\xmega_rf212b_zigbit\led.h">
+			<Link>src\ASF\xmega\boards\xmega_rf212b_zigbit\led.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\boards\xmega_rf212b_zigbit\xmega_rf212b_zigbit.h">
+			<Link>src\ASF\xmega\boards\xmega_rf212b_zigbit\xmega_rf212b_zigbit.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\drivers\cpu\ccp.h">
+			<Link>src\ASF\xmega\drivers\cpu\ccp.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\drivers\cpu\xmega_reset_cause.h">
+			<Link>src\ASF\xmega\drivers\cpu\xmega_reset_cause.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\drivers\nvm\nvm.h">
+			<Link>src\ASF\xmega\drivers\nvm\nvm.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\drivers\pmic\pmic.h">
+			<Link>src\ASF\xmega\drivers\pmic\pmic.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\drivers\sleep\sleep.h">
+			<Link>src\ASF\xmega\drivers\sleep\sleep.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\drivers\spi\spi.h">
+			<Link>src\ASF\xmega\drivers\spi\spi.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\drivers\tc\tc.h">
+			<Link>src\ASF\xmega\drivers\tc\tc.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\drivers\usb\usb_device.h">
+			<Link>src\ASF\xmega\drivers\usb\usb_device.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\utils\assembler.h">
+			<Link>src\ASF\xmega\utils\assembler.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\utils\assembler\gas.h">
+			<Link>src\ASF\xmega\utils\assembler\gas.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\utils\bit_handling\clz_ctz.h">
+			<Link>src\ASF\xmega\utils\bit_handling\clz_ctz.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\utils\compiler.h">
+			<Link>src\ASF\xmega\utils\compiler.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\utils\preprocessor\mrepeat.h">
+			<Link>src\ASF\xmega\utils\preprocessor\mrepeat.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\utils\preprocessor\preprocessor.h">
+			<Link>src\ASF\xmega\utils\preprocessor\preprocessor.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\utils\preprocessor\stringz.h">
+			<Link>src\ASF\xmega\utils\preprocessor\stringz.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\utils\preprocessor\tpaste.h">
+			<Link>src\ASF\xmega\utils\preprocessor\tpaste.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\utils\progmem.h">
+			<Link>src\ASF\xmega\utils\progmem.h</Link>
+		</None>
+		<None Include="..\..\..\..\..\..\..\xmega\utils\status_codes.h">
+			<Link>src\ASF\xmega\utils\status_codes.h</Link>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="src\"/>
+		<Folder Include="src\ASF\"/>
+		<Folder Include="src\ASF\common\"/>
+		<Folder Include="src\ASF\common\boards\"/>
+		<Folder Include="src\ASF\common\services\"/>
+		<Folder Include="src\ASF\common\services\clock\"/>
+		<Folder Include="src\ASF\common\services\clock\xmega\"/>
+		<Folder Include="src\ASF\common\services\delay\"/>
+		<Folder Include="src\ASF\common\services\delay\xmega\"/>
+		<Folder Include="src\ASF\common\services\gpio\"/>
+		<Folder Include="src\ASF\common\services\gpio\xmega_gpio\"/>
+		<Folder Include="src\ASF\common\services\ioport\"/>
+		<Folder Include="src\ASF\common\services\ioport\xmega\"/>
+		<Folder Include="src\ASF\common\services\sleepmgr\"/>
+		<Folder Include="src\ASF\common\services\sleepmgr\xmega\"/>
+		<Folder Include="src\ASF\common\services\spi\"/>
+		<Folder Include="src\ASF\common\services\spi\xmega_spi\"/>
+		<Folder Include="src\ASF\common\services\usb\"/>
+		<Folder Include="src\ASF\common\services\usb\class\"/>
+		<Folder Include="src\ASF\common\services\usb\class\cdc\"/>
+		<Folder Include="src\ASF\common\services\usb\class\cdc\device\"/>
+		<Folder Include="src\ASF\common\services\usb\udc\"/>
+		<Folder Include="src\ASF\common\utils\"/>
+		<Folder Include="src\ASF\common\utils\interrupt\"/>
+		<Folder Include="src\ASF\common\utils\make\"/>
+		<Folder Include="src\ASF\common\utils\stdio\"/>
+		<Folder Include="src\ASF\common\utils\stdio\stdio_usb\"/>
+		<Folder Include="src\ASF\thirdparty\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\addons\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\addons\sio2host\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\addons\sio2host\usb\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\inc\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\nwk\src\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\phy\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\phy\at86rf212b\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\phy\at86rf212b\inc\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\phy\at86rf212b\src\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\inc\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\avr2130_lwmesh\source\sys\src\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\common_hw_timer\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\common_hw_timer\xmega\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\common_hw_timer\xmega\lib\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\sal\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\sal\atxmega_sal\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\sal\atxmega_sal\src\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\sal\inc\"/>
+		<Folder Include="src\ASF\thirdparty\wireless\services\trx_access\"/>
+		<Folder Include="src\ASF\xmega\"/>
+		<Folder Include="src\ASF\xmega\boards\"/>
+		<Folder Include="src\ASF\xmega\boards\xmega_rf212b_zigbit\"/>
+		<Folder Include="src\ASF\xmega\drivers\"/>
+		<Folder Include="src\ASF\xmega\drivers\cpu\"/>
+		<Folder Include="src\ASF\xmega\drivers\nvm\"/>
+		<Folder Include="src\ASF\xmega\drivers\pmic\"/>
+		<Folder Include="src\ASF\xmega\drivers\sleep\"/>
+		<Folder Include="src\ASF\xmega\drivers\spi\"/>
+		<Folder Include="src\ASF\xmega\drivers\tc\"/>
+		<Folder Include="src\ASF\xmega\drivers\usb\"/>
+		<Folder Include="src\ASF\xmega\utils\"/>
+		<Folder Include="src\ASF\xmega\utils\assembler\"/>
+		<Folder Include="src\ASF\xmega\utils\bit_handling\"/>
+		<Folder Include="src\ASF\xmega\utils\preprocessor\"/>
+		<Folder Include="src\config\"/>
+	</ItemGroup>
+	<Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\AvrGCC.targets"/>
+</Project>
