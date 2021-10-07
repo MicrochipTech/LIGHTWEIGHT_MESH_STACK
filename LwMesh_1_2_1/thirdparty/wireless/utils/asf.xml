@@ -1,8 +1,0 @@
-<asf xmlversion="1.0">
-	<module type="meta" id="thirdparty.wireless.utils.bootloadertool"   caption="Serial Bootloader Tool ">
-		<info type="description" value="summary">
-		</info>
-		<info type="gui-flag" value="move-to-root"/>
-		<build type="distribute" subtype="user-file" value="Bootloader_PC_Tool_Setup_1.2.2.233.exe"/>
-	</module>
-</asf>

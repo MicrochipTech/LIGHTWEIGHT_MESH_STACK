@@ -1,0 +1,16 @@
+<extension-container xmlversion="2.0">
+	<extension uuid="Atmel.ASF" org="Atmel" shortname="ASF" version="3.51.0" fullname="Atmel Software Framework">
+		<author name="Atmel Corp." website="http://www.microchip.com/" email="support@atmel.com"/>
+		<description/>
+		<icon-image path="icon.png"/>
+		<preview-image path="preview.jpg"/>
+		<license caption="ASF license" path="license.txt"/>
+		<release-notes caption="ASF release notes" url="http://www.microchip.com/asf"/>
+		<online-help>
+			<index-page caption="ASF help" url="https://asf.microchip.com/docs/"/>
+			<module-help-page scheme="asf-docs" baseurl="https://asf.microchip.com/docs/"/>
+			<module-guide-page scheme="asf-docs" baseurl="https://asf.microchip.com/docs/"/>
+		</online-help>
+		<dependencies/>
+	</extension>
+</extension-container>
